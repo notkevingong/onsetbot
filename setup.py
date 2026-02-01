@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'velocity_commander = odrive_tools.vel_commander:main',
             'zero_sequence = odrive_tools.zero_sequence:main',
+            'odrive_can_bridge = odrive_tools.odrive_can_bridge:main',
         ],
     },
 )
