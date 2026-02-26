@@ -1,0 +1,3 @@
+float64 velocity
+float64 angle_launch
+float64 angle_turret

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "onset_interfaces__py",
+		"source" : "/home/gong/onset_ws/build/onset_interfaces/onset_interfaces__py"
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "package_name": "odrive_can",
+  "non_idl_tuples": [
+    "/home/gong/onset_ws/src/ros_odrive/odrive_node:msg/ControlMessage.msg",
+    "/home/gong/onset_ws/src/ros_odrive/odrive_node:msg/ControllerStatus.msg",
+    "/home/gong/onset_ws/src/ros_odrive/odrive_node:msg/ODriveStatus.msg",
+    "/home/gong/onset_ws/src/ros_odrive/odrive_node:srv/AxisState.srv"
+  ]
+}

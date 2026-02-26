@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "odrive_can__py",
+		"source" : "/home/gong/onset_ws/build/odrive_can/odrive_can__py"
+	}
+}

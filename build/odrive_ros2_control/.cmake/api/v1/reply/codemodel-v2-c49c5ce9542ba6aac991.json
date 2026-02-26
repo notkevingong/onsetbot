@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-a8580097c2fd2979c2fb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "odrive_ros2_control",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "odrive_ros2_control_plugin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odrive_ros2_control_plugin-3416cea65acd3af9f90b.json",
+					"name" : "odrive_ros2_control_plugin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "odrive_ros2_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-odrive_ros2_control_uninstall-88d5cbbba98d62679cd1.json",
+					"name" : "odrive_ros2_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f2c67c30e9272d207c33.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/gong/onset_ws/build/odrive_ros2_control",
+		"source" : "/home/gong/onset_ws/src/ros_odrive/odrive_ros2_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

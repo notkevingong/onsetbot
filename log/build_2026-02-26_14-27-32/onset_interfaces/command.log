@@ -1,0 +1,6 @@
+Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gong/onset_ws/src/onset_interfaces -DCMAKE_INSTALL_PREFIX=/home/gong/onset_ws/install/onset_interfaces
+Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gong/onset_ws/src/onset_interfaces -DCMAKE_INSTALL_PREFIX=/home/gong/onset_ws/install/onset_interfaces
+Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces

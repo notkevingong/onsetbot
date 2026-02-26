@@ -1,0 +1,6 @@
+source;share/onsetbot/hook/pythonpath.ps1
+source;share/onsetbot/hook/pythonpath.dsv
+source;share/onsetbot/hook/pythonpath.sh
+source;share/onsetbot/hook/ament_prefix_path.ps1
+source;share/onsetbot/hook/ament_prefix_path.dsv
+source;share/onsetbot/hook/ament_prefix_path.sh

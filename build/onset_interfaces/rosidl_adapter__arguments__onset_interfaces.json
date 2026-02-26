@@ -1,0 +1,6 @@
+{
+  "package_name": "onset_interfaces",
+  "non_idl_tuples": [
+    "/home/gong/onset_ws/src/onset_interfaces:msg/LaunchCommand.msg"
+  ]
+}
