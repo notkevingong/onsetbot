@@ -3,7 +3,10 @@
   "output_dir": "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/LaunchCommand.idl"
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/LaunchCommand.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/OnsetStatus.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32Message.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32State.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -21,6 +24,9 @@
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/opt/ros/humble/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl"
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/STM32Message.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/STM32State.idl"
   ]
 }

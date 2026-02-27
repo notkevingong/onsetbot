@@ -42,6 +42,7 @@ struct LaunchCommand_
       this->velocity = 0.0;
       this->angle_launch = 0.0;
       this->angle_turret = 0.0;
+      this->home_seq = false;
     }
   }
 
@@ -54,6 +55,7 @@ struct LaunchCommand_
       this->velocity = 0.0;
       this->angle_launch = 0.0;
       this->angle_turret = 0.0;
+      this->home_seq = false;
     }
   }
 
@@ -67,6 +69,9 @@ struct LaunchCommand_
   using _angle_turret_type =
     double;
   _angle_turret_type angle_turret;
+  using _home_seq_type =
+    bool;
+  _home_seq_type home_seq;
 
   // setters for named parameter idiom
   Type & set__velocity(
@@ -85,6 +90,12 @@ struct LaunchCommand_
     const double & _arg)
   {
     this->angle_turret = _arg;
+    return *this;
+  }
+  Type & set__home_seq(
+    const bool & _arg)
+  {
+    this->home_seq = _arg;
     return *this;
   }
 
@@ -137,6 +148,9 @@ struct LaunchCommand_
       return false;
     }
     if (this->angle_turret != other.angle_turret) {
+      return false;
+    }
+    if (this->home_seq != other.home_seq) {
       return false;
     }
     return true;

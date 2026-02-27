@@ -1,1 +1,4 @@
 /home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/LaunchCommand.idl
+/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/OnsetStatus.idl
+/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32Message.idl
+/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32State.idl

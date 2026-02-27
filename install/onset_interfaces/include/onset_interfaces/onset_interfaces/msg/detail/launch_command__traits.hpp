@@ -43,6 +43,13 @@ inline void to_flow_style_yaml(
   {
     out << "angle_turret: ";
     rosidl_generator_traits::value_to_yaml(msg.angle_turret, out);
+    out << ", ";
+  }
+
+  // member: home_seq
+  {
+    out << "home_seq: ";
+    rosidl_generator_traits::value_to_yaml(msg.home_seq, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -78,6 +85,16 @@ inline void to_block_style_yaml(
     }
     out << "angle_turret: ";
     rosidl_generator_traits::value_to_yaml(msg.angle_turret, out);
+    out << "\n";
+  }
+
+  // member: home_seq
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "home_seq: ";
+    rosidl_generator_traits::value_to_yaml(msg.home_seq, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

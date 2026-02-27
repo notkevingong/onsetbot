@@ -1,6 +1,9 @@
 {
   "package_name": "onset_interfaces",
   "non_idl_tuples": [
-    "/home/gong/onset_ws/src/onset_interfaces:msg/LaunchCommand.msg"
+    "/home/gong/onset_ws/src/onset_interfaces:msg/LaunchCommand.msg",
+    "/home/gong/onset_ws/src/onset_interfaces:msg/OnsetStatus.msg",
+    "/home/gong/onset_ws/src/onset_interfaces:msg/STM32Message.msg",
+    "/home/gong/onset_ws/src/onset_interfaces:msg/STM32State.msg"
   ]
 }

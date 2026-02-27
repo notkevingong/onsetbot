@@ -23,6 +23,7 @@ typedef struct onset_interfaces__msg__LaunchCommand
   double velocity;
   double angle_launch;
   double angle_turret;
+  bool home_seq;
 } onset_interfaces__msg__LaunchCommand;
 
 // Struct for a sequence of onset_interfaces__msg__LaunchCommand.

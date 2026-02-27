@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_LaunchCommand_home_seq
+{
+public:
+  explicit Init_LaunchCommand_home_seq(::onset_interfaces::msg::LaunchCommand & msg)
+  : msg_(msg)
+  {}
+  ::onset_interfaces::msg::LaunchCommand home_seq(::onset_interfaces::msg::LaunchCommand::_home_seq_type arg)
+  {
+    msg_.home_seq = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::LaunchCommand msg_;
+};
+
 class Init_LaunchCommand_angle_turret
 {
 public:
   explicit Init_LaunchCommand_angle_turret(::onset_interfaces::msg::LaunchCommand & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::LaunchCommand angle_turret(::onset_interfaces::msg::LaunchCommand::_angle_turret_type arg)
+  Init_LaunchCommand_home_seq angle_turret(::onset_interfaces::msg::LaunchCommand::_angle_turret_type arg)
   {
     msg_.angle_turret = std::move(arg);
-    return std::move(msg_);
+    return Init_LaunchCommand_home_seq(msg_);
   }
 
 private:

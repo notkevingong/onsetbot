@@ -83,6 +83,9 @@ rosidl_generator_c/onset_interfaces/msg/launch_command.h: /opt/ros/humble/share/
 rosidl_generator_c/onset_interfaces/msg/launch_command.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/onset_interfaces/msg/launch_command.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/onset_interfaces/msg/launch_command.h: rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl
+rosidl_generator_c/onset_interfaces/msg/launch_command.h: rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl
+rosidl_generator_c/onset_interfaces/msg/launch_command.h: rosidl_adapter/onset_interfaces/msg/STM32Message.idl
+rosidl_generator_c/onset_interfaces/msg/launch_command.h: rosidl_adapter/onset_interfaces/msg/STM32State.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c__arguments.json
 
@@ -95,8 +98,53 @@ rosidl_generator_c/onset_interfaces/msg/detail/launch_command__struct.h: rosidl_
 rosidl_generator_c/onset_interfaces/msg/detail/launch_command__type_support.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/launch_command__type_support.h
 
+rosidl_generator_c/onset_interfaces/msg/onset_status.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/onset_status.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/onset_status__struct.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/onset_status__struct.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/onset_status__type_support.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/onset_status__type_support.h
+
+rosidl_generator_c/onset_interfaces/msg/stm32_message.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/stm32_message.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__struct.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__struct.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__type_support.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__type_support.h
+
+rosidl_generator_c/onset_interfaces/msg/stm32_state.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/stm32_state.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h
+
 rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c: rosidl_generator_c/onset_interfaces/msg/launch_command.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c
+
+rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c
 
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o: rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c
@@ -112,19 +160,67 @@ CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_int
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.s
 
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o: rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o -MF CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o.d -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o -c /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c > CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.i
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.s
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o: rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o -MF CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o.d -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o -c /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c > CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.i
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.s
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o: rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o -MF CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o.d -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o -c /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c > CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.i
+
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c -o CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.s
+
 # Object files for target onset_interfaces__rosidl_generator_c
 onset_interfaces__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o"
+"CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o" \
+"CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o" \
+"CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o" \
+"CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o"
 
 # External object files for target onset_interfaces__rosidl_generator_c
 onset_interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o
+libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o
+libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o
+libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o
 libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/build.make
 libonset_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libonset_interfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libonset_interfaces__rosidl_generator_c.so: CMakeFiles/onset_interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libonset_interfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libonset_interfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/onset_interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -139,7 +235,22 @@ CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/o
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.h
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/launch_command__struct.h
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/launch_command__type_support.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/onset_status__struct.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/onset_status__type_support.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__struct.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__type_support.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h
 CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/launch_command.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/onset_status.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/stm32_message.h
+CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/onset_interfaces/msg/stm32_state.h
 	cd /home/gong/onset_ws/build/onset_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gong/onset_ws/src/onset_interfaces /home/gong/onset_ws/src/onset_interfaces /home/gong/onset_ws/build/onset_interfaces /home/gong/onset_ws/build/onset_interfaces /home/gong/onset_ws/build/onset_interfaces/CMakeFiles/onset_interfaces__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/onset_interfaces__rosidl_generator_c.dir/depend
 

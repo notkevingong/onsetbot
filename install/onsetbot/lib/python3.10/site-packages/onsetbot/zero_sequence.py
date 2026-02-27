@@ -28,7 +28,7 @@ class ZeroSequencer(Node):
         # Publisher for velocity commands
         self.publisher = self.create_publisher(
             ControlMessage,
-            '/odrive_axis0/control_message',
+            'actuator_command',
             10
         )
         

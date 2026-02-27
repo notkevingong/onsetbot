@@ -1,35 +1,52 @@
 #!/usr/bin/env python3
 """
 ROS2 Node to command a BLDC motor via ODrive using CAN.
-Cycles through velocity sequence: 1, 0, -0.5, 0, repeat.
 """
 
 import rclpy
 from rclpy.node import Node
 from odrive_can.msg import ControlMessage
 from odrive_can.srv import AxisState
-import time
-
+from onset_interfaces.msg import LaunchCommand
+from sensor_msgs.msg import JointState
+import math
 
 class VelocityCommander(Node):
     def __init__(self):
         super().__init__('velocity_commander')
         
-        # Create publisher for velocity commands
+        # Create publisher for launcher
         self.publisher = self.create_publisher(
             ControlMessage,
-            '/odrive_axis0/control_message',
+            'actuator_command',
+            10
+        )
+
+        # Create subscriber for launch_info
+        self.launch_subscriber = self.create_subscription(
+            LaunchCommand,
+            'launch_info',
+            self.convert_callback,
+            10
+        )
+
+        # Create subscriber for odrive_states
+        self.odrive_subscriber = self.create_subscription(
+            JointState,
+            '/odrive/joint_states',
+            self.update_odrive_position,
             10
         )
 
         # Create client for axis state control
         self.axis_state_client = self.create_client(AxisState, '/odrive_axis0/request_axis_state')
         
-        # Define the velocity sequence
-        self.velocity_sequence = [0.3, 0.0, -1.0, 0.0]
-        self.current_index = 0
-        self.axis_id = 0  # Modify if using different axis
-        
+        # Define variables and conversion constants
+        self.velocity = 0.0
+        self.angle_launch = 0.0
+        self._velocity_conversion_constant = (1 / 0.0375) * (60 / (2*math.pi)) * (1 / 60) * 2
+        self._angle_conversion_constant = (0.5 / 180)
+
         # Time interval between velocity changes (seconds)
         self.interval = 2.0
         
@@ -41,8 +58,7 @@ class VelocityCommander(Node):
         self.get_logger().info('Velocity Commander node started')
     
     def publish_velocity(self):
-        """Publish the next velocity in the sequence"""
-        velocity = self.velocity_sequence[self.current_index]
+        """Publish the velocity in the sequence"""
         
         # Create velocity command message
         msg = ControlMessage()
@@ -50,14 +66,11 @@ class VelocityCommander(Node):
         msg.input_mode = 2  # Ramped Vel Mode
         msg.input_pos = 0.0
         msg.input_torque = 0.0
-        msg.input_vel = velocity
+        msg.input_vel = self.velocity
         
         # Publish the message
         self.publisher.publish(msg)
-        self.get_logger().info(f'Published velocity: {velocity} m/s')
-        
-        # Move to next velocity in sequence
-        self.current_index = (self.current_index + 1) % len(self.velocity_sequence)
+        self.get_logger().info(f'Published velocity: {self.velocity} m/s')
     
     def initialize_closed_loop(self):
         """Initialize the motor in closed loop control mode (axis state 8)"""
@@ -83,6 +96,19 @@ class VelocityCommander(Node):
             )
         except Exception as e:
             self.get_logger().error(f'Failed to set axis state: {e}')
+
+    def convert_callback (self, msg: LaunchCommand):
+        msg = LaunchCommand
+        self.velocity = msg.velocity * self._velocity_conversion_constant
+        self.angle_launch = msg.angle_launch * self._angle_conversion_constant
+
+    def update_odrive_position(self, msg: JointState):
+        msg = JointState
+
+
+
+        
+
 
 
 def main(args=None):

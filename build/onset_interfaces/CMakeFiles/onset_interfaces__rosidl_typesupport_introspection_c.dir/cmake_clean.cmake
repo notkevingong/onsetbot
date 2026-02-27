@@ -1,10 +1,22 @@
 file(REMOVE_RECURSE
   "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o"
   "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o.d"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o.d"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o.d"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o"
+  "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o.d"
   "libonset_interfaces__rosidl_typesupport_introspection_c.pdb"
   "libonset_interfaces__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

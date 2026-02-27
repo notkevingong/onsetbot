@@ -9,6 +9,7 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import JointState
+from odrive_can.msg import ControlMessage
 
 import can
 
@@ -48,11 +49,9 @@ class ODriveCANBridge (Node):
     Communicates with ODrive motor controllers over CAN bus using CANSimple protocol.
 
     Publishes: /odrive/joint_states (sensor_msgs/JointState)
-    Subscribes: /odrive/command (sensor_msgs/JointState)
+    Subscribes: odrive_control (odrive_can/ControlMessage)
 
-    - msg.name[i] selects the axis/joint
-    - msg.velocity[i] sets the target velocity for that axis/joint
-    - msg.position[i] sets the target position for that axis/joint
+    - msg.input_vel sets the target velocity for the selected axis
 
     """
 
@@ -67,7 +66,11 @@ class ODriveCANBridge (Node):
         self.declare_parameter("auto_closed_loop", True)
         self.declare_parameter("command_timeout_sec", 0.25)
         self.declare_parameter("topic_joint_states", "/odrive/joint_states")
-        self.declare_parameter("topic_command", "/odrive/command")
+        self.declare_parameter("topic_command", "odrive_control")
+        self.declare_parameter("command_axis_ids", [])
+        self.declare_parameter("command_mirror", False)
+        self.declare_parameter("command_control_mode", CONTROLLER_MODE_VELOCITY_CONTROL)
+        self.declare_parameter("command_input_mode", 2)
 
         self.can_interface: str = self.get_parameter("can_interface").value
         self.axis_ids: List[int] = list(self.get_parameter("axis_ids").value)
@@ -77,6 +80,10 @@ class ODriveCANBridge (Node):
         self.command_timeout_sec: float = float(self.get_parameter("command_timeout_sec").value)
         self.topic_joint_states: str = str(self.get_parameter("topic_joint_states").value)
         self.topic_command: str = str(self.get_parameter("topic_command").value)
+        self.command_axis_ids: List[int] = list(self.get_parameter("command_axis_ids").value)
+        self.command_mirror: bool = bool(self.get_parameter("command_mirror").value)
+        self.command_control_mode: int = int(self.get_parameter("command_control_mode").value)
+        self.command_input_mode: int = int(self.get_parameter("command_input_mode").value)
         self._enc_rr_idx = 0
 
 
@@ -91,10 +98,12 @@ class ODriveCANBridge (Node):
         self.last_command_time: float = 0.0
         self.last_command_vel: Dict[int, float] = {axis_id: 0.0 for axis_id in self.axis_ids}
         self.last_command_pos: Dict[int, float] = {axis_id: 0.0 for axis_id in self.axis_ids}
+        self.last_controller_mode: Dict[int, Optional[int]] = {axis_id: None for axis_id in self.axis_ids}
+        self.last_input_mode: Dict[int, Optional[int]] = {axis_id: None for axis_id in self.axis_ids}
 
-        # Ros interfaces
+        # ROS interfaces
         self.pub_js = self.create_publisher(JointState, self.topic_joint_states, 10)
-        self.sub_cmd = self.create_subscription(JointState, self.topic_command, self.command_callback, 10)
+        self.sub_cmd = self.create_subscription(ControlMessage, self.topic_command, self.command_callback, 10)
 
         # CAN Bus Setup
         self.get_logger().info(f"Opening CAN interface: {self.can_interface}")
@@ -146,6 +155,11 @@ class ODriveCANBridge (Node):
         data = struct.pack("<ff", vel_turns_per_sec, torque_ff)
         self._send(arb_id, data)
 
+    def _set_controller_mode(self, axis_id: int, control_mode: int, input_mode: int):
+        arb_id = make_arb_id(axis_id, CMD_SET_CONTROLLER_MODE)
+        data = struct.pack("<II", control_mode, input_mode)
+        self._send(arb_id, data)
+
     # ---- CAN RX functions ---- #
     def _rx_loop(self):
         while not self._rx_stop.is_set():
@@ -185,26 +199,32 @@ class ODriveCANBridge (Node):
                     st.last_enc_time = now
 
     # ---- ROS Callbacks ---- #
-    def command_callback(self, msg: JointState):
-        """
-        Expect:
-          - msg.name: list of joint names (must match joint_names param)
-          - msg.velocity: desired velocities in turns/s, aligned with msg.name
-        """
-        name_to_axis = {jn: aid for jn, aid in zip(self.joint_names, self.axis_ids)}
-
-        if not msg.name or len(msg.velocity) != len(msg.name):
-            self.get_logger().warn("Command JointState must include name[] and matching velocity[]")
+    def command_callback(self, msg: ControlMessage):
+        """Handle velocity commands via ControlMessage for one or more axes."""
+        axis_ids = self.command_axis_ids or self.axis_ids[:1]
+        if not axis_ids:
             return
 
-        for i, jname in enumerate(msg.name):
-            if jname not in name_to_axis:
-                continue
-            aid = name_to_axis[jname]
-            vel = float(msg.velocity[i])
-            self.last_command_vel[aid] = vel
-            self._send_set_input_vel(aid, vel, 0.0)
+        for axis_id in axis_ids:
+            if axis_id not in self.axes:
+                self.get_logger().warn(f"Command axis_id {axis_id} is not configured")
+                return
 
+        if msg.control_mode != CONTROLLER_MODE_VELOCITY_CONTROL:
+            self.get_logger().warn("ControlMessage control_mode is not velocity; ignoring")
+            return
+
+        base_vel = float(msg.input_vel)
+        for idx, axis_id in enumerate(axis_ids):
+            if (self.last_controller_mode.get(axis_id) != self.command_control_mode or
+                    self.last_input_mode.get(axis_id) != self.command_input_mode):
+                self._set_controller_mode(axis_id, self.command_control_mode, self.command_input_mode)
+                self.last_controller_mode[axis_id] = self.command_control_mode
+                self.last_input_mode[axis_id] = self.command_input_mode
+
+            vel = -base_vel if (self.command_mirror and (idx % 2 == 1)) else base_vel
+            self.last_command_vel[axis_id] = vel
+            self._send_set_input_vel(axis_id, vel, 0.0)
         self.last_command_time = time.time()
 
     def _command_watchdog(self):

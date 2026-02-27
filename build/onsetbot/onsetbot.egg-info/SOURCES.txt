@@ -10,9 +10,10 @@ setup.py
 ../../build/onsetbot/onsetbot.egg-info/top_level.txt
 ../../build/onsetbot/onsetbot.egg-info/zip-safe
 onsetbot/__init__.py
+onsetbot/actuator_command.py
 onsetbot/odrive_can_bridge.py
 onsetbot/onset_gui.py
-onsetbot/vel_commander.py
+onsetbot/stm32_bridge.py
 onsetbot/zero_sequence.py
 resource/onsetbot
 test/test_copyright.py

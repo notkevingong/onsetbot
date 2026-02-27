@@ -1,2 +1,8 @@
 msg/LaunchCommand.idl
 msg/LaunchCommand.msg
+msg/OnsetStatus.idl
+msg/OnsetStatus.msg
+msg/STM32Message.idl
+msg/STM32Message.msg
+msg/STM32State.idl
+msg/STM32State.msg

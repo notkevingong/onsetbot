@@ -1,7 +1,7 @@
 # volleyball_gui.py
 import rclpy
 from rclpy.node import Node
-from onset_interfaces.msg import LaunchCommand
+from onset_interfaces.msg import LaunchCommand, OnsetStatus
 import sys
 import math
 from PyQt6.QtCore import Qt, QPointF, QTimer
@@ -27,6 +27,15 @@ class OnsetbotGuiRosNode(Node):
     def __init__(self):
         super().__init__('onsetbot_gui_node')
         self.cmd_pub = self.create_publisher(LaunchCommand, '/launch_info', 10)
+        self.actuator_pub = self.create_publisher(LaunchCommand, 'actuator_command', 10)
+        self.bool_homed = False
+        self.bool_busy = False
+        self.status_sub = self.create_subscription(
+            OnsetStatus,
+            '/onset_status',
+            self.onset_status_callback,
+            10
+        )
 
     def publish_odrive_command(self, velocity: float, angle_turret: float, angle_launch: float):
         msg = LaunchCommand()
@@ -38,6 +47,18 @@ class OnsetbotGuiRosNode(Node):
         # self.get_logger().info(
         #     f'Published LaunchCommand: velocity={msg.velocity:.3f}, angle_turret={msg.angle_turret:.3f}'
         # )
+
+    def onset_status_callback(self, msg: OnsetStatus):
+        self.bool_homed = bool(msg.bool_homed)
+        self.bool_busy = bool(msg.bool_busy)
+
+    def can_launch(self) -> bool:
+        return self.bool_homed and not self.bool_busy
+
+    def publish_home_sequence(self, home_seq: bool):
+        msg = LaunchCommand()
+        msg.home_seq = bool(home_seq)
+        self.actuator_pub.publish(msg)
 
 class DraggableBall(QGraphicsEllipseItem):
     """Ball item that can be dragged and snaps to grid points on release."""
@@ -275,10 +296,9 @@ class FieldView(QGraphicsView):
     - world coords (meters): x right, y up
     - scene coords (pixels): x right, y down
     """
-    def __init__(self, status_label: QLabel, publish_callback=None, parent=None):
+    def __init__(self, status_label: QLabel, parent=None):
         super().__init__(parent) 
         self.status_label = status_label
-        self.publish_callback = publish_callback
 
         # ---- World configuration (edit these freely) ----
         self.grid_spacing_m = 0.25
@@ -757,10 +777,6 @@ class FieldView(QGraphicsView):
         # Exit speed magnitude
         V_0 = math.sqrt(V_h * V_h + V_z * V_z)
 
-        # Publish V0, yaw/angle_turret, th/angle_launch
-        if self.publish_callback is not None:
-            self.publish_callback(V_0, yaw, th)
-
         # Optional: actual apex check (should match z_peak closely)
         z_peak_actual = z_launch + (V_z * V_z) / (2.0 * g)
 
@@ -823,6 +839,10 @@ class MainWindow(QWidget):
         self.hold_timer.timeout.connect(self.on_hold_timer)
         self.held_button = None  # track which button is held
 
+        # Timer to update launch button readiness
+        self.launch_ready_timer = QTimer()
+        self.launch_ready_timer.timeout.connect(self.update_launch_button_state)
+
         main_layout = QHBoxLayout(self)
 
         # Left side: field view
@@ -830,10 +850,7 @@ class MainWindow(QWidget):
         self.status = QLabel("Target (m): x = --, z = --, y = --")
         self.status.setAlignment(Qt.AlignmentFlag.AlignLeft)
 
-        self.view = FieldView(
-            self.status,
-            publish_callback=(self.ros_node.publish_odrive_command if self.ros_node is not None else None)
-        )
+        self.view = FieldView(self.status)
 
         left_layout.addWidget(self.view)
         left_layout.addWidget(self.status)
@@ -844,6 +861,8 @@ class MainWindow(QWidget):
         
         btn_up = QPushButton("↑ Higher")
         btn_down = QPushButton("↓ Lower")
+        self.btn_launch = QPushButton("Launch")
+        btn_home_robot = QPushButton("Home Robot")
         
         # Connect pressed/released for hold-to-repeat
         btn_up.pressed.connect(lambda: self.on_button_pressed("up"))
@@ -851,8 +870,13 @@ class MainWindow(QWidget):
         btn_down.pressed.connect(lambda: self.on_button_pressed("down"))
         btn_down.released.connect(self.on_button_released)
         
+        self.btn_launch.clicked.connect(self.on_launch_clicked)
+        btn_home_robot.clicked.connect(self.home_robot_command)
+
         right_layout.addWidget(btn_up)
         right_layout.addWidget(btn_down)
+        right_layout.addWidget(self.btn_launch)
+        right_layout.addWidget(btn_home_robot)
         right_layout.addStretch()
 
         main_layout.addLayout(left_layout, 1)
@@ -860,6 +884,9 @@ class MainWindow(QWidget):
 
         self.setLayout(main_layout)
         self.resize(1400, 900)
+
+        self.btn_launch.setEnabled(False)
+        self.launch_ready_timer.start(100)
 
     def increase_parabola_height(self):
         """Raise the parabola."""
@@ -885,6 +912,34 @@ class MainWindow(QWidget):
             self.increase_parabola_height()
         elif self.held_button == "down":
             self.decrease_parabola_height()
+
+    def update_launch_button_state(self):
+        if self.ros_node is None:
+            self.btn_launch.setEnabled(False)
+            return
+        self.btn_launch.setEnabled(self.ros_node.can_launch())
+
+    def on_launch_clicked(self):
+        """Publish launch info only when the Launch button is clicked."""
+        if self.ros_node is None:
+            return
+        if not self.ros_node.can_launch():
+            return
+        solution = getattr(self.view, "last_launch_solution", None)
+        if not solution:
+            return
+        self.ros_node.publish_odrive_command(
+            solution["V_0_mps"],
+            solution["yaw_rad"],
+            solution["theta_rad"],
+        )
+
+    def home_robot_command(self):
+        """Placeholder for robot homing command."""
+        if self.ros_node is None:
+            return
+        self.ros_node.publish_home_sequence(True)
+        QTimer.singleShot(100, lambda: self.ros_node.publish_home_sequence(False))
 
 def main():
     rclpy.init(args=None)

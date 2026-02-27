@@ -60,18 +60,21 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         '_velocity',
         '_angle_launch',
         '_angle_turret',
+        '_home_seq',
     ]
 
     _fields_and_field_types = {
         'velocity': 'double',
         'angle_launch': 'double',
         'angle_turret': 'double',
+        'home_seq': 'boolean',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -81,6 +84,7 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         self.velocity = kwargs.get('velocity', float())
         self.angle_launch = kwargs.get('angle_launch', float())
         self.angle_turret = kwargs.get('angle_turret', float())
+        self.home_seq = kwargs.get('home_seq', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -116,6 +120,8 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         if self.angle_launch != other.angle_launch:
             return False
         if self.angle_turret != other.angle_turret:
+            return False
+        if self.home_seq != other.home_seq:
             return False
         return True
 
@@ -168,3 +174,16 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
             assert not (value < -1.7976931348623157e+308 or value > 1.7976931348623157e+308) or math.isinf(value), \
                 "The 'angle_turret' field must be a double in [-1.7976931348623157e+308, 1.7976931348623157e+308]"
         self._angle_turret = value
+
+    @builtins.property
+    def home_seq(self):
+        """Message field 'home_seq'."""
+        return self._home_seq
+
+    @home_seq.setter
+    def home_seq(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'home_seq' field must be of type 'bool'"
+        self._home_seq = value

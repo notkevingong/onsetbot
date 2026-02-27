@@ -16,6 +16,21 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__struct.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__traits.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__type_support.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/onset_status__builder.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/onset_status__struct.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/onset_status__traits.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/onset_status__type_support.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_message__builder.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_message__struct.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_message__traits.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_message__type_support.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__builder.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__struct.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__traits.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/onset_status.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/stm32_message.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/stm32_state.hpp" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
   )
 
 

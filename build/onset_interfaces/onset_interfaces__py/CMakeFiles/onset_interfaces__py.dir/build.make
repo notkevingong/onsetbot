@@ -70,8 +70,14 @@ onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_
 onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c
 onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_launch_command.py
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_onset_status.py
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_message.py
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_state.py
 onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/__init__.py
 onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c
+onset_interfaces__py/CMakeFiles/onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c
 
 rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
 rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_py/__init__.py
@@ -87,6 +93,9 @@ rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_f
 rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl
+rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl
+rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/onset_interfaces/msg/STM32Message.idl
+rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/onset_interfaces/msg/STM32State.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/gong/onset_ws/build/onset_interfaces/onset_interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -99,11 +108,29 @@ rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c
 rosidl_generator_py/onset_interfaces/msg/_launch_command.py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_launch_command.py
 
+rosidl_generator_py/onset_interfaces/msg/_onset_status.py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_onset_status.py
+
+rosidl_generator_py/onset_interfaces/msg/_stm32_message.py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_stm32_message.py
+
+rosidl_generator_py/onset_interfaces/msg/_stm32_state.py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_stm32_state.py
+
 rosidl_generator_py/onset_interfaces/msg/__init__.py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/__init__.py
 
 rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c
+
+rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c
+
+rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c
+
+rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c
 
 onset_interfaces__py: onset_interfaces__py/CMakeFiles/onset_interfaces__py
 onset_interfaces__py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c
@@ -112,6 +139,12 @@ onset_interfaces__py: rosidl_generator_py/onset_interfaces/_onset_interfaces_s.e
 onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/__init__.py
 onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_launch_command.py
 onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_onset_status.py
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_message.py
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_state.py
+onset_interfaces__py: rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c
 onset_interfaces__py: onset_interfaces__py/CMakeFiles/onset_interfaces__py.dir/build.make
 .PHONY : onset_interfaces__py
 

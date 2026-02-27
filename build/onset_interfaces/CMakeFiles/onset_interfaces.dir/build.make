@@ -67,6 +67,9 @@ include CMakeFiles/onset_interfaces.dir/compiler_depend.make
 include CMakeFiles/onset_interfaces.dir/progress.make
 
 CMakeFiles/onset_interfaces: /home/gong/onset_ws/src/onset_interfaces/msg/LaunchCommand.msg
+CMakeFiles/onset_interfaces: /home/gong/onset_ws/src/onset_interfaces/msg/OnsetStatus.msg
+CMakeFiles/onset_interfaces: /home/gong/onset_ws/src/onset_interfaces/msg/STM32Message.msg
+CMakeFiles/onset_interfaces: /home/gong/onset_ws/src/onset_interfaces/msg/STM32State.msg
 
 onset_interfaces: CMakeFiles/onset_interfaces
 onset_interfaces: CMakeFiles/onset_interfaces.dir/build.make

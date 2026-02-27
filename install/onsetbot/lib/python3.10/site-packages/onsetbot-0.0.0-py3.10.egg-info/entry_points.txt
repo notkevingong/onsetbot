@@ -1,6 +1,6 @@
 [console_scripts]
+actuator_command = onsetbot.actuator_command:main
 odrive_can_bridge = onsetbot.odrive_can_bridge:main
 onset_gui = onsetbot.onset_gui:main
-velocity_commander = onsetbot.vel_commander:main
 zero_sequence = onsetbot.zero_sequence:main
 

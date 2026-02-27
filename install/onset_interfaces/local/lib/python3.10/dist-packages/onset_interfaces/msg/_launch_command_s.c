@@ -77,6 +77,15 @@ bool onset_interfaces__msg__launch_command__convert_from_py(PyObject * _pymsg, v
     ros_message->angle_turret = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // home_seq
+    PyObject * field = PyObject_GetAttrString(_pymsg, "home_seq");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->home_seq = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -126,6 +135,17 @@ PyObject * onset_interfaces__msg__launch_command__convert_to_py(void * raw_ros_m
     field = PyFloat_FromDouble(ros_message->angle_turret);
     {
       int rc = PyObject_SetAttrString(_pymessage, "angle_turret", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // home_seq
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->home_seq ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "home_seq", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

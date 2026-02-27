@@ -17,6 +17,12 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/__init__.py" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_launch_command.py" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_onset_status.py" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_stm32_message.py" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_stm32_state.py" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c" "/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
   )
 
 

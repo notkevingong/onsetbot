@@ -3,7 +3,10 @@
   "output_dir": "/home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_fastrtps_c/onset_interfaces",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
-    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/LaunchCommand.idl"
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/LaunchCommand.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/OnsetStatus.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32Message.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces:msg/STM32State.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c",
@@ -14,6 +17,9 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/msg__type_support_c.cpp.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
-    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl"
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/LaunchCommand.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/STM32Message.idl",
+    "/home/gong/onset_ws/build/onset_interfaces/rosidl_adapter/onset_interfaces/msg/STM32State.idl"
   ]
 }
