@@ -1,0 +1,36 @@
+[0.994s] Invoking command in '/home/gong/onset_ws/src/onsetbot': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control LD_LIBRARY_PATH=/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[1.253s] running egg_info
+[1.253s] writing ../../build/onsetbot/onsetbot.egg-info/PKG-INFO
+[1.255s] writing dependency_links to ../../build/onsetbot/onsetbot.egg-info/dependency_links.txt
+[1.255s] writing entry points to ../../build/onsetbot/onsetbot.egg-info/entry_points.txt
+[1.255s] writing requirements to ../../build/onsetbot/onsetbot.egg-info/requires.txt
+[1.255s] writing top-level names to ../../build/onsetbot/onsetbot.egg-info/top_level.txt
+[1.258s] reading manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+[1.259s] writing manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+[1.260s] running build
+[1.260s] running build_py
+[1.261s] copying onsetbot/zero_sequence.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[1.262s] copying onsetbot/odrive_can_bridge.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[1.262s] copying onsetbot/vel_commander.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[1.262s] copying onsetbot/onset_gui.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[1.263s] running install
+[1.263s] running install_lib
+[1.264s] copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/zero_sequence.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+[1.265s] copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/odrive_can_bridge.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+[1.265s] copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/vel_commander.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+[1.265s] copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/onset_gui.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+[1.266s] byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/zero_sequence.py to zero_sequence.cpython-310.pyc
+[1.267s] byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/odrive_can_bridge.py to odrive_can_bridge.cpython-310.pyc
+[1.269s] byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/vel_commander.py to vel_commander.cpython-310.pyc
+[1.270s] byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/onset_gui.py to onset_gui.cpython-310.pyc
+[1.276s] running install_data
+[1.276s] running install_egg_info
+[1.278s] removing '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info' (and everything under it)
+[1.281s] Copying ../../build/onsetbot/onsetbot.egg-info to /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info
+[1.282s] running install_scripts
+[1.302s] Installing odrive_can_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[1.303s] Installing onset_gui script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[1.303s] Installing velocity_commander script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[1.303s] Installing zero_sequence script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[1.304s] writing list of installed files to '/home/gong/onset_ws/build/onsetbot/install.log'
+[1.330s] Invoked command in '/home/gong/onset_ws/src/onsetbot' returned '0': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control LD_LIBRARY_PATH=/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data

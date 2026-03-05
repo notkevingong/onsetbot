@@ -7,3 +7,5 @@ onset_interfaces.egg-info/top_level.txt
 onset_interfaces/msg/__init__.py
 onset_interfaces/msg/_launch_command.py
 onset_interfaces/msg/_onset_status.py
+onset_interfaces/msg/_stm32_message.py
+onset_interfaces/msg/_stm32_state.py

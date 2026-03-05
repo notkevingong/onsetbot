@@ -22,4 +22,5 @@
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/actuator_command
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/odrive_can_bridge
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/onset_gui
+/home/gong/onset_ws/install/onsetbot/lib/onsetbot/stm32_bridge
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/zero_sequence

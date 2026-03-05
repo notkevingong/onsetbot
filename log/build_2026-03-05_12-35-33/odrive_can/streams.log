@@ -1,0 +1,226 @@
+[0.111s] Invoking command in '/home/gong/onset_ws/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_can -- -j2 -l2
+[0.614s] [  1%] Built target odrive_can__cpp
+[0.645s] [ 11%] Built target odrive_can__rosidl_generator_c
+[0.890s] [ 21%] Built target odrive_can__rosidl_typesupport_cpp
+[0.934s] [ 21%] Built target ament_cmake_python_copy_odrive_can
+[1.133s] [ 31%] Built target odrive_can__rosidl_typesupport_fastrtps_c
+[1.170s] [ 41%] Built target odrive_can__rosidl_typesupport_fastrtps_cpp
+[1.353s] [ 51%] Built target odrive_can__rosidl_typesupport_introspection_c
+[1.395s] [ 61%] Built target odrive_can__rosidl_typesupport_c
+[1.507s] [ 71%] Built target odrive_can__rosidl_typesupport_introspection_cpp
+[1.768s] [ 80%] Built target odrive_can_node
+[1.957s] [ 80%] Built target odrive_can
+[2.153s] [ 81%] Built target odrive_can__py
+[2.348s] [ 90%] Built target odrive_can__rosidl_generator_py
+[2.510s] [ 93%] Built target odrive_can__rosidl_typesupport_fastrtps_c__pyext
+[2.660s] [ 96%] Built target odrive_can__rosidl_typesupport_introspection_c__pyext
+[2.830s] running egg_info
+[2.836s] [100%] Built target odrive_can__rosidl_typesupport_c__pyext
+[2.838s] writing odrive_can.egg-info/PKG-INFO
+[2.845s] writing dependency_links to odrive_can.egg-info/dependency_links.txt
+[2.846s] writing top-level names to odrive_can.egg-info/top_level.txt
+[2.853s] reading manifest file 'odrive_can.egg-info/SOURCES.txt'
+[2.854s] writing manifest file 'odrive_can.egg-info/SOURCES.txt'
+[2.959s] [100%] Built target ament_cmake_python_build_odrive_can_egg
+[3.027s] Invoked command in '/home/gong/onset_ws/build/odrive_can' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_can -- -j2 -l2
+[3.037s] Invoking command in '/home/gong/onset_ws/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_can
+[3.079s] -- Install configuration: ""
+[3.082s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/rosidl_interfaces/odrive_can
+[3.084s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.084s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.084s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/controller_status.h
+[3.085s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.085s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__functions.h
+[3.086s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__functions.h
+[3.086s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.h
+[3.088s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__functions.c
+[3.089s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__functions.c
+[3.089s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.h
+[3.089s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__functions.h
+[3.089s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.h
+[3.090s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__struct.h
+[3.093s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__struct.h
+[3.093s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__struct.h
+[3.094s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__functions.c
+[3.094s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/control_message.h
+[3.094s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_generator_c__visibility_control.h
+[3.094s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/o_drive_status.h
+[3.094s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.096s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.097s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__struct.h
+[3.097s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.h
+[3.098s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__functions.h
+[3.098s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__functions.c
+[3.098s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/axis_state.h
+[3.098s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/library_path.sh
+[3.099s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/library_path.dsv
+[3.102s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_generator_c.so
+[3.102s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.102s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.102s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.103s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h
+[3.103s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_fastrtps_c.h
+[3.103s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_c.h
+[3.103s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.103s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.106s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.112s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_fastrtps_c.h
+[3.112s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_fastrtps_c.so
+[3.114s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.114s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.114s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/control_message.hpp
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/o_drive_status.hpp
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.hpp
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__builder.hpp
+[3.115s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__struct.hpp
+[3.116s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__builder.hpp
+[3.116s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.hpp
+[3.116s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__traits.hpp
+[3.119s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__builder.hpp
+[3.120s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__traits.hpp
+[3.120s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__struct.hpp
+[3.120s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__struct.hpp
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__traits.hpp
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.hpp
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/controller_status.hpp
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.121s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__builder.hpp
+[3.122s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__struct.hpp
+[3.127s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__traits.hpp
+[3.127s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.hpp
+[3.127s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/axis_state.hpp
+[3.127s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.127s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.128s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.129s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_cpp.hpp
+[3.129s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/dds_fastrtps
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_fastrtps_cpp.hpp
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.130s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_fastrtps_cpp.hpp
+[3.131s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/dds_fastrtps
+[3.131s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_fastrtps_cpp.so
+[3.136s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.136s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.144s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.146s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_introspection_c.h
+[3.148s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.c
+[3.149s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_introspection_c.h
+[3.149s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.c
+[3.151s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_introspection_c.h
+[3.151s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.c
+[3.152s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.152s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.152s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.152s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_introspection_c.h
+[3.158s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.c
+[3.158s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_introspection_c.so
+[3.159s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_c.so
+[3.159s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can
+[3.162s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg
+[3.162s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail
+[3.163s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_introspection_cpp.hpp
+[3.163s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp
+[3.163s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.cpp
+[3.165s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_introspection_cpp.hpp
+[3.165s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.cpp
+[3.165s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.cpp
+[3.167s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv
+[3.168s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail
+[3.168s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.cpp
+[3.171s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_introspection_cpp.hpp
+[3.171s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_introspection_cpp.so
+[3.174s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_cpp.so
+[3.174s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/pythonpath.sh
+[3.174s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/pythonpath.dsv
+[3.174s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info
+[3.177s] -- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/SOURCES.txt
+[3.177s] -- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/top_level.txt
+[3.178s] -- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/dependency_links.txt
+[3.178s] -- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/PKG-INFO
+[3.178s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can
+[3.178s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.179s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_introspection_c.c
+[3.179s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/__init__.py
+[3.179s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.179s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/libodrive_can__rosidl_generator_py.so
+[3.179s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg
+[3.180s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_control_message_s.c
+[3.180s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_controller_status.py
+[3.180s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/__init__.py
+[3.180s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_o_drive_status.py
+[3.180s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_controller_status_s.c
+[3.183s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_control_message.py
+[3.183s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_o_drive_status_s.c
+[3.183s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.183s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.185s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_c.c
+[3.185s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv
+[3.186s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/_axis_state_s.c
+[3.186s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/_axis_state.py
+[3.187s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/__init__.py
+[3.315s] Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can'...
+[3.317s] Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg'...
+[3.319s] Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv'...
+[3.332s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.337s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.342s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.342s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_generator_py.so
+[3.343s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControlMessage.idl
+[3.343s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControllerStatus.idl
+[3.343s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ODriveStatus.idl
+[3.343s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState.idl
+[3.343s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControlMessage.msg
+[3.348s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControllerStatus.msg
+[3.348s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ODriveStatus.msg
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState.srv
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState_Request.msg
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState_Response.msg
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/odrive_can/odrive_can_node
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/launch
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/launch/example_launch.yaml
+[3.349s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/package_run_dependencies/odrive_can
+[3.350s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/parent_prefix_path/odrive_can
+[3.354s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/ament_prefix_path.sh
+[3.354s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/ament_prefix_path.dsv
+[3.354s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/path.sh
+[3.354s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/path.dsv
+[3.355s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.bash
+[3.358s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.sh
+[3.358s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.zsh
+[3.358s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.dsv
+[3.358s] -- Installing: /home/gong/onset_ws/install/odrive_can/share/odrive_can/package.dsv
+[3.359s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/packages/odrive_can
+[3.359s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cExport.cmake
+[3.359s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cExport-noconfig.cmake
+[3.360s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cExport.cmake
+[3.365s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.365s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cppExport.cmake
+[3.367s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.367s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.367s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cExport.cmake
+[3.370s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.373s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cExport.cmake
+[3.376s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cExport-noconfig.cmake
+[3.376s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cppExport.cmake
+[3.376s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.377s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cppExport.cmake
+[3.377s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cppExport-noconfig.cmake
+[3.377s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_pyExport.cmake
+[3.380s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_pyExport-noconfig.cmake
+[3.380s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake-extras.cmake
+[3.380s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.380s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_libraries-extras.cmake
+[3.380s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_targets-extras.cmake
+[3.381s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.381s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.381s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.381s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_canConfig.cmake
+[3.393s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_canConfig-version.cmake
+[3.395s] -- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/package.xml
+[3.401s] Invoked command in '/home/gong/onset_ws/build/odrive_can' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_can

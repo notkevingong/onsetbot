@@ -1,0 +1,302 @@
+[0.021s] Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+[0.145s] -- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.823s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.841s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.857s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.006s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.440s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.685s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.987s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.026s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.064s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.065s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.065s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.112s] -- Configuring done
+[2.233s] -- Generating done
+[2.255s] -- Build files have been written to: /home/gong/onset_ws/build/onset_interfaces
+[2.306s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.335s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[3.484s] [  3%] Built target onset_interfaces__cpp
+[3.495s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_generator_c[0m
+[3.524s] [  5%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o[0m
+[3.601s] [  5%] Built target ament_cmake_python_copy_onset_interfaces
+[3.632s] [  7%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.922s] [  9%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o[0m
+[4.008s] [ 10%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o[0m
+[4.079s] [ 12%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o[0m
+[4.149s] [ 14%] [32m[1mLinking C shared library libonset_interfaces__rosidl_generator_c.so[0m
+[4.252s] [ 14%] Built target onset_interfaces__rosidl_generator_c
+[4.267s] [ 16%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.271s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[4.306s] [ 18%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/launch_command__type_support.cpp.o[0m
+[4.782s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_cpp[0m
+[4.810s] [ 20%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/launch_command__type_support.cpp.o[0m
+[5.251s] [ 21%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/onset_status__type_support.cpp.o[0m
+[5.489s] [ 23%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/onset_status__type_support.cpp.o[0m
+[5.828s] [ 25%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/stm32_message__type_support.cpp.o[0m
+[6.023s] [ 27%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/stm32_message__type_support.cpp.o[0m
+[6.396s] [ 29%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/stm32_state__type_support.cpp.o[0m
+[6.538s] [ 30%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/stm32_state__type_support.cpp.o[0m
+[6.869s] [ 32%] [32m[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[6.989s] [ 34%] [32m[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[6.995s] [ 34%] Built target onset_interfaces__rosidl_typesupport_fastrtps_cpp
+[7.013s] [ 36%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.055s] [ 36%] Built target onset_interfaces__rosidl_typesupport_introspection_cpp
+[7.073s] [ 38%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.362s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_cpp[0m
+[7.390s] [ 40%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/launch_command__type_support.cpp.o[0m
+[7.526s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_c[0m
+[7.550s] [ 41%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/launch_command__type_support_c.cpp.o[0m
+[7.692s] [ 43%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/onset_status__type_support.cpp.o[0m
+[7.959s] [ 45%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/onset_status__type_support_c.cpp.o[0m
+[8.013s] [ 47%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/stm32_message__type_support.cpp.o[0m
+[8.320s] [ 49%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/stm32_state__type_support.cpp.o[0m
+[8.353s] [ 50%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/stm32_message__type_support_c.cpp.o[0m
+[8.629s] [ 52%] [32m[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_cpp.so[0m
+[8.703s] [ 52%] Built target onset_interfaces__rosidl_typesupport_cpp
+[8.717s] [ 54%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/stm32_state__type_support_c.cpp.o[0m
+[8.746s] [ 56%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[9.134s] [ 58%] [32m[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[9.189s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_c[0m
+[9.215s] [ 60%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o[0m
+[9.256s] [ 60%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c
+[9.276s] [ 63%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.277s] [ 63%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o[0m
+[9.328s] [ 65%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o[0m
+[9.380s] [ 67%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o[0m
+[9.432s] [ 69%] [32m[1mLinking C shared library libonset_interfaces__rosidl_typesupport_introspection_c.so[0m
+[9.493s] [ 69%] Built target onset_interfaces__rosidl_typesupport_introspection_c
+[9.634s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_c[0m
+[9.655s] [ 70%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/launch_command__type_support.cpp.o[0m
+[9.705s] [ 72%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/onset_status__type_support.cpp.o[0m
+[9.753s] [ 74%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/stm32_message__type_support.cpp.o[0m
+[9.799s] [ 76%] [32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/stm32_state__type_support.cpp.o[0m
+[9.821s] running egg_info
+[9.823s] writing onset_interfaces.egg-info/PKG-INFO
+[9.824s] writing dependency_links to onset_interfaces.egg-info/dependency_links.txt
+[9.826s] writing top-level names to onset_interfaces.egg-info/top_level.txt
+[9.835s] reading manifest file 'onset_interfaces.egg-info/SOURCES.txt'
+[9.838s] writing manifest file 'onset_interfaces.egg-info/SOURCES.txt'
+[9.857s] [ 78%] [32m[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_c.so[0m
+[9.884s] [ 78%] Built target ament_cmake_python_build_onset_interfaces_egg
+[9.915s] [ 78%] Built target onset_interfaces__rosidl_typesupport_c
+[9.948s] [ 78%] Built target onset_interfaces
+[9.982s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.774s] [ 80%] Built target onset_interfaces__py
+[10.794s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_generator_py[0m
+[10.821s] [ 81%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c.o[0m
+[10.821s] [ 83%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c.o[0m
+[11.043s] [ 87%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c.o[0m
+[11.044s] [ 87%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c.o[0m
+[11.189s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/onset_interfaces/libonset_interfaces__rosidl_generator_py.so[0m
+[11.415s] [ 89%] Built target onset_interfaces__rosidl_generator_py
+[11.454s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[11.454s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[11.475s] [ 90%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[11.489s] [ 92%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[11.611s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.634s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.673s] [ 96%] Built target onset_interfaces__rosidl_typesupport_introspection_c__pyext
+[11.696s] [35m[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_c__pyext[0m
+[11.710s] [ 96%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[11.722s] [ 98%] [32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[11.857s] [100%] [32m[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[11.906s] [100%] Built target onset_interfaces__rosidl_typesupport_c__pyext
+[11.925s] Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+[11.929s] Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[11.942s] -- Install configuration: ""
+[11.942s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/rosidl_interfaces/onset_interfaces
+[11.944s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.944s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.944s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.h
+[11.944s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.944s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__functions.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__functions.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__functions.c
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__functions.c
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.h
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__functions.c
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__functions.c
+[11.945s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__functions.h
+[11.946s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__functions.h
+[11.946s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.h
+[11.946s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.h
+[11.946s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_c__visibility_control.h
+[11.948s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.h
+[11.949s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.h
+[11.949s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.h
+[11.950s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.sh
+[11.950s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.dsv
+[11.950s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_c.so
+[11.950s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_c.so" to ""
+[11.950s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.950s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.951s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.952s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_c.h
+[11.952s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_c.h
+[11.952s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_c.h
+[11.952s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_c.h
+[11.952s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.952s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_c.so
+[11.952s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[11.955s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.955s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.956s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.c
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.c
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_c.h
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_c.h
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.c
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h
+[11.956s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.c
+[11.956s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[11.959s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_c.so
+[11.959s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[11.962s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_c.so
+[11.962s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_c.so" to ""
+[11.964s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.964s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.964s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.hpp
+[11.964s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.hpp
+[11.964s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[11.964s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.964s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__traits.hpp
+[11.965s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.hpp
+[11.965s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.hpp
+[11.966s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__builder.hpp
+[11.968s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__builder.hpp
+[11.968s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.hpp
+[11.968s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.hpp
+[11.968s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__builder.hpp
+[11.968s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__builder.hpp
+[11.969s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__traits.hpp
+[11.969s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.hpp
+[11.970s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__traits.hpp
+[11.970s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__traits.hpp
+[11.970s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.hpp
+[11.971s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.hpp
+[11.972s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.hpp
+[11.972s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.hpp
+[11.973s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.hpp
+[11.973s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.974s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.974s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.974s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_cpp.hpp
+[11.975s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_cpp.hpp
+[11.976s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_cpp.hpp
+[11.976s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/dds_fastrtps
+[11.976s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_cpp.hpp
+[11.976s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[11.979s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[11.979s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[11.979s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces
+[11.980s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg
+[11.982s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail
+[11.982s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_cpp.hpp
+[11.982s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.cpp
+[11.982s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_cpp.hpp
+[11.985s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.cpp
+[11.985s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_cpp.hpp
+[11.986s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.cpp
+[11.986s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_cpp.hpp
+[11.986s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.cpp
+[11.988s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_cpp.so
+[11.990s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[11.990s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_cpp.so
+[11.992s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_cpp.so" to ""
+[11.992s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.sh
+[11.993s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.dsv
+[11.993s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info
+[11.994s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[11.995s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[11.995s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[11.996s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[11.996s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces
+[11.996s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[11.997s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/__init__.py
+[11.997s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[11.998s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg
+[11.998s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state_s.c
+[11.998s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command_s.c
+[12.000s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/__init__.py
+[12.002s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command.py
+[12.002s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state.py
+[12.003s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status_s.c
+[12.003s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message.py
+[12.004s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message_s.c
+[12.005s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status.py
+[12.006s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.006s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c
+[12.006s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/libonset_interfaces__rosidl_generator_py.so
+[12.006s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[12.006s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[12.065s] Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces'...
+[12.065s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/__init__.py'...
+[12.065s] Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg'...
+[12.065s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/__init__.py'...
+[12.065s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command.py'...
+[12.065s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status.py'...
+[12.066s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message.py'...
+[12.066s] Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state.py'...
+[12.073s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[12.074s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.075s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[12.075s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.076s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[12.076s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[12.080s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_py.so
+[12.080s] -- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_py.so" to ""
+[12.080s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.idl
+[12.080s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.idl
+[12.081s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.idl
+[12.081s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.idl
+[12.082s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.msg
+[12.083s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.msg
+[12.083s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.msg
+[12.083s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.msg
+[12.083s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/package_run_dependencies/onset_interfaces
+[12.083s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/parent_prefix_path/onset_interfaces
+[12.084s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.sh
+[12.084s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.dsv
+[12.084s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.sh
+[12.085s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.dsv
+[12.085s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.bash
+[12.086s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.sh
+[12.086s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.zsh
+[12.086s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.dsv
+[12.087s] -- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv
+[12.087s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/packages/onset_interfaces
+[12.089s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport.cmake
+[12.089s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport-noconfig.cmake
+[12.089s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[12.089s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[12.090s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[12.090s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[12.091s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport.cmake
+[12.091s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[12.091s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cppExport.cmake
+[12.092s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[12.092s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[12.093s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[12.093s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[12.094s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport.cmake
+[12.094s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[12.095s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig-version.cmake
+[12.096s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.xml
+[12.102s] Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces

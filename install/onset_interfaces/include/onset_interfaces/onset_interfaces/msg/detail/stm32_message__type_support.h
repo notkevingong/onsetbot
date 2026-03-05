@@ -1,0 +1,33 @@
+// generated from rosidl_generator_c/resource/idl__type_support.h.em
+// with input from onset_interfaces:msg/STM32Message.idl
+// generated code does not contain a copyright notice
+
+#ifndef ONSET_INTERFACES__MSG__DETAIL__STM32_MESSAGE__TYPE_SUPPORT_H_
+#define ONSET_INTERFACES__MSG__DETAIL__STM32_MESSAGE__TYPE_SUPPORT_H_
+
+#include "rosidl_typesupport_interface/macros.h"
+
+#include "onset_interfaces/msg/rosidl_generator_c__visibility_control.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include "rosidl_runtime_c/message_type_support_struct.h"
+
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_C_PUBLIC_onset_interfaces
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  onset_interfaces,
+  msg,
+  STM32Message
+)();
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // ONSET_INTERFACES__MSG__DETAIL__STM32_MESSAGE__TYPE_SUPPORT_H_

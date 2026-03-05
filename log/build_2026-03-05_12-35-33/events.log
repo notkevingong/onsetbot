@@ -1,0 +1,964 @@
+[0.000000] (-) TimerEvent: {}
+[0.016748] (odrive_can) JobQueued: {'identifier': 'odrive_can', 'dependencies': OrderedDict()}
+[0.016901] (odrive_ros2_control) JobQueued: {'identifier': 'odrive_ros2_control', 'dependencies': OrderedDict()}
+[0.016965] (onset_interfaces) JobQueued: {'identifier': 'onset_interfaces', 'dependencies': OrderedDict()}
+[0.017002] (odrive_botwheel_explorer) JobQueued: {'identifier': 'odrive_botwheel_explorer', 'dependencies': OrderedDict([('odrive_ros2_control', '/home/gong/onset_ws/install/odrive_ros2_control')])}
+[0.017150] (onsetbot) JobQueued: {'identifier': 'onsetbot', 'dependencies': OrderedDict([('odrive_can', '/home/gong/onset_ws/install/odrive_can'), ('onset_interfaces', '/home/gong/onset_ws/install/onset_interfaces')])}
+[0.017230] (odrive_can) JobStarted: {'identifier': 'odrive_can'}
+[0.067246] (odrive_ros2_control) JobStarted: {'identifier': 'odrive_ros2_control'}
+[0.093752] (odrive_can) JobProgress: {'identifier': 'odrive_can', 'progress': 'cmake'}
+[0.098513] (odrive_can) JobProgress: {'identifier': 'odrive_can', 'progress': 'build'}
+[0.099439] (-) TimerEvent: {}
+[0.099641] (odrive_can) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gong/onset_ws/build/odrive_can', '--', '-j2', '-l2'], 'cwd': '/home/gong/onset_ws/build/odrive_can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_can'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[0.133994] (odrive_ros2_control) JobProgress: {'identifier': 'odrive_ros2_control', 'progress': 'cmake'}
+[0.144824] (odrive_ros2_control) JobProgress: {'identifier': 'odrive_ros2_control', 'progress': 'build'}
+[0.144942] (odrive_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gong/onset_ws/build/odrive_ros2_control', '--', '-j2', '-l2'], 'cwd': '/home/gong/onset_ws/build/odrive_ros2_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_ros2_control'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[0.200179] (-) TimerEvent: {}
+[0.304231] (-) TimerEvent: {}
+[0.406329] (-) TimerEvent: {}
+[0.508426] (-) TimerEvent: {}
+[0.613176] (-) TimerEvent: {}
+[0.631254] (odrive_can) StdoutLine: {'line': b'[  1%] Built target odrive_can__cpp\n'}
+[0.662003] (odrive_can) StdoutLine: {'line': b'[ 11%] Built target odrive_can__rosidl_generator_c\n'}
+[0.714660] (-) TimerEvent: {}
+[0.815551] (-) TimerEvent: {}
+[0.881559] (odrive_ros2_control) StdoutLine: {'line': b'[100%] Built target odrive_ros2_control_plugin\n'}
+[0.906992] (odrive_can) StdoutLine: {'line': b'[ 21%] Built target odrive_can__rosidl_typesupport_cpp\n'}
+[0.916049] (-) TimerEvent: {}
+[0.940269] (odrive_ros2_control) CommandEnded: {'returncode': 0}
+[0.943682] (odrive_ros2_control) JobProgress: {'identifier': 'odrive_ros2_control', 'progress': 'install'}
+[0.950449] (odrive_can) StdoutLine: {'line': b'[ 21%] Built target ament_cmake_python_copy_odrive_can\n'}
+[1.009982] (odrive_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gong/onset_ws/build/odrive_ros2_control'], 'cwd': '/home/gong/onset_ws/build/odrive_ros2_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_ros2_control'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[1.016241] (-) TimerEvent: {}
+[1.045491] (odrive_ros2_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.050529] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/odrive_hardware_interface.xml\n'}
+[1.055865] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/lib/libodrive_ros2_control_plugin.so\n'}
+[1.056758] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/ament_index/resource_index/package_run_dependencies/odrive_ros2_control\n'}
+[1.061702] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/ament_index/resource_index/parent_prefix_path/odrive_ros2_control\n'}
+[1.061948] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/environment/ament_prefix_path.sh\n'}
+[1.062080] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/environment/ament_prefix_path.dsv\n'}
+[1.062198] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/environment/path.sh\n'}
+[1.062310] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/environment/path.dsv\n'}
+[1.062420] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/local_setup.bash\n'}
+[1.063990] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/local_setup.sh\n'}
+[1.064328] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/local_setup.zsh\n'}
+[1.064549] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/local_setup.dsv\n'}
+[1.066067] (odrive_ros2_control) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.dsv\n'}
+[1.067586] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/ament_index/resource_index/packages/odrive_ros2_control\n'}
+[1.069209] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/odrive_ros2_control\n'}
+[1.072913] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.073219] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/cmake/odrive_ros2_controlConfig.cmake\n'}
+[1.073476] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/cmake/odrive_ros2_controlConfig-version.cmake\n'}
+[1.073940] (odrive_ros2_control) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.xml\n'}
+[1.088745] (odrive_ros2_control) CommandEnded: {'returncode': 0}
+[1.117703] (-) TimerEvent: {}
+[1.149625] (odrive_can) StdoutLine: {'line': b'[ 31%] Built target odrive_can__rosidl_typesupport_fastrtps_c\n'}
+[1.187480] (odrive_can) StdoutLine: {'line': b'[ 41%] Built target odrive_can__rosidl_typesupport_fastrtps_cpp\n'}
+[1.219143] (-) TimerEvent: {}
+[1.278582] (odrive_ros2_control) JobEnded: {'identifier': 'odrive_ros2_control', 'rc': 0}
+[1.282384] (onset_interfaces) JobStarted: {'identifier': 'onset_interfaces'}
+[1.313734] (onset_interfaces) JobProgress: {'identifier': 'onset_interfaces', 'progress': 'cmake'}
+[1.320176] (-) TimerEvent: {}
+[1.326206] (onset_interfaces) JobProgress: {'identifier': 'onset_interfaces', 'progress': 'build'}
+[1.329213] (onset_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gong/onset_ws/build/onset_interfaces', '--', '-j2', '-l2'], 'cwd': '/home/gong/onset_ws/build/onset_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/onset_interfaces'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[1.369231] (odrive_can) StdoutLine: {'line': b'[ 51%] Built target odrive_can__rosidl_typesupport_introspection_c\n'}
+[1.412217] (odrive_can) StdoutLine: {'line': b'[ 61%] Built target odrive_can__rosidl_typesupport_c\n'}
+[1.420952] (-) TimerEvent: {}
+[1.504171] (onset_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.13 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.521872] (-) TimerEvent: {}
+[1.524175] (odrive_can) StdoutLine: {'line': b'[ 71%] Built target odrive_can__rosidl_typesupport_introspection_cpp\n'}
+[1.623789] (-) TimerEvent: {}
+[1.724976] (-) TimerEvent: {}
+[1.784623] (odrive_can) StdoutLine: {'line': b'[ 80%] Built target odrive_can_node\n'}
+[1.825882] (-) TimerEvent: {}
+[1.926929] (-) TimerEvent: {}
+[1.974286] (odrive_can) StdoutLine: {'line': b'[ 80%] Built target odrive_can\n'}
+[2.028018] (-) TimerEvent: {}
+[2.131260] (-) TimerEvent: {}
+[2.170128] (odrive_can) StdoutLine: {'line': b'[ 81%] Built target odrive_can__py\n'}
+[2.231866] (-) TimerEvent: {}
+[2.334792] (-) TimerEvent: {}
+[2.364425] (odrive_can) StdoutLine: {'line': b'[ 90%] Built target odrive_can__rosidl_generator_py\n'}
+[2.435287] (-) TimerEvent: {}
+[2.526976] (odrive_can) StdoutLine: {'line': b'[ 93%] Built target odrive_can__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.536017] (-) TimerEvent: {}
+[2.573477] (onset_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.606483] (onset_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.637042] (-) TimerEvent: {}
+[2.640397] (onset_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.675942] (odrive_can) StdoutLine: {'line': b'[ 96%] Built target odrive_can__rosidl_typesupport_introspection_c__pyext\n'}
+[2.737828] (-) TimerEvent: {}
+[2.839071] (-) TimerEvent: {}
+[2.844668] (odrive_can) StdoutLine: {'line': b'running egg_info\n'}
+[2.847520] (odrive_can) StdoutLine: {'line': b'[100%] Built target odrive_can__rosidl_typesupport_c__pyext\n'}
+[2.854416] (odrive_can) StdoutLine: {'line': b'writing odrive_can.egg-info/PKG-INFO\n'}
+[2.855531] (odrive_can) StdoutLine: {'line': b'writing dependency_links to odrive_can.egg-info/dependency_links.txt\n'}
+[2.862521] (odrive_can) StdoutLine: {'line': b'writing top-level names to odrive_can.egg-info/top_level.txt\n'}
+[2.869835] (odrive_can) StdoutLine: {'line': b"reading manifest file 'odrive_can.egg-info/SOURCES.txt'\n"}
+[2.871335] (odrive_can) StdoutLine: {'line': b"writing manifest file 'odrive_can.egg-info/SOURCES.txt'\n"}
+[2.934224] (onset_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.940005] (-) TimerEvent: {}
+[2.975444] (odrive_can) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_odrive_can_egg\n'}
+[3.040691] (-) TimerEvent: {}
+[3.043474] (odrive_can) CommandEnded: {'returncode': 0}
+[3.047751] (odrive_can) JobProgress: {'identifier': 'odrive_can', 'progress': 'install'}
+[3.053626] (odrive_can) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gong/onset_ws/build/odrive_can'], 'cwd': '/home/gong/onset_ws/build/odrive_can', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_can'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[3.096307] (odrive_can) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.099031] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/rosidl_interfaces/odrive_can\n'}
+[3.100417] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.100903] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.101111] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/controller_status.h\n'}
+[3.102215] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.102467] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__functions.h\n'}
+[3.102650] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__functions.h\n'}
+[3.103078] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.h\n'}
+[3.105233] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__functions.c\n'}
+[3.105781] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__functions.c\n'}
+[3.106045] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.h\n'}
+[3.106360] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__functions.h\n'}
+[3.106553] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.h\n'}
+[3.106679] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__struct.h\n'}
+[3.109521] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__struct.h\n'}
+[3.110503] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__struct.h\n'}
+[3.110676] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__functions.c\n'}
+[3.111007] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/control_message.h\n'}
+[3.111155] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.111285] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/o_drive_status.h\n'}
+[3.111425] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.111654] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.114262] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__struct.h\n'}
+[3.114543] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.h\n'}
+[3.114733] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__functions.h\n'}
+[3.115173] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__functions.c\n'}
+[3.115379] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/axis_state.h\n'}
+[3.115527] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/library_path.sh\n'}
+[3.115670] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/library_path.dsv\n'}
+[3.115847] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_generator_c.so\n'}
+[3.119023] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.119185] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.119303] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.119486] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.119848] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_fastrtps_c.h\n'}
+[3.120058] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_c.h\n'}
+[3.120207] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.120371] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.120535] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.127850] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_fastrtps_c.h\n'}
+[3.128833] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_fastrtps_c.so\n'}
+[3.131305] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.131509] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.131636] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/control_message.hpp\n'}
+[3.131746] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.131853] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/o_drive_status.hpp\n'}
+[3.131954] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.132053] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.hpp\n'}
+[3.132154] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__builder.hpp\n'}
+[3.132512] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__struct.hpp\n'}
+[3.132796] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__builder.hpp\n'}
+[3.133000] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.hpp\n'}
+[3.133217] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__traits.hpp\n'}
+[3.133485] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__builder.hpp\n'}
+[3.136816] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__traits.hpp\n'}
+[3.137330] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__struct.hpp\n'}
+[3.137495] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__struct.hpp\n'}
+[3.137701] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__traits.hpp\n'}
+[3.138031] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.hpp\n'}
+[3.138186] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/controller_status.hpp\n'}
+[3.138327] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.138473] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.138597] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__builder.hpp\n'}
+[3.138703] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__struct.hpp\n'}
+[3.143253] (-) TimerEvent: {}
+[3.143732] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__traits.hpp\n'}
+[3.144128] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.hpp\n'}
+[3.144319] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/axis_state.hpp\n'}
+[3.144441] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.144548] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.144650] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.145956] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.146225] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.146391] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/dds_fastrtps\n'}
+[3.147006] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.147150] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.147323] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.147465] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.147577] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.147679] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/dds_fastrtps\n'}
+[3.147800] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.147897] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.153456] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.160374] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.161240] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_introspection_c.h\n'}
+[3.163621] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.c\n'}
+[3.166117] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_introspection_c.h\n'}
+[3.166489] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.c\n'}
+[3.168067] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_introspection_c.h\n'}
+[3.168459] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.c\n'}
+[3.169026] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.169317] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.169453] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.169568] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_introspection_c.h\n'}
+[3.169676] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.c\n'}
+[3.175251] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_introspection_c.so\n'}
+[3.175575] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_c.so\n'}
+[3.176269] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can\n'}
+[3.176548] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg\n'}
+[3.179488] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail\n'}
+[3.179637] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.179846] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.180349] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/o_drive_status__type_support.cpp\n'}
+[3.180672] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.182038] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/control_message__type_support.cpp\n'}
+[3.182294] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/msg/detail/controller_status__type_support.cpp\n'}
+[3.182532] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv\n'}
+[3.184739] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail\n'}
+[3.185256] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__type_support.cpp\n'}
+[3.185501] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/include/odrive_can/odrive_can/srv/detail/axis_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.188271] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_introspection_cpp.so\n'}
+[3.188599] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_typesupport_cpp.so\n'}
+[3.191058] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/pythonpath.sh\n'}
+[3.191254] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/pythonpath.dsv\n'}
+[3.191449] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info\n'}
+[3.193982] (odrive_can) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[3.194291] (odrive_can) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[3.194469] (odrive_can) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[3.194888] (odrive_can) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[3.195151] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can\n'}
+[3.195336] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.195495] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.196085] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/__init__.py\n'}
+[3.196279] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.196475] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/libodrive_can__rosidl_generator_py.so\n'}
+[3.196604] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg\n'}
+[3.196714] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_control_message_s.c\n'}
+[3.196834] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_controller_status.py\n'}
+[3.197196] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/__init__.py\n'}
+[3.197333] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_o_drive_status.py\n'}
+[3.197497] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_controller_status_s.c\n'}
+[3.197648] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_control_message.py\n'}
+[3.200279] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg/_o_drive_status_s.c\n'}
+[3.200426] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.200570] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.200737] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/_odrive_can_s.ep.rosidl_typesupport_c.c\n'}
+[3.202447] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv\n'}
+[3.202927] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/_axis_state_s.c\n'}
+[3.203220] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/_axis_state.py\n'}
+[3.203436] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv/__init__.py\n'}
+[3.250861] (-) TimerEvent: {}
+[3.331643] (odrive_can) StdoutLine: {'line': b"Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can'...\n"}
+[3.333037] (odrive_can) StdoutLine: {'line': b"Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/msg'...\n"}
+[3.335199] (odrive_can) StdoutLine: {'line': b"Listing '/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/srv'...\n"}
+[3.348377] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.352288] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.354531] (-) TimerEvent: {}
+[3.359003] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages/odrive_can/odrive_can_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.359237] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/libodrive_can__rosidl_generator_py.so\n'}
+[3.359904] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControlMessage.idl\n'}
+[3.360197] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControllerStatus.idl\n'}
+[3.360333] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ODriveStatus.idl\n'}
+[3.360446] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState.idl\n'}
+[3.360557] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControlMessage.msg\n'}
+[3.364828] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ControllerStatus.msg\n'}
+[3.365368] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/msg/ODriveStatus.msg\n'}
+[3.365702] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState.srv\n'}
+[3.365894] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState_Request.msg\n'}
+[3.366020] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/srv/AxisState_Response.msg\n'}
+[3.366244] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/lib/odrive_can/odrive_can_node\n'}
+[3.366364] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/launch\n'}
+[3.366502] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/launch/example_launch.yaml\n'}
+[3.366607] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/package_run_dependencies/odrive_can\n'}
+[3.366775] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/parent_prefix_path/odrive_can\n'}
+[3.370972] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/ament_prefix_path.sh\n'}
+[3.371286] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/ament_prefix_path.dsv\n'}
+[3.371409] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/path.sh\n'}
+[3.371521] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/environment/path.dsv\n'}
+[3.371630] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.bash\n'}
+[3.372177] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.sh\n'}
+[3.375133] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.zsh\n'}
+[3.375290] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/local_setup.dsv\n'}
+[3.375475] (odrive_can) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_can/share/odrive_can/package.dsv\n'}
+[3.375927] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/ament_index/resource_index/packages/odrive_can\n'}
+[3.376182] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cExport.cmake\n'}
+[3.376398] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.376611] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.376959] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.382094] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_cppExport.cmake\n'}
+[3.384094] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.384336] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.384465] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.387041] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.387227] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cExport.cmake\n'}
+[3.390408] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.393284] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.393447] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.393634] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cppExport.cmake\n'}
+[3.394131] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_can__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.394292] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_pyExport.cmake\n'}
+[3.394498] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/export_odrive_can__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.396860] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake-extras.cmake\n'}
+[3.397101] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.397283] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.397405] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.397593] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.398090] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.398220] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.398331] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_canConfig.cmake\n'}
+[3.405114] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/cmake/odrive_canConfig-version.cmake\n'}
+[3.411697] (odrive_can) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_can/share/odrive_can/package.xml\n'}
+[3.417153] (odrive_can) CommandEnded: {'returncode': 0}
+[3.455486] (-) TimerEvent: {}
+[3.491482] (odrive_can) JobEnded: {'identifier': 'odrive_can', 'rc': 0}
+[3.495339] (odrive_botwheel_explorer) JobStarted: {'identifier': 'odrive_botwheel_explorer'}
+[3.556306] (-) TimerEvent: {}
+[3.560997] (odrive_botwheel_explorer) JobProgress: {'identifier': 'odrive_botwheel_explorer', 'progress': 'cmake'}
+[3.572338] (odrive_botwheel_explorer) JobProgress: {'identifier': 'odrive_botwheel_explorer', 'progress': 'build'}
+[3.572532] (odrive_botwheel_explorer) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gong/onset_ws/build/odrive_botwheel_explorer', '--', '-j2', '-l2'], 'cwd': '/home/gong/onset_ws/build/odrive_botwheel_explorer', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_botwheel_explorer'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[3.656964] (-) TimerEvent: {}
+[3.759044] (odrive_botwheel_explorer) CommandEnded: {'returncode': 0}
+[3.761969] (-) TimerEvent: {}
+[3.768282] (odrive_botwheel_explorer) JobProgress: {'identifier': 'odrive_botwheel_explorer', 'progress': 'install'}
+[3.768427] (odrive_botwheel_explorer) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gong/onset_ws/build/odrive_botwheel_explorer'], 'cwd': '/home/gong/onset_ws/build/odrive_botwheel_explorer', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/odrive_botwheel_explorer'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[3.809221] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.814025] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/urdf\n'}
+[3.823416] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/urdf/diffbot_description.urdf.xacro\n'}
+[3.824082] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/urdf/diffbot.ros2_control.xacro\n'}
+[3.824231] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/urdf/diffbot.urdf.xacro\n'}
+[3.824377] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/config\n'}
+[3.824485] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/config/diffbot_controllers.yaml\n'}
+[3.824752] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/launch\n'}
+[3.824949] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/launch/botwheel_explorer.launch.py\n'}
+[3.829802] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/ament_index/resource_index/package_run_dependencies/odrive_botwheel_explorer\n'}
+[3.832141] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/ament_index/resource_index/parent_prefix_path/odrive_botwheel_explorer\n'}
+[3.832356] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/environment/ament_prefix_path.sh\n'}
+[3.832887] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/environment/ament_prefix_path.dsv\n'}
+[3.833208] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/environment/path.sh\n'}
+[3.833333] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/environment/path.dsv\n'}
+[3.833469] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/local_setup.bash\n'}
+[3.838361] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/local_setup.sh\n'}
+[3.838650] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/local_setup.zsh\n'}
+[3.839279] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/local_setup.dsv\n'}
+[3.839501] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.dsv\n'}
+[3.839687] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/ament_index/resource_index/packages/odrive_botwheel_explorer\n'}
+[3.846798] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/cmake/odrive_botwheel_explorerConfig.cmake\n'}
+[3.847190] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/cmake/odrive_botwheel_explorerConfig-version.cmake\n'}
+[3.847510] (odrive_botwheel_explorer) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.xml\n'}
+[3.852267] (odrive_botwheel_explorer) CommandEnded: {'returncode': 0}
+[3.863283] (-) TimerEvent: {}
+[3.930430] (odrive_botwheel_explorer) JobEnded: {'identifier': 'odrive_botwheel_explorer', 'rc': 0}
+[3.964238] (-) TimerEvent: {}
+[4.065922] (-) TimerEvent: {}
+[4.167206] (-) TimerEvent: {}
+[4.268541] (-) TimerEvent: {}
+[4.369308] (-) TimerEvent: {}
+[4.383642] (onset_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.470145] (-) TimerEvent: {}
+[4.572123] (-) TimerEvent: {}
+[4.673641] (-) TimerEvent: {}
+[4.775051] (-) TimerEvent: {}
+[4.878054] (-) TimerEvent: {}
+[4.980064] (-) TimerEvent: {}
+[5.080271] (onset_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.080806] (-) TimerEvent: {}
+[5.182631] (-) TimerEvent: {}
+[5.283846] (-) TimerEvent: {}
+[5.385749] (-) TimerEvent: {}
+[5.488042] (-) TimerEvent: {}
+[5.590836] (-) TimerEvent: {}
+[5.692970] (-) TimerEvent: {}
+[5.794554] (-) TimerEvent: {}
+[5.896038] (-) TimerEvent: {}
+[5.970100] (onset_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.996679] (-) TimerEvent: {}
+[6.062495] (onset_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[6.097863] (-) TimerEvent: {}
+[6.157333] (onset_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.157849] (onset_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[6.158451] (onset_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[6.199192] (-) TimerEvent: {}
+[6.270761] (onset_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.300564] (-) TimerEvent: {}
+[6.401880] (-) TimerEvent: {}
+[6.503022] (-) TimerEvent: {}
+[6.544566] (onset_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[6.606330] (-) TimerEvent: {}
+[6.607276] (onset_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/gong/onset_ws/build/onset_interfaces\n'}
+[6.707015] (-) TimerEvent: {}
+[6.711057] (onset_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.786554] (onset_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[6.807830] (-) TimerEvent: {}
+[6.908759] (-) TimerEvent: {}
+[7.011116] (-) TimerEvent: {}
+[7.111994] (-) TimerEvent: {}
+[7.214008] (-) TimerEvent: {}
+[7.314914] (-) TimerEvent: {}
+[7.415847] (-) TimerEvent: {}
+[7.519615] (-) TimerEvent: {}
+[7.621072] (-) TimerEvent: {}
+[7.724536] (-) TimerEvent: {}
+[7.826805] (-) TimerEvent: {}
+[7.929173] (-) TimerEvent: {}
+[8.030766] (-) TimerEvent: {}
+[8.133993] (-) TimerEvent: {}
+[8.234762] (-) TimerEvent: {}
+[8.337126] (-) TimerEvent: {}
+[8.437907] (-) TimerEvent: {}
+[8.540111] (-) TimerEvent: {}
+[8.616008] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_generator_c\x1b[0m\n'}
+[8.640967] (-) TimerEvent: {}
+[8.682224] (onset_interfaces) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.c.o\x1b[0m\n'}
+[8.698130] (onset_interfaces) StdoutLine: {'line': b'[  5%] Built target onset_interfaces__cpp\n'}
+[8.742858] (-) TimerEvent: {}
+[8.845711] (-) TimerEvent: {}
+[8.912344] (onset_interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_onset_interfaces\n'}
+[8.946009] (-) TimerEvent: {}
+[8.953165] (onset_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.c.o\x1b[0m\n'}
+[9.046935] (-) TimerEvent: {}
+[9.149515] (-) TimerEvent: {}
+[9.254465] (onset_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.c.o\x1b[0m\n'}
+[9.254816] (-) TimerEvent: {}
+[9.256542] (onset_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_c.dir/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.c.o\x1b[0m\n'}
+[9.355352] (-) TimerEvent: {}
+[9.424037] (onset_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[9.429614] (onset_interfaces) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libonset_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[9.456121] (-) TimerEvent: {}
+[9.559209] (-) TimerEvent: {}
+[9.651359] (onset_interfaces) StdoutLine: {'line': b'[ 14%] Built target onset_interfaces__rosidl_generator_c\n'}
+[9.660013] (-) TimerEvent: {}
+[9.705386] (onset_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[9.763203] (-) TimerEvent: {}
+[9.864255] (-) TimerEvent: {}
+[9.965155] (-) TimerEvent: {}
+[10.066000] (-) TimerEvent: {}
+[10.167983] (-) TimerEvent: {}
+[10.270300] (-) TimerEvent: {}
+[10.372244] (-) TimerEvent: {}
+[10.473958] (-) TimerEvent: {}
+[10.578151] (-) TimerEvent: {}
+[10.679622] (-) TimerEvent: {}
+[10.720297] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[10.779895] (-) TimerEvent: {}
+[10.782423] (onset_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/launch_command__type_support.cpp.o\x1b[0m\n'}
+[10.880876] (-) TimerEvent: {}
+[10.952301] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[10.982248] (-) TimerEvent: {}
+[11.028189] (onset_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/launch_command__type_support.cpp.o\x1b[0m\n'}
+[11.084627] (-) TimerEvent: {}
+[11.186577] (-) TimerEvent: {}
+[11.290094] (-) TimerEvent: {}
+[11.394571] (-) TimerEvent: {}
+[11.498508] (-) TimerEvent: {}
+[11.599948] (-) TimerEvent: {}
+[11.703718] (-) TimerEvent: {}
+[11.805169] (-) TimerEvent: {}
+[11.907974] (-) TimerEvent: {}
+[12.009591] (-) TimerEvent: {}
+[12.112821] (-) TimerEvent: {}
+[12.214281] (-) TimerEvent: {}
+[12.316946] (-) TimerEvent: {}
+[12.418793] (-) TimerEvent: {}
+[12.510947] (onset_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/onset_status__type_support.cpp.o\x1b[0m\n'}
+[12.519011] (-) TimerEvent: {}
+[12.538709] (onset_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/onset_status__type_support.cpp.o\x1b[0m\n'}
+[12.620916] (-) TimerEvent: {}
+[12.722013] (-) TimerEvent: {}
+[12.825333] (-) TimerEvent: {}
+[12.927141] (-) TimerEvent: {}
+[13.030567] (-) TimerEvent: {}
+[13.131888] (-) TimerEvent: {}
+[13.233853] (-) TimerEvent: {}
+[13.334839] (-) TimerEvent: {}
+[13.436907] (-) TimerEvent: {}
+[13.539494] (-) TimerEvent: {}
+[13.640366] (-) TimerEvent: {}
+[13.690823] (onset_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/stm32_message__type_support.cpp.o\x1b[0m\n'}
+[13.741134] (-) TimerEvent: {}
+[13.783702] (onset_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/stm32_message__type_support.cpp.o\x1b[0m\n'}
+[13.842087] (-) TimerEvent: {}
+[13.943902] (-) TimerEvent: {}
+[14.045318] (-) TimerEvent: {}
+[14.146968] (-) TimerEvent: {}
+[14.248366] (-) TimerEvent: {}
+[14.352123] (-) TimerEvent: {}
+[14.453217] (-) TimerEvent: {}
+[14.554708] (-) TimerEvent: {}
+[14.656898] (-) TimerEvent: {}
+[14.757990] (-) TimerEvent: {}
+[14.860619] (onset_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/onset_interfaces/msg/detail/stm32_state__type_support.cpp.o\x1b[0m\n'}
+[14.861141] (-) TimerEvent: {}
+[14.962229] (-) TimerEvent: {}
+[15.028570] (onset_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/onset_interfaces/msg/detail/dds_fastrtps/stm32_state__type_support.cpp.o\x1b[0m\n'}
+[15.065073] (-) TimerEvent: {}
+[15.166052] (-) TimerEvent: {}
+[15.269708] (-) TimerEvent: {}
+[15.370827] (-) TimerEvent: {}
+[15.472419] (-) TimerEvent: {}
+[15.575123] (-) TimerEvent: {}
+[15.676252] (-) TimerEvent: {}
+[15.779379] (-) TimerEvent: {}
+[15.881078] (-) TimerEvent: {}
+[15.982129] (-) TimerEvent: {}
+[16.054065] (onset_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[16.082826] (-) TimerEvent: {}
+[16.185035] (-) TimerEvent: {}
+[16.235968] (onset_interfaces) StdoutLine: {'line': b'[ 32%] Built target onset_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[16.286443] (-) TimerEvent: {}
+[16.301666] (onset_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.334067] (onset_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32m\x1b[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[16.387355] (-) TimerEvent: {}
+[16.488235] (-) TimerEvent: {}
+[16.589802] (-) TimerEvent: {}
+[16.616394] (onset_interfaces) StdoutLine: {'line': b'[ 36%] Built target onset_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[16.665359] (onset_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[16.690723] (-) TimerEvent: {}
+[16.791816] (-) TimerEvent: {}
+[16.895263] (-) TimerEvent: {}
+[16.995991] (-) TimerEvent: {}
+[17.096996] (-) TimerEvent: {}
+[17.198243] (-) TimerEvent: {}
+[17.219215] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[17.299133] (onset_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/launch_command__type_support.cpp.o\x1b[0m\n'}
+[17.299527] (-) TimerEvent: {}
+[17.400831] (-) TimerEvent: {}
+[17.502230] (-) TimerEvent: {}
+[17.605619] (-) TimerEvent: {}
+[17.706921] (-) TimerEvent: {}
+[17.812432] (-) TimerEvent: {}
+[17.914112] (-) TimerEvent: {}
+[17.915552] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[17.986130] (onset_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/launch_command__type_support_c.cpp.o\x1b[0m\n'}
+[18.015059] (-) TimerEvent: {}
+[18.118289] (-) TimerEvent: {}
+[18.130314] (onset_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/onset_status__type_support.cpp.o\x1b[0m\n'}
+[18.220984] (-) TimerEvent: {}
+[18.322375] (-) TimerEvent: {}
+[18.423721] (-) TimerEvent: {}
+[18.525095] (-) TimerEvent: {}
+[18.627733] (-) TimerEvent: {}
+[18.729163] (-) TimerEvent: {}
+[18.830620] (-) TimerEvent: {}
+[18.934001] (-) TimerEvent: {}
+[18.969169] (onset_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/stm32_message__type_support.cpp.o\x1b[0m\n'}
+[19.034861] (-) TimerEvent: {}
+[19.109413] (onset_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/onset_status__type_support_c.cpp.o\x1b[0m\n'}
+[19.136478] (-) TimerEvent: {}
+[19.237891] (-) TimerEvent: {}
+[19.342322] (-) TimerEvent: {}
+[19.443983] (-) TimerEvent: {}
+[19.544981] (-) TimerEvent: {}
+[19.648731] (-) TimerEvent: {}
+[19.750266] (-) TimerEvent: {}
+[19.851884] (-) TimerEvent: {}
+[19.895008] (onset_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/onset_interfaces/msg/stm32_state__type_support.cpp.o\x1b[0m\n'}
+[19.954941] (-) TimerEvent: {}
+[20.056321] (-) TimerEvent: {}
+[20.158150] (-) TimerEvent: {}
+[20.256412] (onset_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/stm32_message__type_support_c.cpp.o\x1b[0m\n'}
+[20.259941] (-) TimerEvent: {}
+[20.361651] (-) TimerEvent: {}
+[20.463310] (-) TimerEvent: {}
+[20.567122] (-) TimerEvent: {}
+[20.668037] (-) TimerEvent: {}
+[20.736306] (onset_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[20.768814] (-) TimerEvent: {}
+[20.869948] (-) TimerEvent: {}
+[20.890033] (onset_interfaces) StdoutLine: {'line': b'[ 52%] Built target onset_interfaces__rosidl_typesupport_cpp\n'}
+[20.933407] (onset_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/onset_interfaces/msg/detail/stm32_state__type_support_c.cpp.o\x1b[0m\n'}
+[20.970676] (-) TimerEvent: {}
+[21.072114] (-) TimerEvent: {}
+[21.173658] (-) TimerEvent: {}
+[21.277035] (-) TimerEvent: {}
+[21.300851] (onset_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[21.378011] (-) TimerEvent: {}
+[21.479269] (-) TimerEvent: {}
+[21.581175] (-) TimerEvent: {}
+[21.684910] (-) TimerEvent: {}
+[21.786731] (-) TimerEvent: {}
+[21.889911] (-) TimerEvent: {}
+[21.992904] (-) TimerEvent: {}
+[22.097400] (-) TimerEvent: {}
+[22.197982] (-) TimerEvent: {}
+[22.203348] (onset_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[22.305224] (-) TimerEvent: {}
+[22.406109] (-) TimerEvent: {}
+[22.507161] (-) TimerEvent: {}
+[22.604221] (onset_interfaces) StdoutLine: {'line': b'[ 58%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[22.607336] (-) TimerEvent: {}
+[22.645833] (onset_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[22.708270] (-) TimerEvent: {}
+[22.811014] (-) TimerEvent: {}
+[22.859970] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[22.907309] (onset_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o\x1b[0m\n'}
+[22.912805] (-) TimerEvent: {}
+[23.014423] (-) TimerEvent: {}
+[23.055644] (onset_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o\x1b[0m\n'}
+[23.114741] (-) TimerEvent: {}
+[23.180634] (onset_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o\x1b[0m\n'}
+[23.215510] (-) TimerEvent: {}
+[23.316535] (onset_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o\x1b[0m\n'}
+[23.317518] (-) TimerEvent: {}
+[23.419900] (-) TimerEvent: {}
+[23.457470] (onset_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking C shared library libonset_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[23.520831] (-) TimerEvent: {}
+[23.526470] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[23.583670] (onset_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/launch_command__type_support.cpp.o\x1b[0m\n'}
+[23.593941] (onset_interfaces) StdoutLine: {'line': b'[ 70%] Built target onset_interfaces__rosidl_typesupport_introspection_c\n'}
+[23.624181] (-) TimerEvent: {}
+[23.715652] (onset_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/onset_status__type_support.cpp.o\x1b[0m\n'}
+[23.726321] (-) TimerEvent: {}
+[23.829002] (onset_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/stm32_message__type_support.cpp.o\x1b[0m\n'}
+[23.829532] (-) TimerEvent: {}
+[23.933347] (-) TimerEvent: {}
+[23.934481] (onset_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/onset_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/onset_interfaces/msg/stm32_state__type_support.cpp.o\x1b[0m\n'}
+[24.033986] (-) TimerEvent: {}
+[24.047733] (onset_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libonset_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[24.136206] (-) TimerEvent: {}
+[24.217101] (onset_interfaces) StdoutLine: {'line': b'[ 78%] Built target onset_interfaces__rosidl_typesupport_c\n'}
+[24.237133] (-) TimerEvent: {}
+[24.313820] (onset_interfaces) StdoutLine: {'line': b'[ 78%] Built target onset_interfaces\n'}
+[24.338283] (-) TimerEvent: {}
+[24.405506] (onset_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[24.438498] (-) TimerEvent: {}
+[24.542092] (-) TimerEvent: {}
+[24.583080] (onset_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[24.588064] (onset_interfaces) StdoutLine: {'line': b'writing onset_interfaces.egg-info/PKG-INFO\n'}
+[24.588280] (onset_interfaces) StdoutLine: {'line': b'writing dependency_links to onset_interfaces.egg-info/dependency_links.txt\n'}
+[24.591187] (onset_interfaces) StdoutLine: {'line': b'writing top-level names to onset_interfaces.egg-info/top_level.txt\n'}
+[24.594689] (onset_interfaces) StdoutLine: {'line': b"reading manifest file 'onset_interfaces.egg-info/SOURCES.txt'\n"}
+[24.598213] (onset_interfaces) StdoutLine: {'line': b"writing manifest file 'onset_interfaces.egg-info/SOURCES.txt'\n"}
+[24.643155] (-) TimerEvent: {}
+[24.679949] (onset_interfaces) StdoutLine: {'line': b'[ 80%] Built target ament_cmake_python_build_onset_interfaces_egg\n'}
+[24.744029] (-) TimerEvent: {}
+[24.845190] (-) TimerEvent: {}
+[24.948626] (-) TimerEvent: {}
+[25.049943] (-) TimerEvent: {}
+[25.151318] (-) TimerEvent: {}
+[25.252625] (-) TimerEvent: {}
+[25.354555] (-) TimerEvent: {}
+[25.455937] (-) TimerEvent: {}
+[25.556904] (-) TimerEvent: {}
+[25.657844] (-) TimerEvent: {}
+[25.759075] (-) TimerEvent: {}
+[25.860177] (-) TimerEvent: {}
+[25.961397] (-) TimerEvent: {}
+[26.064124] (-) TimerEvent: {}
+[26.147752] (onset_interfaces) StdoutLine: {'line': b'[ 80%] Built target onset_interfaces__py\n'}
+[26.164781] (-) TimerEvent: {}
+[26.212581] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_generator_py\x1b[0m\n'}
+[26.265551] (-) TimerEvent: {}
+[26.279388] (onset_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_onset_status_s.c.o\x1b[0m\n'}
+[26.280253] (onset_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_launch_command_s.c.o\x1b[0m\n'}
+[26.366519] (-) TimerEvent: {}
+[26.468116] (-) TimerEvent: {}
+[26.570654] (-) TimerEvent: {}
+[26.674345] (-) TimerEvent: {}
+[26.774130] (onset_interfaces) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_stm32_message_s.c.o\x1b[0m\n'}
+[26.774564] (-) TimerEvent: {}
+[26.779515] (onset_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_generator_py.dir/rosidl_generator_py/onset_interfaces/msg/_stm32_state_s.c.o\x1b[0m\n'}
+[26.875047] (-) TimerEvent: {}
+[26.977368] (-) TimerEvent: {}
+[27.079960] (-) TimerEvent: {}
+[27.136943] (onset_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/onset_interfaces/libonset_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[27.180808] (-) TimerEvent: {}
+[27.282726] (-) TimerEvent: {}
+[27.285843] (onset_interfaces) StdoutLine: {'line': b'[ 89%] Built target onset_interfaces__rosidl_generator_py\n'}
+[27.330111] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[27.342043] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[27.383143] (-) TimerEvent: {}
+[27.399511] (onset_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[27.403220] (onset_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[27.485256] (-) TimerEvent: {}
+[27.588041] (-) TimerEvent: {}
+[27.691149] (-) TimerEvent: {}
+[27.765307] (onset_interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[27.780620] (onset_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[27.792378] (-) TimerEvent: {}
+[27.894063] (-) TimerEvent: {}
+[27.913497] (onset_interfaces) StdoutLine: {'line': b'[ 96%] Built target onset_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[27.940200] (onset_interfaces) StdoutLine: {'line': b'[ 96%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[27.962486] (onset_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target onset_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[27.995814] (-) TimerEvent: {}
+[28.019029] (onset_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/onset_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[28.096366] (-) TimerEvent: {}
+[28.200345] (-) TimerEvent: {}
+[28.302796] (-) TimerEvent: {}
+[28.368736] (onset_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[28.403307] (-) TimerEvent: {}
+[28.498339] (onset_interfaces) StdoutLine: {'line': b'[100%] Built target onset_interfaces__rosidl_typesupport_c__pyext\n'}
+[28.504145] (-) TimerEvent: {}
+[28.549821] (onset_interfaces) CommandEnded: {'returncode': 0}
+[28.562576] (onset_interfaces) JobProgress: {'identifier': 'onset_interfaces', 'progress': 'install'}
+[28.562942] (onset_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gong/onset_ws/build/onset_interfaces'], 'cwd': '/home/gong/onset_ws/build/onset_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'gong'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gong'), ('OLDPWD', '/home/gong/onset_ws/src/onsetbot/onsetbot'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1657'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/gong/onset_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gong'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'gong'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W7BHL3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.100'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/gong/onset_ws/build/onset_interfaces'), ('TURTLEBOT3_MODEL', 'burger'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble')]), 'shell': False}
+[28.593439] (onset_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.593923] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/rosidl_interfaces/onset_interfaces\n'}
+[28.594093] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.598058] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.599841] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.h\n'}
+[28.605900] (-) TimerEvent: {}
+[28.607819] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.608059] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__functions.h\n'}
+[28.610859] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.h\n'}
+[28.611093] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__functions.h\n'}
+[28.611336] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__functions.c\n'}
+[28.614247] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.h\n'}
+[28.614418] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.h\n'}
+[28.614919] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__functions.c\n'}
+[28.615076] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.h\n'}
+[28.615194] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.h\n'}
+[28.616056] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.h\n'}
+[28.618962] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__functions.c\n'}
+[28.619455] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__functions.c\n'}
+[28.620102] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__functions.h\n'}
+[28.620348] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__functions.h\n'}
+[28.620608] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.h\n'}
+[28.625208] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.h\n'}
+[28.625503] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[28.625682] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.h\n'}
+[28.625814] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.h\n'}
+[28.627755] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.h\n'}
+[28.628026] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.sh\n'}
+[28.628155] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.dsv\n'}
+[28.628907] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_c.so\n'}
+[28.629646] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_c.so" to ""\n'}
+[28.630736] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.630881] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.631243] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.631366] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_c.h\n'}
+[28.631477] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_c.h\n'}
+[28.631620] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_c.h\n'}
+[28.631723] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_c.h\n'}
+[28.631821] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[28.634151] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[28.637571] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[28.637775] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.638182] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.638422] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.638547] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.c\n'}
+[28.638659] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.c\n'}
+[28.641270] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h\n'}
+[28.641520] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_c.h\n'}
+[28.643912] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_c.h\n'}
+[28.644086] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.c\n'}
+[28.647937] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h\n'}
+[28.648339] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.c\n'}
+[28.648593] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[28.655305] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[28.656032] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[28.657940] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_c.so\n'}
+[28.660000] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[28.660346] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.660575] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.665380] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.hpp\n'}
+[28.666075] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.hpp\n'}
+[28.666313] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[28.666482] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.669177] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__traits.hpp\n'}
+[28.669516] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.hpp\n'}
+[28.669672] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.hpp\n'}
+[28.670024] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__builder.hpp\n'}
+[28.670163] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__builder.hpp\n'}
+[28.670278] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.hpp\n'}
+[28.670401] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.hpp\n'}
+[28.670566] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__builder.hpp\n'}
+[28.670682] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__builder.hpp\n'}
+[28.675040] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__traits.hpp\n'}
+[28.675283] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.hpp\n'}
+[28.675490] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__traits.hpp\n'}
+[28.675707] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__traits.hpp\n'}
+[28.680013] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.hpp\n'}
+[28.680205] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.hpp\n'}
+[28.680636] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.hpp\n'}
+[28.680974] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.hpp\n'}
+[28.681107] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.hpp\n'}
+[28.681450] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.681874] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.682788] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.682937] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.683576] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.684178] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.684357] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/dds_fastrtps\n'}
+[28.684489] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.684619] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[28.686469] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[28.689164] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[28.689984] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces\n'}
+[28.690180] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg\n'}
+[28.690810] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail\n'}
+[28.691610] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.692106] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.cpp\n'}
+[28.693177] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.695366] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.cpp\n'}
+[28.695656] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.699912] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.cpp\n'}
+[28.700122] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.700254] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.cpp\n'}
+[28.707497] (-) TimerEvent: {}
+[28.708268] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[28.709417] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[28.712912] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_cpp.so\n'}
+[28.715556] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[28.715763] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.sh\n'}
+[28.717061] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.dsv\n'}
+[28.718109] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info\n'}
+[28.718937] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[28.720050] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[28.721921] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[28.722309] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[28.724064] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces\n'}
+[28.725436] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.725764] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/__init__.py\n'}
+[28.727438] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.727727] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg\n'}
+[28.728607] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state_s.c\n'}
+[28.730194] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command_s.c\n'}
+[28.732220] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/__init__.py\n'}
+[28.732503] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command.py\n'}
+[28.733505] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state.py\n'}
+[28.734634] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status_s.c\n'}
+[28.737463] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message.py\n'}
+[28.739348] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message_s.c\n'}
+[28.739657] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status.py\n'}
+[28.741713] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.743994] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[28.745033] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/libonset_interfaces__rosidl_generator_py.so\n'}
+[28.748518] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[28.751214] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[28.807844] (-) TimerEvent: {}
+[28.885009] (onset_interfaces) StdoutLine: {'line': b"Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces'...\n"}
+[28.885294] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/__init__.py'...\n"}
+[28.885427] (onset_interfaces) StdoutLine: {'line': b"Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg'...\n"}
+[28.885541] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/__init__.py'...\n"}
+[28.885867] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command.py'...\n"}
+[28.886050] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status.py'...\n"}
+[28.886169] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message.py'...\n"}
+[28.886274] (onset_interfaces) StdoutLine: {'line': b"Compiling '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state.py'...\n"}
+[28.899958] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.901238] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.902369] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.904327] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.905664] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[28.908354] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[28.908569] (-) TimerEvent: {}
+[28.912787] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_py.so\n'}
+[28.915076] (onset_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_py.so" to ""\n'}
+[28.915558] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.idl\n'}
+[28.916230] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.idl\n'}
+[28.917360] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.idl\n'}
+[28.917919] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.idl\n'}
+[28.918544] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.msg\n'}
+[28.920428] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.msg\n'}
+[28.920762] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.msg\n'}
+[28.921383] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.msg\n'}
+[28.922635] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/package_run_dependencies/onset_interfaces\n'}
+[28.924227] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/parent_prefix_path/onset_interfaces\n'}
+[28.924796] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.sh\n'}
+[28.925875] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.dsv\n'}
+[28.926768] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.sh\n'}
+[28.928602] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.dsv\n'}
+[28.928914] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.bash\n'}
+[28.929613] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.sh\n'}
+[28.930288] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.zsh\n'}
+[28.932699] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.dsv\n'}
+[28.932994] (onset_interfaces) StdoutLine: {'line': b'-- Installing: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv\n'}
+[28.933137] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/packages/onset_interfaces\n'}
+[28.933838] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport.cmake\n'}
+[28.934378] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[28.935130] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[28.935889] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[28.937839] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[28.938319] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[28.938917] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[28.941948] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[28.942189] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cppExport.cmake\n'}
+[28.942318] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[28.942490] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[28.943115] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[28.943379] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[28.944344] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[28.945300] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[28.946288] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport.cmake\n'}
+[28.947030] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[28.947638] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[28.948897] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[28.949115] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[28.949246] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[28.950751] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[28.952057] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[28.952741] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[28.953927] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig.cmake\n'}
+[28.954457] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig-version.cmake\n'}
+[28.957494] (onset_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.xml\n'}
+[28.973120] (onset_interfaces) CommandEnded: {'returncode': 0}
+[29.011407] (-) TimerEvent: {}
+[29.041463] (onset_interfaces) JobEnded: {'identifier': 'onset_interfaces', 'rc': 0}
+[29.051043] (onsetbot) JobStarted: {'identifier': 'onsetbot'}
+[29.113970] (-) TimerEvent: {}
+[29.215509] (-) TimerEvent: {}
+[29.317530] (-) TimerEvent: {}
+[29.418969] (-) TimerEvent: {}
+[29.519860] (-) TimerEvent: {}
+[29.621112] (-) TimerEvent: {}
+[29.722553] (-) TimerEvent: {}
+[29.823269] (-) TimerEvent: {}
+[29.925574] (-) TimerEvent: {}
+[30.028110] (-) TimerEvent: {}
+[30.131718] (-) TimerEvent: {}
+[30.233724] (-) TimerEvent: {}
+[30.334718] (-) TimerEvent: {}
+[30.435593] (-) TimerEvent: {}
+[30.536325] (-) TimerEvent: {}
+[30.637870] (-) TimerEvent: {}
+[30.738996] (-) TimerEvent: {}
+[30.839754] (-) TimerEvent: {}
+[30.940712] (-) TimerEvent: {}
+[31.042253] (-) TimerEvent: {}
+[31.142933] (-) TimerEvent: {}
+[31.244404] (-) TimerEvent: {}
+[31.346070] (-) TimerEvent: {}
+[31.447597] (-) TimerEvent: {}
+[31.548663] (-) TimerEvent: {}
+[31.649299] (-) TimerEvent: {}
+[31.750234] (-) TimerEvent: {}
+[31.852124] (-) TimerEvent: {}
+[31.953916] (-) TimerEvent: {}
+[32.056894] (-) TimerEvent: {}
+[32.114195] (onsetbot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/onsetbot', 'build', '--build-base', '/home/gong/onset_ws/build/onsetbot/build', 'install', '--record', '/home/gong/onset_ws/build/onsetbot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/gong/onset_ws/src/onsetbot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_CA:en', 'USER': 'gong', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/gong', 'OLDPWD': '/home/gong/onset_ws/src/onsetbot/onsetbot', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1657', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/gong/onset_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'gong', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'gong', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/gong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/gong-virtual-machine:@/tmp/.ICE-unix/1629,unix/gong-virtual-machine:/tmp/.ICE-unix/1629', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/16edb9d3_1cfb_41f7_8d5c_ffbfb8daf514', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.W7BHL3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.100', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/gong/onset_ws/install/onsetbot:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/odrive_can:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/gong/onset_ws/build/onsetbot', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages:/home/gong/onset_ws/install/odrive_can/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control'}, 'shell': False}
+[32.157772] (-) TimerEvent: {}
+[32.259259] (-) TimerEvent: {}
+[32.360932] (-) TimerEvent: {}
+[32.461991] (-) TimerEvent: {}
+[32.563316] (-) TimerEvent: {}
+[32.664939] (-) TimerEvent: {}
+[32.765819] (-) TimerEvent: {}
+[32.867087] (-) TimerEvent: {}
+[32.959308] (onsetbot) StdoutLine: {'line': b'running egg_info\n'}
+[32.961667] (onsetbot) StdoutLine: {'line': b'writing ../../build/onsetbot/onsetbot.egg-info/PKG-INFO\n'}
+[32.963378] (onsetbot) StdoutLine: {'line': b'writing dependency_links to ../../build/onsetbot/onsetbot.egg-info/dependency_links.txt\n'}
+[32.965099] (onsetbot) StdoutLine: {'line': b'writing entry points to ../../build/onsetbot/onsetbot.egg-info/entry_points.txt\n'}
+[32.967867] (onsetbot) StdoutLine: {'line': b'writing requirements to ../../build/onsetbot/onsetbot.egg-info/requires.txt\n'}
+[32.968256] (-) TimerEvent: {}
+[32.968487] (onsetbot) StdoutLine: {'line': b'writing top-level names to ../../build/onsetbot/onsetbot.egg-info/top_level.txt\n'}
+[32.972729] (onsetbot) StdoutLine: {'line': b"reading manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'\n"}
+[32.975739] (onsetbot) StdoutLine: {'line': b"writing manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'\n"}
+[32.976835] (onsetbot) StdoutLine: {'line': b'running build\n'}
+[32.977028] (onsetbot) StdoutLine: {'line': b'running build_py\n'}
+[32.978175] (onsetbot) StdoutLine: {'line': b'copying onsetbot/stm32_bridge.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot\n'}
+[32.979612] (onsetbot) StdoutLine: {'line': b'running install\n'}
+[32.981141] (onsetbot) StdoutLine: {'line': b'running install_lib\n'}
+[32.984748] (onsetbot) StdoutLine: {'line': b'copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/stm32_bridge.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot\n'}
+[32.987181] (onsetbot) StdoutLine: {'line': b'byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/stm32_bridge.py to stm32_bridge.cpython-310.pyc\n'}
+[32.992021] (onsetbot) StdoutLine: {'line': b'running install_data\n'}
+[32.994089] (onsetbot) StdoutLine: {'line': b'running install_egg_info\n'}
+[33.001989] (onsetbot) StdoutLine: {'line': b"removing '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[33.002326] (onsetbot) StdoutLine: {'line': b'Copying ../../build/onsetbot/onsetbot.egg-info to /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info\n'}
+[33.016914] (onsetbot) StdoutLine: {'line': b'running install_scripts\n'}
+[33.068888] (-) TimerEvent: {}
+[33.075129] (onsetbot) StdoutLine: {'line': b'Installing actuator_command script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot\n'}
+[33.077989] (onsetbot) StdoutLine: {'line': b'Installing odrive_can_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot\n'}
+[33.078293] (onsetbot) StdoutLine: {'line': b'Installing onset_gui script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot\n'}
+[33.079992] (onsetbot) StdoutLine: {'line': b'Installing stm32_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot\n'}
+[33.082224] (onsetbot) StdoutLine: {'line': b'Installing zero_sequence script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot\n'}
+[33.082470] (onsetbot) StdoutLine: {'line': b"writing list of installed files to '/home/gong/onset_ws/build/onsetbot/install.log'\n"}
+[33.147887] (onsetbot) CommandEnded: {'returncode': 0}
+[33.170010] (-) TimerEvent: {}
+[33.182140] (onsetbot) JobEnded: {'identifier': 'onsetbot', 'rc': 0}
+[33.185324] (-) EventReactorShutdown: {}

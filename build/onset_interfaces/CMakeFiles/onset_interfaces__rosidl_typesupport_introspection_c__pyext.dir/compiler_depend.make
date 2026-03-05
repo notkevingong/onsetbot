@@ -248,8 +248,24 @@ CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosid
   rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.h \
   rosidl_generator_c/onset_interfaces/msg/detail/onset_status__type_support.h \
   rosidl_generator_c/onset_interfaces/msg/detail/onset_status__struct.h \
-  rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.h
+  rosidl_generator_c/onset_interfaces/msg/detail/onset_status__functions.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__type_support.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__struct.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h \
+  rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h
 
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h:
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h:
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h:
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__struct.h:
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__type_support.h:
 
 rosidl_generator_c/onset_interfaces/msg/detail/launch_command__functions.h:
 
@@ -372,6 +388,8 @@ rosidl_generator_c/onset_interfaces/msg/rosidl_generator_c__visibility_control.h
 /usr/include/python3.10/cpython/object.h:
 
 /usr/include/python3.10/pymath.h:
+
+rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h:
 
 /usr/include/python3.10/warnings.h:
 

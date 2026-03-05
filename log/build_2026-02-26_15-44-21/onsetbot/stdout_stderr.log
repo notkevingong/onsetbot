@@ -1,0 +1,25 @@
+running egg_info
+writing ../../build/onsetbot/onsetbot.egg-info/PKG-INFO
+writing dependency_links to ../../build/onsetbot/onsetbot.egg-info/dependency_links.txt
+writing entry points to ../../build/onsetbot/onsetbot.egg-info/entry_points.txt
+writing requirements to ../../build/onsetbot/onsetbot.egg-info/requires.txt
+writing top-level names to ../../build/onsetbot/onsetbot.egg-info/top_level.txt
+reading manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+writing manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+running build
+running build_py
+copying onsetbot/onset_gui.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+running install
+running install_lib
+copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/onset_gui.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/onset_gui.py to onset_gui.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/onsetbot/onsetbot.egg-info to /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info
+running install_scripts
+Installing odrive_can_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+Installing onset_gui script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+Installing velocity_commander script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+Installing zero_sequence script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+writing list of installed files to '/home/gong/onset_ws/build/onsetbot/install.log'

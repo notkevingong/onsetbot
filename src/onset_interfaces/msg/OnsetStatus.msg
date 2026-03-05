@@ -1,0 +1,2 @@
+bool bool_homed
+bool bool_busy

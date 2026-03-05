@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from onset_interfaces/msg/OnsetStatus.msg
+// generated code does not contain a copyright notice
+
+
+module onset_interfaces {
+  module msg {
+    struct OnsetStatus {
+      boolean bool_homed;
+
+      boolean bool_busy;
+    };
+  };
+};

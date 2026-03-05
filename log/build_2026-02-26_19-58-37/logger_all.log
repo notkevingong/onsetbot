@@ -1,0 +1,531 @@
+[0.141s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.141s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x72830a08c220>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72830a057a60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72830a057a60>>, mixin_verb=('build',))
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.462s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gong/onset_ws'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.462s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ignore'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ignore_ament_install'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['colcon_pkg']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'colcon_pkg'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'colcon_meta'
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['ros']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ros'
+[0.479s] DEBUG:colcon.colcon_core.package_identification:Package 'src/onset_interfaces' with type 'ros.ament_cmake' and name 'onset_interfaces'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['ignore', 'ignore_ament_install']
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ignore'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ignore_ament_install'
+[0.479s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['colcon_pkg']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'colcon_pkg'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['colcon_meta']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'colcon_meta'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['ros']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ros'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['cmake', 'python']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'cmake'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'python'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['python_setup_py']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'python_setup_py'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['ignore', 'ignore_ament_install']
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'ignore'
+[0.480s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'colcon_meta'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['ros']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'ros'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['cmake', 'python']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'cmake'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'python'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extensions ['python_setup_py']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include) by extension 'python_setup_py'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'ignore'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'ignore_ament_install'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['colcon_pkg']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'colcon_pkg'
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['colcon_meta']
+[0.481s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'ros'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['cmake', 'python']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'cmake'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'python'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extensions ['python_setup_py']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/include/onset_interfaces) by extension 'python_setup_py'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ignore'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ignore_ament_install'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['colcon_pkg']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'colcon_pkg'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['colcon_meta']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'colcon_meta'
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['ros']
+[0.482s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'cmake'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'python'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['python_setup_py']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'python_setup_py'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['ignore', 'ignore_ament_install']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'ignore'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'ignore_ament_install'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['colcon_pkg']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'colcon_pkg'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['colcon_meta']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'colcon_meta'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['ros']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'ros'
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['cmake', 'python']
+[0.483s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'cmake'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'python'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extensions ['python_setup_py']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/src) by extension 'python_setup_py'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['ignore', 'ignore_ament_install']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ignore'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ignore_ament_install'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['colcon_pkg']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'colcon_pkg'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['colcon_meta']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'colcon_meta'
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['ros']
+[0.484s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ros'
+[0.485s] DEBUG:colcon.colcon_core.package_identification:Package 'src/onsetbot' with type 'ros.ament_python' and name 'onsetbot'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['ignore', 'ignore_ament_install']
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ignore'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ignore_ament_install'
+[0.485s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['colcon_meta']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'colcon_meta'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['ros']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ros'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['cmake', 'python']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'cmake'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'python'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['python_setup_py']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'python_setup_py'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['ignore', 'ignore_ament_install']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'ignore'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'ignore_ament_install'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['colcon_pkg']
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'colcon_pkg'
+[0.486s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'colcon_meta'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['ros']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'ros'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['cmake', 'python']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'cmake'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'python'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extensions ['python_setup_py']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base) by extension 'python_setup_py'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['ignore', 'ignore_ament_install']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'ignore'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'ignore_ament_install'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['colcon_pkg']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'colcon_pkg'
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['colcon_meta']
+[0.487s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'colcon_meta'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['ros']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'ros'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['cmake', 'python']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'cmake'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'python'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extensions ['python_setup_py']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/include) by extension 'python_setup_py'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['ignore', 'ignore_ament_install']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'ignore'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'ignore_ament_install'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['colcon_pkg']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'colcon_pkg'
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['colcon_meta']
+[0.488s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'colcon_meta'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['ros']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'ros'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['cmake', 'python']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'cmake'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'python'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extensions ['python_setup_py']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_base/src) by extension 'python_setup_py'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extensions ['ignore', 'ignore_ament_install']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extension 'ignore'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extension 'ignore_ament_install'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extensions ['colcon_pkg']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extension 'colcon_pkg'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extensions ['colcon_meta']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extension 'colcon_meta'
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extensions ['ros']
+[0.489s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_botwheel_explorer) by extension 'ros'
+[0.490s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_odrive/odrive_botwheel_explorer' with type 'ros.ament_cmake' and name 'odrive_botwheel_explorer'
+[0.490s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extensions ['ignore', 'ignore_ament_install']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extension 'ignore'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extension 'ignore_ament_install'
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extensions ['colcon_pkg']
+[0.491s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extension 'colcon_pkg'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extensions ['colcon_meta']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extension 'colcon_meta'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extensions ['ros']
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_node) by extension 'ros'
+[0.493s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_odrive/odrive_node' with type 'ros.ament_cmake' and name 'odrive_can'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extension 'ignore_ament_install'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extensions ['colcon_pkg']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extension 'colcon_pkg'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extensions ['colcon_meta']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extension 'colcon_meta'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extensions ['ros']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive/odrive_ros2_control) by extension 'ros'
+[0.494s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros_odrive/odrive_ros2_control' with type 'ros.ament_cmake' and name 'odrive_ros2_control'
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.495s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.533s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.540s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/gong/onset_ws/install
+[0.542s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 444 installed packages in /opt/ros/humble
+[0.545s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_args' from command line to 'None'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_target' from command line to 'None'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_clean_cache' from command line to 'False'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_clean_first' from command line to 'False'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'cmake_force_configure' from command line to 'False'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'ament_cmake_args' from command line to 'None'
+[0.604s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'catkin_cmake_args' from command line to 'None'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_can' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.605s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_can' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/odrive_can', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/odrive_can', 'merge_install': False, 'path': '/home/gong/onset_ws/src/ros_odrive/odrive_node', 'symlink_install': False, 'test_result_base': None}
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_args' from command line to 'None'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_target' from command line to 'None'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.605s] Level 5:colcon.colcon_core.verb:set package 'odrive_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.605s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/odrive_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/odrive_ros2_control', 'merge_install': False, 'path': '/home/gong/onset_ws/src/ros_odrive/odrive_ros2_control', 'symlink_install': False, 'test_result_base': None}
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.606s] DEBUG:colcon.colcon_core.verb:Building package 'onset_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/onset_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/onset_interfaces', 'merge_install': False, 'path': '/home/gong/onset_ws/src/onset_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_args' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_target' from command line to 'None'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.606s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_clean_cache' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_clean_first' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'cmake_force_configure' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'ament_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'catkin_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'odrive_botwheel_explorer' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.607s] DEBUG:colcon.colcon_core.verb:Building package 'odrive_botwheel_explorer' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/odrive_botwheel_explorer', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/odrive_botwheel_explorer', 'merge_install': False, 'path': '/home/gong/onset_ws/src/ros_odrive/odrive_botwheel_explorer', 'symlink_install': False, 'test_result_base': None}
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_target' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_clean_first' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_force_configure' from command line to 'False'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'ament_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.607s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.607s] DEBUG:colcon.colcon_core.verb:Building package 'onsetbot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/onsetbot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/onsetbot', 'merge_install': False, 'path': '/home/gong/onset_ws/src/onsetbot', 'symlink_install': False, 'test_result_base': None}
+[0.607s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.609s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.609s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gong/onset_ws/src/ros_odrive/odrive_node' with build type 'ament_cmake'
+[0.609s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gong/onset_ws/src/ros_odrive/odrive_node'
+[0.615s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.615s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.615s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.624s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gong/onset_ws/src/ros_odrive/odrive_ros2_control' with build type 'ament_cmake'
+[0.624s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gong/onset_ws/src/ros_odrive/odrive_ros2_control'
+[0.624s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.624s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.637s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_can -- -j2 -l2
+[0.645s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_ros2_control -- -j2 -l2
+[1.111s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_ros2_control -- -j2 -l2
+[1.136s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_ros2_control
+[1.178s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_ros2_control)
+[1.178s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_ros2_control
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control' for CMake module files
+[1.189s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control' for CMake config files
+[1.192s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_ros2_control', 'cmake_prefix_path')
+[1.192s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.ps1'
+[1.194s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.dsv'
+[1.194s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.sh'
+[1.196s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib'
+[1.196s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_ros2_control', 'ld_library_path_lib')
+[1.196s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.ps1'
+[1.201s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.dsv'
+[1.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.sh'
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/bin'
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib/pkgconfig/odrive_ros2_control.pc'
+[1.203s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib/python3.10/site-packages'
+[1.204s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/bin'
+[1.204s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.ps1'
+[1.206s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.dsv'
+[1.207s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.sh'
+[1.210s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.bash'
+[1.213s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.zsh'
+[1.215s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_ros2_control/share/colcon-core/packages/odrive_ros2_control)
+[1.217s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_ros2_control)
+[1.217s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control' for CMake module files
+[1.217s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control' for CMake config files
+[1.218s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_ros2_control', 'cmake_prefix_path')
+[1.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.ps1'
+[1.219s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.dsv'
+[1.219s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/cmake_prefix_path.sh'
+[1.220s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib'
+[1.220s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_ros2_control', 'ld_library_path_lib')
+[1.220s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.ps1'
+[1.221s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.dsv'
+[1.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/hook/ld_library_path_lib.sh'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/bin'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib/pkgconfig/odrive_ros2_control.pc'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/lib/python3.10/site-packages'
+[1.222s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_ros2_control/bin'
+[1.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.ps1'
+[1.223s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.dsv'
+[1.224s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.sh'
+[1.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.bash'
+[1.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_ros2_control/share/odrive_ros2_control/package.zsh'
+[1.226s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_ros2_control/share/colcon-core/packages/odrive_ros2_control)
+[1.227s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gong/onset_ws/src/onset_interfaces' with build type 'ament_cmake'
+[1.227s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gong/onset_ws/src/onset_interfaces'
+[1.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.227s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.247s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+[2.100s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_can' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_can -- -j2 -l2
+[2.105s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_can': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_can
+[2.295s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_can)
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can' for CMake module files
+[2.296s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can' for CMake config files
+[2.304s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_can' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_can
+[2.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_can', 'cmake_prefix_path')
+[2.311s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.ps1'
+[2.313s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.dsv'
+[2.313s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.sh'
+[2.316s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib'
+[2.316s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_can', 'ld_library_path_lib')
+[2.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.ps1'
+[2.320s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.dsv'
+[2.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.sh'
+[2.323s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/bin'
+[2.323s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib/pkgconfig/odrive_can.pc'
+[2.324s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib/python3.10/site-packages'
+[2.324s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/bin'
+[2.324s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.ps1'
+[2.330s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.dsv'
+[2.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.sh'
+[2.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.bash'
+[2.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.zsh'
+[2.336s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_can/share/colcon-core/packages/odrive_can)
+[2.340s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_can)
+[2.340s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can' for CMake module files
+[2.341s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can' for CMake config files
+[2.345s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_can', 'cmake_prefix_path')
+[2.346s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.ps1'
+[2.349s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.dsv'
+[2.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/cmake_prefix_path.sh'
+[2.356s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib'
+[2.356s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_can', 'ld_library_path_lib')
+[2.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.ps1'
+[2.362s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.dsv'
+[2.364s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_can/share/odrive_can/hook/ld_library_path_lib.sh'
+[2.366s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/bin'
+[2.366s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib/pkgconfig/odrive_can.pc'
+[2.366s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/lib/python3.10/site-packages'
+[2.366s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_can/bin'
+[2.367s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.ps1'
+[2.368s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.dsv'
+[2.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.sh'
+[2.369s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.bash'
+[2.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_can/share/odrive_can/package.zsh'
+[2.371s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_can/share/colcon-core/packages/odrive_can)
+[2.373s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gong/onset_ws/src/ros_odrive/odrive_botwheel_explorer' with build type 'ament_cmake'
+[2.373s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gong/onset_ws/src/ros_odrive/odrive_botwheel_explorer'
+[2.373s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.374s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.415s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_botwheel_explorer': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble LD_LIBRARY_PATH=/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_botwheel_explorer -- -j2 -l2
+[2.597s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_botwheel_explorer' returned '0': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble LD_LIBRARY_PATH=/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/gong/onset_ws/build/odrive_botwheel_explorer -- -j2 -l2
+[2.606s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/odrive_botwheel_explorer': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble LD_LIBRARY_PATH=/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_botwheel_explorer
+[2.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_botwheel_explorer)
+[2.672s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer' for CMake module files
+[2.674s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/odrive_botwheel_explorer' returned '0': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/odrive_ros2_control:/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble LD_LIBRARY_PATH=/home/gong/onset_ws/install/odrive_ros2_control/lib:/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/gong/onset_ws/build/odrive_botwheel_explorer
+[2.674s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer' for CMake config files
+[2.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_botwheel_explorer', 'cmake_prefix_path')
+[2.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.ps1'
+[2.682s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.dsv'
+[2.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.sh'
+[2.686s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/bin'
+[2.686s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/lib/pkgconfig/odrive_botwheel_explorer.pc'
+[2.687s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/lib/python3.10/site-packages'
+[2.687s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/bin'
+[2.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.ps1'
+[2.695s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.dsv'
+[2.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.sh'
+[2.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.bash'
+[2.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.zsh'
+[2.701s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_botwheel_explorer/share/colcon-core/packages/odrive_botwheel_explorer)
+[2.702s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(odrive_botwheel_explorer)
+[2.702s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer' for CMake module files
+[2.704s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer' for CMake config files
+[2.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('odrive_botwheel_explorer', 'cmake_prefix_path')
+[2.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.ps1'
+[2.706s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.dsv'
+[2.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/hook/cmake_prefix_path.sh'
+[2.712s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/bin'
+[2.712s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/lib/pkgconfig/odrive_botwheel_explorer.pc'
+[2.712s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/lib/python3.10/site-packages'
+[2.712s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/odrive_botwheel_explorer/bin'
+[2.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.ps1'
+[2.718s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.dsv'
+[2.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.sh'
+[2.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.bash'
+[2.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/odrive_botwheel_explorer/share/odrive_botwheel_explorer/package.zsh'
+[2.733s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/odrive_botwheel_explorer/share/colcon-core/packages/odrive_botwheel_explorer)
+[14.788s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j2 -l2
+[14.794s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[14.985s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onset_interfaces)
+[14.987s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake module files
+[14.988s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[14.989s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake config files
+[14.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'cmake_prefix_path')
+[14.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.ps1'
+[15.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.dsv'
+[15.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.sh'
+[15.003s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib'
+[15.003s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'ld_library_path_lib')
+[15.003s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.ps1'
+[15.005s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.dsv'
+[15.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.sh'
+[15.007s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[15.007s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/pkgconfig/onset_interfaces.pc'
+[15.007s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/python3.10/site-packages'
+[15.007s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[15.008s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.ps1'
+[15.009s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv'
+[15.010s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.sh'
+[15.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.bash'
+[15.013s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.zsh'
+[15.013s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onset_interfaces/share/colcon-core/packages/onset_interfaces)
+[15.016s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onset_interfaces)
+[15.017s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake module files
+[15.017s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake config files
+[15.018s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'cmake_prefix_path')
+[15.018s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.ps1'
+[15.019s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.dsv'
+[15.020s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.sh'
+[15.020s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib'
+[15.020s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'ld_library_path_lib')
+[15.021s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.ps1'
+[15.023s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.dsv'
+[15.023s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.sh'
+[15.024s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[15.024s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/pkgconfig/onset_interfaces.pc'
+[15.025s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/python3.10/site-packages'
+[15.025s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[15.025s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.ps1'
+[15.028s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv'
+[15.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.sh'
+[15.030s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.bash'
+[15.033s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.zsh'
+[15.034s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onset_interfaces/share/colcon-core/packages/onset_interfaces)
+[15.036s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gong/onset_ws/src/onsetbot' with build type 'ament_python'
+[15.036s] Level 1:colcon.colcon_core.shell:create_environment_hook('onsetbot', 'ament_prefix_path')
+[15.036s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.ps1'
+[15.039s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.dsv'
+[15.039s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.sh'
+[15.043s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[15.043s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[15.583s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gong/onset_ws/src/onsetbot'
+[15.584s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[15.584s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[16.464s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/src/onsetbot': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control LD_LIBRARY_PATH=/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[17.060s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot' for CMake module files
+[17.063s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot' for CMake config files
+[17.062s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/src/onsetbot' returned '0': CMAKE_PREFIX_PATH=/home/gong/onset_ws/install/onset_interfaces:/home/gong/onset_ws/install/odrive_can:/home/gong/onset_ws/install/odrive_botwheel_explorer:/home/gong/onset_ws/install/odrive_ros2_control LD_LIBRARY_PATH=/home/gong/onset_ws/install/onset_interfaces/lib:/home/gong/onset_ws/install/odrive_can/lib:/home/gong/onset_ws/install/odrive_ros2_control/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[17.064s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib'
+[17.064s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/bin'
+[17.064s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib/pkgconfig/onsetbot.pc'
+[17.065s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages'
+[17.065s] Level 1:colcon.colcon_core.shell:create_environment_hook('onsetbot', 'pythonpath')
+[17.065s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.ps1'
+[17.066s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.dsv'
+[17.066s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.sh'
+[17.069s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/bin'
+[17.069s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onsetbot)
+[17.069s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.ps1'
+[17.070s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.dsv'
+[17.071s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.sh'
+[17.072s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.bash'
+[17.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.zsh'
+[17.075s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onsetbot/share/colcon-core/packages/onsetbot)
+[17.078s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[17.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[17.079s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[17.079s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[17.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[17.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[17.101s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[17.138s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[17.139s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.ps1'
+[17.141s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gong/onset_ws/install/_local_setup_util_ps1.py'
+[17.143s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.ps1'
+[17.146s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.sh'
+[17.148s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gong/onset_ws/install/_local_setup_util_sh.py'
+[17.149s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.sh'
+[17.153s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.bash'
+[17.154s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.bash'
+[17.159s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.zsh'
+[17.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.zsh'
