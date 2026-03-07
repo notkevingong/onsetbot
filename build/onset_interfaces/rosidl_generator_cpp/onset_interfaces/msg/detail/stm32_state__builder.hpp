@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
-class Init_STM32State_error_code
+class Init_STM32State_elbow_power_status
 {
 public:
-  explicit Init_STM32State_error_code(::onset_interfaces::msg::STM32State & msg)
+  explicit Init_STM32State_elbow_power_status(::onset_interfaces::msg::STM32State & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::STM32State error_code(::onset_interfaces::msg::STM32State::_error_code_type arg)
+  ::onset_interfaces::msg::STM32State elbow_power_status(::onset_interfaces::msg::STM32State::_elbow_power_status_type arg)
   {
-    msg_.error_code = std::move(arg);
+    msg_.elbow_power_status = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32State msg_;
+};
+
+class Init_STM32State_elbow_moving_status
+{
+public:
+  explicit Init_STM32State_elbow_moving_status(::onset_interfaces::msg::STM32State & msg)
+  : msg_(msg)
+  {}
+  Init_STM32State_elbow_power_status elbow_moving_status(::onset_interfaces::msg::STM32State::_elbow_moving_status_type arg)
+  {
+    msg_.elbow_moving_status = std::move(arg);
+    return Init_STM32State_elbow_power_status(msg_);
   }
 
 private:
@@ -43,10 +59,10 @@ public:
   explicit Init_STM32State_sw3(::onset_interfaces::msg::STM32State & msg)
   : msg_(msg)
   {}
-  Init_STM32State_error_code sw3(::onset_interfaces::msg::STM32State::_sw3_type arg)
+  Init_STM32State_elbow_moving_status sw3(::onset_interfaces::msg::STM32State::_sw3_type arg)
   {
     msg_.sw3 = std::move(arg);
-    return Init_STM32State_error_code(msg_);
+    return Init_STM32State_elbow_moving_status(msg_);
   }
 
 private:
@@ -56,29 +72,13 @@ private:
 class Init_STM32State_sw2
 {
 public:
-  explicit Init_STM32State_sw2(::onset_interfaces::msg::STM32State & msg)
-  : msg_(msg)
+  Init_STM32State_sw2()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
   Init_STM32State_sw3 sw2(::onset_interfaces::msg::STM32State::_sw2_type arg)
   {
     msg_.sw2 = std::move(arg);
     return Init_STM32State_sw3(msg_);
-  }
-
-private:
-  ::onset_interfaces::msg::STM32State msg_;
-};
-
-class Init_STM32State_sw1
-{
-public:
-  Init_STM32State_sw1()
-  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
-  {}
-  Init_STM32State_sw2 sw1(::onset_interfaces::msg::STM32State::_sw1_type arg)
-  {
-    msg_.sw1 = std::move(arg);
-    return Init_STM32State_sw2(msg_);
   }
 
 private:
@@ -96,7 +96,7 @@ template<>
 inline
 auto build<::onset_interfaces::msg::STM32State>()
 {
-  return onset_interfaces::msg::builder::Init_STM32State_sw1();
+  return onset_interfaces::msg::builder::Init_STM32State_sw2();
 }
 
 }  // namespace onset_interfaces

@@ -39,14 +39,14 @@ void OnsetStatus_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember OnsetStatus_message_member_array[2] = {
   {
-    "bool_homed",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    "onset_is_homed",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(onset_interfaces::msg::OnsetStatus, bool_homed),  // bytes offset in struct
+    offsetof(onset_interfaces::msg::OnsetStatus, onset_is_homed),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -56,14 +56,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember OnsetStatus_m
     nullptr  // resize(index) function pointer
   },
   {
-    "bool_busy",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    "onset_is_busy",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(onset_interfaces::msg::OnsetStatus, bool_busy),  // bytes offset in struct
+    offsetof(onset_interfaces::msg::OnsetStatus, onset_is_busy),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

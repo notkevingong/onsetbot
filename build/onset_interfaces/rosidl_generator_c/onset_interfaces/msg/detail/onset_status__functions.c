@@ -17,8 +17,8 @@ onset_interfaces__msg__OnsetStatus__init(onset_interfaces__msg__OnsetStatus * ms
   if (!msg) {
     return false;
   }
-  // bool_homed
-  // bool_busy
+  // onset_is_homed
+  // onset_is_busy
   return true;
 }
 
@@ -28,8 +28,8 @@ onset_interfaces__msg__OnsetStatus__fini(onset_interfaces__msg__OnsetStatus * ms
   if (!msg) {
     return;
   }
-  // bool_homed
-  // bool_busy
+  // onset_is_homed
+  // onset_is_busy
 }
 
 bool
@@ -38,12 +38,12 @@ onset_interfaces__msg__OnsetStatus__are_equal(const onset_interfaces__msg__Onset
   if (!lhs || !rhs) {
     return false;
   }
-  // bool_homed
-  if (lhs->bool_homed != rhs->bool_homed) {
+  // onset_is_homed
+  if (lhs->onset_is_homed != rhs->onset_is_homed) {
     return false;
   }
-  // bool_busy
-  if (lhs->bool_busy != rhs->bool_busy) {
+  // onset_is_busy
+  if (lhs->onset_is_busy != rhs->onset_is_busy) {
     return false;
   }
   return true;
@@ -57,10 +57,10 @@ onset_interfaces__msg__OnsetStatus__copy(
   if (!input || !output) {
     return false;
   }
-  // bool_homed
-  output->bool_homed = input->bool_homed;
-  // bool_busy
-  output->bool_busy = input->bool_busy;
+  // onset_is_homed
+  output->onset_is_homed = input->onset_is_homed;
+  // onset_is_busy
+  output->onset_is_busy = input->onset_is_busy;
   return true;
 }
 

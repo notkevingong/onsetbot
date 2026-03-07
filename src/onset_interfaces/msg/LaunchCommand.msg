@@ -1,4 +1,4 @@
 float64 velocity
 float64 angle_launch
 float64 angle_turret
-bool home_seq
+uint8 home_onset_request

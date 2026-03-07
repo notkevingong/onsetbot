@@ -32,10 +32,10 @@ cdr_serialize(
   const onset_interfaces::msg::OnsetStatus & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: bool_homed
-  cdr << (ros_message.bool_homed ? true : false);
-  // Member: bool_busy
-  cdr << (ros_message.bool_busy ? true : false);
+  // Member: onset_is_homed
+  cdr << ros_message.onset_is_homed;
+  // Member: onset_is_busy
+  cdr << ros_message.onset_is_busy;
   return true;
 }
 
@@ -45,19 +45,11 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   onset_interfaces::msg::OnsetStatus & ros_message)
 {
-  // Member: bool_homed
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.bool_homed = tmp ? true : false;
-  }
+  // Member: onset_is_homed
+  cdr >> ros_message.onset_is_homed;
 
-  // Member: bool_busy
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.bool_busy = tmp ? true : false;
-  }
+  // Member: onset_is_busy
+  cdr >> ros_message.onset_is_busy;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -75,15 +67,15 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: bool_homed
+  // Member: onset_is_homed
   {
-    size_t item_size = sizeof(ros_message.bool_homed);
+    size_t item_size = sizeof(ros_message.onset_is_homed);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: bool_busy
+  // Member: onset_is_busy
   {
-    size_t item_size = sizeof(ros_message.bool_busy);
+    size_t item_size = sizeof(ros_message.onset_is_busy);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -111,7 +103,7 @@ max_serialized_size_OnsetStatus(
   is_plain = true;
 
 
-  // Member: bool_homed
+  // Member: onset_is_homed
   {
     size_t array_size = 1;
 
@@ -119,7 +111,7 @@ max_serialized_size_OnsetStatus(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: bool_busy
+  // Member: onset_is_busy
   {
     size_t array_size = 1;
 
@@ -135,7 +127,7 @@ max_serialized_size_OnsetStatus(
     using DataType = onset_interfaces::msg::OnsetStatus;
     is_plain =
       (
-      offsetof(DataType, bool_busy) +
+      offsetof(DataType, onset_is_busy) +
       last_member_size
       ) == ret_val;
   }

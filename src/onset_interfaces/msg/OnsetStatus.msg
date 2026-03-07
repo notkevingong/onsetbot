@@ -1,2 +1,2 @@
-bool bool_homed
-bool bool_busy
+uint8 onset_is_homed
+uint8 onset_is_busy

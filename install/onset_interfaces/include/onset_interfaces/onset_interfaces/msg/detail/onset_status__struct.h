@@ -20,8 +20,8 @@ extern "C"
 /// Struct defined in msg/OnsetStatus in the package onset_interfaces.
 typedef struct onset_interfaces__msg__OnsetStatus
 {
-  bool bool_homed;
-  bool bool_busy;
+  uint8_t onset_is_homed;
+  uint8_t onset_is_busy;
 } onset_interfaces__msg__OnsetStatus;
 
 // Struct for a sequence of onset_interfaces__msg__OnsetStatus.

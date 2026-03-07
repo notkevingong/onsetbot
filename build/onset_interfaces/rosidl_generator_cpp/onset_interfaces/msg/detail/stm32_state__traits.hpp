@@ -25,13 +25,6 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: sw1
-  {
-    out << "sw1: ";
-    rosidl_generator_traits::value_to_yaml(msg.sw1, out);
-    out << ", ";
-  }
-
   // member: sw2
   {
     out << "sw2: ";
@@ -46,10 +39,17 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: error_code
+  // member: elbow_moving_status
   {
-    out << "error_code: ";
-    rosidl_generator_traits::value_to_yaml(msg.error_code, out);
+    out << "elbow_moving_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.elbow_moving_status, out);
+    out << ", ";
+  }
+
+  // member: elbow_power_status
+  {
+    out << "elbow_power_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.elbow_power_status, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -58,16 +58,6 @@ inline void to_block_style_yaml(
   const STM32State & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: sw1
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "sw1: ";
-    rosidl_generator_traits::value_to_yaml(msg.sw1, out);
-    out << "\n";
-  }
-
   // member: sw2
   {
     if (indentation > 0) {
@@ -88,13 +78,23 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: error_code
+  // member: elbow_moving_status
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "error_code: ";
-    rosidl_generator_traits::value_to_yaml(msg.error_code, out);
+    out << "elbow_moving_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.elbow_moving_status, out);
+    out << "\n";
+  }
+
+  // member: elbow_power_status
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "elbow_power_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.elbow_power_status, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

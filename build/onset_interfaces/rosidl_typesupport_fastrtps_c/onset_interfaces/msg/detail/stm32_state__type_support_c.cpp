@@ -49,11 +49,6 @@ static bool _STM32State__cdr_serialize(
     return false;
   }
   const _STM32State__ros_msg_type * ros_message = static_cast<const _STM32State__ros_msg_type *>(untyped_ros_message);
-  // Field name: sw1
-  {
-    cdr << ros_message->sw1;
-  }
-
   // Field name: sw2
   {
     cdr << ros_message->sw2;
@@ -64,9 +59,14 @@ static bool _STM32State__cdr_serialize(
     cdr << ros_message->sw3;
   }
 
-  // Field name: error_code
+  // Field name: elbow_moving_status
   {
-    cdr << ros_message->error_code;
+    cdr << ros_message->elbow_moving_status;
+  }
+
+  // Field name: elbow_power_status
+  {
+    cdr << ros_message->elbow_power_status;
   }
 
   return true;
@@ -81,11 +81,6 @@ static bool _STM32State__cdr_deserialize(
     return false;
   }
   _STM32State__ros_msg_type * ros_message = static_cast<_STM32State__ros_msg_type *>(untyped_ros_message);
-  // Field name: sw1
-  {
-    cdr >> ros_message->sw1;
-  }
-
   // Field name: sw2
   {
     cdr >> ros_message->sw2;
@@ -96,9 +91,14 @@ static bool _STM32State__cdr_deserialize(
     cdr >> ros_message->sw3;
   }
 
-  // Field name: error_code
+  // Field name: elbow_moving_status
   {
-    cdr >> ros_message->error_code;
+    cdr >> ros_message->elbow_moving_status;
+  }
+
+  // Field name: elbow_power_status
+  {
+    cdr >> ros_message->elbow_power_status;
   }
 
   return true;
@@ -118,12 +118,6 @@ size_t get_serialized_size_onset_interfaces__msg__STM32State(
   (void)padding;
   (void)wchar_size;
 
-  // field.name sw1
-  {
-    size_t item_size = sizeof(ros_message->sw1);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name sw2
   {
     size_t item_size = sizeof(ros_message->sw2);
@@ -136,9 +130,15 @@ size_t get_serialized_size_onset_interfaces__msg__STM32State(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name error_code
+  // field.name elbow_moving_status
   {
-    size_t item_size = sizeof(ros_message->error_code);
+    size_t item_size = sizeof(ros_message->elbow_moving_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name elbow_power_status
+  {
+    size_t item_size = sizeof(ros_message->elbow_power_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -171,13 +171,6 @@ size_t max_serialized_size_onset_interfaces__msg__STM32State(
   full_bounded = true;
   is_plain = true;
 
-  // member: sw1
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
   // member: sw2
   {
     size_t array_size = 1;
@@ -192,7 +185,14 @@ size_t max_serialized_size_onset_interfaces__msg__STM32State(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: error_code
+  // member: elbow_moving_status
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: elbow_power_status
   {
     size_t array_size = 1;
 
@@ -208,7 +208,7 @@ size_t max_serialized_size_onset_interfaces__msg__STM32State(
     using DataType = onset_interfaces__msg__STM32State;
     is_plain =
       (
-      offsetof(DataType, error_code) +
+      offsetof(DataType, elbow_power_status) +
       last_member_size
       ) == ret_val;
   }

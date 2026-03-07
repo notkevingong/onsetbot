@@ -50,22 +50,22 @@ bool onset_interfaces__msg__onset_status__convert_from_py(PyObject * _pymsg, voi
     assert(strncmp("onset_interfaces.msg._onset_status.OnsetStatus", full_classname_dest, 46) == 0);
   }
   onset_interfaces__msg__OnsetStatus * ros_message = _ros_message;
-  {  // bool_homed
-    PyObject * field = PyObject_GetAttrString(_pymsg, "bool_homed");
+  {  // onset_is_homed
+    PyObject * field = PyObject_GetAttrString(_pymsg, "onset_is_homed");
     if (!field) {
       return false;
     }
-    assert(PyBool_Check(field));
-    ros_message->bool_homed = (Py_True == field);
+    assert(PyLong_Check(field));
+    ros_message->onset_is_homed = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // bool_busy
-    PyObject * field = PyObject_GetAttrString(_pymsg, "bool_busy");
+  {  // onset_is_busy
+    PyObject * field = PyObject_GetAttrString(_pymsg, "onset_is_busy");
     if (!field) {
       return false;
     }
-    assert(PyBool_Check(field));
-    ros_message->bool_busy = (Py_True == field);
+    assert(PyLong_Check(field));
+    ros_message->onset_is_busy = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 
@@ -90,22 +90,22 @@ PyObject * onset_interfaces__msg__onset_status__convert_to_py(void * raw_ros_mes
     }
   }
   onset_interfaces__msg__OnsetStatus * ros_message = (onset_interfaces__msg__OnsetStatus *)raw_ros_message;
-  {  // bool_homed
+  {  // onset_is_homed
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->bool_homed ? 1 : 0);
+    field = PyLong_FromUnsignedLong(ros_message->onset_is_homed);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "bool_homed", field);
+      int rc = PyObject_SetAttrString(_pymessage, "onset_is_homed", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // bool_busy
+  {  // onset_is_busy
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->bool_busy ? 1 : 0);
+    field = PyLong_FromUnsignedLong(ros_message->onset_is_busy);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "bool_busy", field);
+      int rc = PyObject_SetAttrString(_pymessage, "onset_is_busy", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

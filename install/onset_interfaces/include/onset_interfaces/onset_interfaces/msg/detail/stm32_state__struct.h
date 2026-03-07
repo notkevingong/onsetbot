@@ -20,10 +20,10 @@ extern "C"
 /// Struct defined in msg/STM32State in the package onset_interfaces.
 typedef struct onset_interfaces__msg__STM32State
 {
-  uint8_t sw1;
   uint8_t sw2;
   uint8_t sw3;
-  uint8_t error_code;
+  uint8_t elbow_moving_status;
+  uint8_t elbow_power_status;
 } onset_interfaces__msg__STM32State;
 
 // Struct for a sequence of onset_interfaces__msg__STM32State.

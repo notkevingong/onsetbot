@@ -3,5 +3,4 @@ actuator_command = onsetbot.actuator_command:main
 odrive_can_bridge = onsetbot.odrive_can_bridge:main
 onset_gui = onsetbot.onset_gui:main
 stm32_bridge = onsetbot.stm32_bridge:main
-zero_sequence = onsetbot.zero_sequence:main
 

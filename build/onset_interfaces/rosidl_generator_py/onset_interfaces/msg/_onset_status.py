@@ -55,26 +55,26 @@ class OnsetStatus(metaclass=Metaclass_OnsetStatus):
     """Message class 'OnsetStatus'."""
 
     __slots__ = [
-        '_bool_homed',
-        '_bool_busy',
+        '_onset_is_homed',
+        '_onset_is_busy',
     ]
 
     _fields_and_field_types = {
-        'bool_homed': 'boolean',
-        'bool_busy': 'boolean',
+        'onset_is_homed': 'uint8',
+        'onset_is_busy': 'uint8',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.bool_homed = kwargs.get('bool_homed', bool())
-        self.bool_busy = kwargs.get('bool_busy', bool())
+        self.onset_is_homed = kwargs.get('onset_is_homed', int())
+        self.onset_is_busy = kwargs.get('onset_is_busy', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -105,9 +105,9 @@ class OnsetStatus(metaclass=Metaclass_OnsetStatus):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.bool_homed != other.bool_homed:
+        if self.onset_is_homed != other.onset_is_homed:
             return False
-        if self.bool_busy != other.bool_busy:
+        if self.onset_is_busy != other.onset_is_busy:
             return False
         return True
 
@@ -117,27 +117,31 @@ class OnsetStatus(metaclass=Metaclass_OnsetStatus):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def bool_homed(self):
-        """Message field 'bool_homed'."""
-        return self._bool_homed
+    def onset_is_homed(self):
+        """Message field 'onset_is_homed'."""
+        return self._onset_is_homed
 
-    @bool_homed.setter
-    def bool_homed(self, value):
+    @onset_is_homed.setter
+    def onset_is_homed(self, value):
         if __debug__:
             assert \
-                isinstance(value, bool), \
-                "The 'bool_homed' field must be of type 'bool'"
-        self._bool_homed = value
+                isinstance(value, int), \
+                "The 'onset_is_homed' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'onset_is_homed' field must be an unsigned integer in [0, 255]"
+        self._onset_is_homed = value
 
     @builtins.property
-    def bool_busy(self):
-        """Message field 'bool_busy'."""
-        return self._bool_busy
+    def onset_is_busy(self):
+        """Message field 'onset_is_busy'."""
+        return self._onset_is_busy
 
-    @bool_busy.setter
-    def bool_busy(self, value):
+    @onset_is_busy.setter
+    def onset_is_busy(self, value):
         if __debug__:
             assert \
-                isinstance(value, bool), \
-                "The 'bool_busy' field must be of type 'bool'"
-        self._bool_busy = value
+                isinstance(value, int), \
+                "The 'onset_is_busy' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'onset_is_busy' field must be an unsigned integer in [0, 255]"
+        self._onset_is_busy = value

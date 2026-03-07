@@ -38,8 +38,8 @@ cdr_serialize(
   cdr << ros_message.angle_launch;
   // Member: angle_turret
   cdr << ros_message.angle_turret;
-  // Member: home_seq
-  cdr << (ros_message.home_seq ? true : false);
+  // Member: home_onset_request
+  cdr << ros_message.home_onset_request;
   return true;
 }
 
@@ -58,12 +58,8 @@ cdr_deserialize(
   // Member: angle_turret
   cdr >> ros_message.angle_turret;
 
-  // Member: home_seq
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.home_seq = tmp ? true : false;
-  }
+  // Member: home_onset_request
+  cdr >> ros_message.home_onset_request;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -99,9 +95,9 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: home_seq
+  // Member: home_onset_request
   {
-    size_t item_size = sizeof(ros_message.home_seq);
+    size_t item_size = sizeof(ros_message.home_onset_request);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -156,7 +152,7 @@ max_serialized_size_LaunchCommand(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: home_seq
+  // Member: home_onset_request
   {
     size_t array_size = 1;
 
@@ -172,7 +168,7 @@ max_serialized_size_LaunchCommand(
     using DataType = onset_interfaces::msg::LaunchCommand;
     is_plain =
       (
-      offsetof(DataType, home_seq) +
+      offsetof(DataType, home_onset_request) +
       last_member_size
       ) == ret_val;
   }

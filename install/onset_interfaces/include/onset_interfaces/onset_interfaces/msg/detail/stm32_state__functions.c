@@ -17,10 +17,10 @@ onset_interfaces__msg__STM32State__init(onset_interfaces__msg__STM32State * msg)
   if (!msg) {
     return false;
   }
-  // sw1
   // sw2
   // sw3
-  // error_code
+  // elbow_moving_status
+  // elbow_power_status
   return true;
 }
 
@@ -30,20 +30,16 @@ onset_interfaces__msg__STM32State__fini(onset_interfaces__msg__STM32State * msg)
   if (!msg) {
     return;
   }
-  // sw1
   // sw2
   // sw3
-  // error_code
+  // elbow_moving_status
+  // elbow_power_status
 }
 
 bool
 onset_interfaces__msg__STM32State__are_equal(const onset_interfaces__msg__STM32State * lhs, const onset_interfaces__msg__STM32State * rhs)
 {
   if (!lhs || !rhs) {
-    return false;
-  }
-  // sw1
-  if (lhs->sw1 != rhs->sw1) {
     return false;
   }
   // sw2
@@ -54,8 +50,12 @@ onset_interfaces__msg__STM32State__are_equal(const onset_interfaces__msg__STM32S
   if (lhs->sw3 != rhs->sw3) {
     return false;
   }
-  // error_code
-  if (lhs->error_code != rhs->error_code) {
+  // elbow_moving_status
+  if (lhs->elbow_moving_status != rhs->elbow_moving_status) {
+    return false;
+  }
+  // elbow_power_status
+  if (lhs->elbow_power_status != rhs->elbow_power_status) {
     return false;
   }
   return true;
@@ -69,14 +69,14 @@ onset_interfaces__msg__STM32State__copy(
   if (!input || !output) {
     return false;
   }
-  // sw1
-  output->sw1 = input->sw1;
   // sw2
   output->sw2 = input->sw2;
   // sw3
   output->sw3 = input->sw3;
-  // error_code
-  output->error_code = input->error_code;
+  // elbow_moving_status
+  output->elbow_moving_status = input->elbow_moving_status;
+  // elbow_power_status
+  output->elbow_power_status = input->elbow_power_status;
   return true;
 }
 

@@ -60,21 +60,21 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         '_velocity',
         '_angle_launch',
         '_angle_turret',
-        '_home_seq',
+        '_home_onset_request',
     ]
 
     _fields_and_field_types = {
         'velocity': 'double',
         'angle_launch': 'double',
         'angle_turret': 'double',
-        'home_seq': 'boolean',
+        'home_onset_request': 'uint8',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -84,7 +84,7 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         self.velocity = kwargs.get('velocity', float())
         self.angle_launch = kwargs.get('angle_launch', float())
         self.angle_turret = kwargs.get('angle_turret', float())
-        self.home_seq = kwargs.get('home_seq', bool())
+        self.home_onset_request = kwargs.get('home_onset_request', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -121,7 +121,7 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
             return False
         if self.angle_turret != other.angle_turret:
             return False
-        if self.home_seq != other.home_seq:
+        if self.home_onset_request != other.home_onset_request:
             return False
         return True
 
@@ -176,14 +176,16 @@ class LaunchCommand(metaclass=Metaclass_LaunchCommand):
         self._angle_turret = value
 
     @builtins.property
-    def home_seq(self):
-        """Message field 'home_seq'."""
-        return self._home_seq
+    def home_onset_request(self):
+        """Message field 'home_onset_request'."""
+        return self._home_onset_request
 
-    @home_seq.setter
-    def home_seq(self, value):
+    @home_onset_request.setter
+    def home_onset_request(self, value):
         if __debug__:
             assert \
-                isinstance(value, bool), \
-                "The 'home_seq' field must be of type 'bool'"
-        self._home_seq = value
+                isinstance(value, int), \
+                "The 'home_onset_request' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'home_onset_request' field must be an unsigned integer in [0, 255]"
+        self._home_onset_request = value

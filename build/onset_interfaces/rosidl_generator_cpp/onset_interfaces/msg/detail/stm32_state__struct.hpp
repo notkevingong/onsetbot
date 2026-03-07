@@ -39,10 +39,10 @@ struct STM32State_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->sw1 = 0;
       this->sw2 = 0;
       this->sw3 = 0;
-      this->error_code = 0;
+      this->elbow_moving_status = 0;
+      this->elbow_power_status = 0;
     }
   }
 
@@ -52,34 +52,28 @@ struct STM32State_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->sw1 = 0;
       this->sw2 = 0;
       this->sw3 = 0;
-      this->error_code = 0;
+      this->elbow_moving_status = 0;
+      this->elbow_power_status = 0;
     }
   }
 
   // field types and members
-  using _sw1_type =
-    uint8_t;
-  _sw1_type sw1;
   using _sw2_type =
     uint8_t;
   _sw2_type sw2;
   using _sw3_type =
     uint8_t;
   _sw3_type sw3;
-  using _error_code_type =
+  using _elbow_moving_status_type =
     uint8_t;
-  _error_code_type error_code;
+  _elbow_moving_status_type elbow_moving_status;
+  using _elbow_power_status_type =
+    uint8_t;
+  _elbow_power_status_type elbow_power_status;
 
   // setters for named parameter idiom
-  Type & set__sw1(
-    const uint8_t & _arg)
-  {
-    this->sw1 = _arg;
-    return *this;
-  }
   Type & set__sw2(
     const uint8_t & _arg)
   {
@@ -92,10 +86,16 @@ struct STM32State_
     this->sw3 = _arg;
     return *this;
   }
-  Type & set__error_code(
+  Type & set__elbow_moving_status(
     const uint8_t & _arg)
   {
-    this->error_code = _arg;
+    this->elbow_moving_status = _arg;
+    return *this;
+  }
+  Type & set__elbow_power_status(
+    const uint8_t & _arg)
+  {
+    this->elbow_power_status = _arg;
     return *this;
   }
 
@@ -141,16 +141,16 @@ struct STM32State_
   // comparison operators
   bool operator==(const STM32State_ & other) const
   {
-    if (this->sw1 != other.sw1) {
-      return false;
-    }
     if (this->sw2 != other.sw2) {
       return false;
     }
     if (this->sw3 != other.sw3) {
       return false;
     }
-    if (this->error_code != other.error_code) {
+    if (this->elbow_moving_status != other.elbow_moving_status) {
+      return false;
+    }
+    if (this->elbow_power_status != other.elbow_power_status) {
       return false;
     }
     return true;

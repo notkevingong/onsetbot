@@ -49,14 +49,14 @@ static bool _OnsetStatus__cdr_serialize(
     return false;
   }
   const _OnsetStatus__ros_msg_type * ros_message = static_cast<const _OnsetStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: bool_homed
+  // Field name: onset_is_homed
   {
-    cdr << (ros_message->bool_homed ? true : false);
+    cdr << ros_message->onset_is_homed;
   }
 
-  // Field name: bool_busy
+  // Field name: onset_is_busy
   {
-    cdr << (ros_message->bool_busy ? true : false);
+    cdr << ros_message->onset_is_busy;
   }
 
   return true;
@@ -71,18 +71,14 @@ static bool _OnsetStatus__cdr_deserialize(
     return false;
   }
   _OnsetStatus__ros_msg_type * ros_message = static_cast<_OnsetStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: bool_homed
+  // Field name: onset_is_homed
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->bool_homed = tmp ? true : false;
+    cdr >> ros_message->onset_is_homed;
   }
 
-  // Field name: bool_busy
+  // Field name: onset_is_busy
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->bool_busy = tmp ? true : false;
+    cdr >> ros_message->onset_is_busy;
   }
 
   return true;
@@ -102,15 +98,15 @@ size_t get_serialized_size_onset_interfaces__msg__OnsetStatus(
   (void)padding;
   (void)wchar_size;
 
-  // field.name bool_homed
+  // field.name onset_is_homed
   {
-    size_t item_size = sizeof(ros_message->bool_homed);
+    size_t item_size = sizeof(ros_message->onset_is_homed);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name bool_busy
+  // field.name onset_is_busy
   {
-    size_t item_size = sizeof(ros_message->bool_busy);
+    size_t item_size = sizeof(ros_message->onset_is_busy);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -143,14 +139,14 @@ size_t max_serialized_size_onset_interfaces__msg__OnsetStatus(
   full_bounded = true;
   is_plain = true;
 
-  // member: bool_homed
+  // member: onset_is_homed
   {
     size_t array_size = 1;
 
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: bool_busy
+  // member: onset_is_busy
   {
     size_t array_size = 1;
 
@@ -166,7 +162,7 @@ size_t max_serialized_size_onset_interfaces__msg__OnsetStatus(
     using DataType = onset_interfaces__msg__OnsetStatus;
     is_plain =
       (
-      offsetof(DataType, bool_busy) +
+      offsetof(DataType, onset_is_busy) +
       last_member_size
       ) == ret_val;
   }

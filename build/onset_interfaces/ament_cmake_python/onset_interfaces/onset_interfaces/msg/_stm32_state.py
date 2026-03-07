@@ -55,17 +55,17 @@ class STM32State(metaclass=Metaclass_STM32State):
     """Message class 'STM32State'."""
 
     __slots__ = [
-        '_sw1',
         '_sw2',
         '_sw3',
-        '_error_code',
+        '_elbow_moving_status',
+        '_elbow_power_status',
     ]
 
     _fields_and_field_types = {
-        'sw1': 'uint8',
         'sw2': 'uint8',
         'sw3': 'uint8',
-        'error_code': 'uint8',
+        'elbow_moving_status': 'uint8',
+        'elbow_power_status': 'uint8',
     }
 
     SLOT_TYPES = (
@@ -79,10 +79,10 @@ class STM32State(metaclass=Metaclass_STM32State):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.sw1 = kwargs.get('sw1', int())
         self.sw2 = kwargs.get('sw2', int())
         self.sw3 = kwargs.get('sw3', int())
-        self.error_code = kwargs.get('error_code', int())
+        self.elbow_moving_status = kwargs.get('elbow_moving_status', int())
+        self.elbow_power_status = kwargs.get('elbow_power_status', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -113,13 +113,13 @@ class STM32State(metaclass=Metaclass_STM32State):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.sw1 != other.sw1:
-            return False
         if self.sw2 != other.sw2:
             return False
         if self.sw3 != other.sw3:
             return False
-        if self.error_code != other.error_code:
+        if self.elbow_moving_status != other.elbow_moving_status:
+            return False
+        if self.elbow_power_status != other.elbow_power_status:
             return False
         return True
 
@@ -127,21 +127,6 @@ class STM32State(metaclass=Metaclass_STM32State):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
-
-    @builtins.property
-    def sw1(self):
-        """Message field 'sw1'."""
-        return self._sw1
-
-    @sw1.setter
-    def sw1(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'sw1' field must be of type 'int'"
-            assert value >= 0 and value < 256, \
-                "The 'sw1' field must be an unsigned integer in [0, 255]"
-        self._sw1 = value
 
     @builtins.property
     def sw2(self):
@@ -174,16 +159,31 @@ class STM32State(metaclass=Metaclass_STM32State):
         self._sw3 = value
 
     @builtins.property
-    def error_code(self):
-        """Message field 'error_code'."""
-        return self._error_code
+    def elbow_moving_status(self):
+        """Message field 'elbow_moving_status'."""
+        return self._elbow_moving_status
 
-    @error_code.setter
-    def error_code(self, value):
+    @elbow_moving_status.setter
+    def elbow_moving_status(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'error_code' field must be of type 'int'"
+                "The 'elbow_moving_status' field must be of type 'int'"
             assert value >= 0 and value < 256, \
-                "The 'error_code' field must be an unsigned integer in [0, 255]"
-        self._error_code = value
+                "The 'elbow_moving_status' field must be an unsigned integer in [0, 255]"
+        self._elbow_moving_status = value
+
+    @builtins.property
+    def elbow_power_status(self):
+        """Message field 'elbow_power_status'."""
+        return self._elbow_power_status
+
+    @elbow_power_status.setter
+    def elbow_power_status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'elbow_power_status' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'elbow_power_status' field must be an unsigned integer in [0, 255]"
+        self._elbow_power_status = value

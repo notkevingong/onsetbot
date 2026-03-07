@@ -14,7 +14,6 @@ onsetbot/actuator_command.py
 onsetbot/odrive_can_bridge.py
 onsetbot/onset_gui.py
 onsetbot/stm32_bridge.py
-onsetbot/zero_sequence.py
 resource/onsetbot
 test/test_copyright.py
 test/test_flake8.py

@@ -24,6 +24,7 @@ CMD_SET_INPUT_VEL = 0x0D
 CMD_GET_IQ = 0x14
 
 AXIS_STATE_CLOSED_LOOP_CONTROL = 8
+AXIS_STATE_IDLE = 1
 CONTROLLER_MODE_VELOCITY_CONTROL = 2
 
 def make_arb_id(node_id: int, cmd_id: int) -> int:
@@ -60,17 +61,18 @@ class ODriveCANBridge (Node):
 
         # ---- Parameters ----
         self.declare_parameter("can_interface", "can0")
-        self.declare_parameter("axis_ids", [0, 1, 2])
-        self.declare_parameter("joint_names", ["axis0", "axis1", "axis2"])
+        self.declare_parameter("axis_ids", [0, 1])
+        self.declare_parameter("joint_names", ["axis0", "axis1"])
         self.declare_parameter("publish_rate_hz", 100.0)
         self.declare_parameter("auto_closed_loop", True)
         self.declare_parameter("command_timeout_sec", 0.25)
         self.declare_parameter("topic_joint_states", "/odrive/joint_states")
-        self.declare_parameter("topic_command", "odrive_control")
-        self.declare_parameter("command_axis_ids", [])
-        self.declare_parameter("command_mirror", False)
+        self.declare_parameter("topic_command", "/odrive_control")
+        self.declare_parameter("command_axis_ids", [0, 1])
+        self.declare_parameter("command_mirror", True)
         self.declare_parameter("command_control_mode", CONTROLLER_MODE_VELOCITY_CONTROL)
         self.declare_parameter("command_input_mode", 2)
+        self.declare_parameter("feedback_axis_id", 0)
 
         self.can_interface: str = self.get_parameter("can_interface").value
         self.axis_ids: List[int] = list(self.get_parameter("axis_ids").value)
@@ -84,6 +86,7 @@ class ODriveCANBridge (Node):
         self.command_mirror: bool = bool(self.get_parameter("command_mirror").value)
         self.command_control_mode: int = int(self.get_parameter("command_control_mode").value)
         self.command_input_mode: int = int(self.get_parameter("command_input_mode").value)
+        self.feedback_axis_id: int = int(self.get_parameter("feedback_axis_id").value)
         self._enc_rr_idx = 0
 
 
@@ -93,6 +96,9 @@ class ODriveCANBridge (Node):
 
         # Axis State Setup
         self.axes: Dict[int, ODriveAxis] = {axis_id: ODriveAxis() for axis_id in self.axis_ids}
+        self._feedback_axis_ids: List[int] = [axis_id for axis_id in [0, 1] if axis_id in self.axes]
+        if not self._feedback_axis_ids:
+            self._feedback_axis_ids = list(self.axis_ids)
 
         # Deadman Timer
         self.last_command_time: float = 0.0
@@ -100,6 +106,7 @@ class ODriveCANBridge (Node):
         self.last_command_pos: Dict[int, float] = {axis_id: 0.0 for axis_id in self.axis_ids}
         self.last_controller_mode: Dict[int, Optional[int]] = {axis_id: None for axis_id in self.axis_ids}
         self.last_input_mode: Dict[int, Optional[int]] = {axis_id: None for axis_id in self.axis_ids}
+        self._shutdown_requested: bool = False
 
         # ROS interfaces
         self.pub_js = self.create_publisher(JointState, self.topic_joint_states, 10)
@@ -200,8 +207,11 @@ class ODriveCANBridge (Node):
 
     # ---- ROS Callbacks ---- #
     def command_callback(self, msg: ControlMessage):
-        """Handle velocity commands via ControlMessage for one or more axes."""
-        axis_ids = self.command_axis_ids or self.axis_ids[:1]
+        """Handle velocity commands via ControlMessage and fan out to target axes."""
+        if self._shutdown_requested:
+            return
+
+        axis_ids = [0, 1]
         if not axis_ids:
             return
 
@@ -231,18 +241,27 @@ class ODriveCANBridge (Node):
         """
         If command stream stops, command all axes to 0 velocity.
         """
+        if self._shutdown_requested:
+            return
         if self.last_command_time <= 0.0:
             return
         if (time.time() - self.last_command_time) > self.command_timeout_sec:
-            for aid in self.axis_ids:
+            for aid in [0, 1]:
                 if self.last_command_vel.get(aid, 0.0) != 0.0:
                     self._send_set_input_vel(aid, 0.0, 0.0)
                     self.last_command_vel[aid] = 0.0
 
+    def _stop_all_axes(self):
+        self._shutdown_requested = True
+        for axis_id in self.axis_ids:
+            self._send_set_input_vel(axis_id, 0.0, 0.0)
+            self._set_axis_state(axis_id, AXIS_STATE_IDLE)
+            self.last_command_vel[axis_id] = 0.0
+
     def _request_encoder_estimates(self):
-        if not self.axis_ids:
+        if not self._feedback_axis_ids:
             return
-        aid = self.axis_ids[self._enc_rr_idx % len(self.axis_ids)]
+        aid = self._feedback_axis_ids[self._enc_rr_idx % len(self._feedback_axis_ids)]
         self._enc_rr_idx += 1
         arb_id = make_arb_id(aid, CMD_GET_ENCODER_ESTIMATES)
         self._send(arb_id, b'')
@@ -267,6 +286,7 @@ class ODriveCANBridge (Node):
         self.pub_js.publish(js)
 
     def destroy_node(self):
+        self._stop_all_axes()
         self._rx_stop.set()
         try:
             if self._rx_thread.is_alive():
@@ -286,9 +306,10 @@ def main():
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
-        pass
-    node.destroy_node()
-    rclpy.shutdown()
+        node.get_logger().info("Ctrl+C received, stopping ODrive axes")
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":

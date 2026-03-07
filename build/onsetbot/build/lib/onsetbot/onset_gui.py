@@ -4,6 +4,8 @@ from rclpy.node import Node
 from onset_interfaces.msg import LaunchCommand, OnsetStatus
 import sys
 import math
+import time
+import signal
 from PyQt6.QtCore import Qt, QPointF, QTimer
 from PyQt6.QtGui import QPen, QBrush, QPainter, QPainterPath
 from PyQt6.QtWidgets import (
@@ -27,9 +29,14 @@ class OnsetbotGuiRosNode(Node):
     def __init__(self):
         super().__init__('onsetbot_gui_node')
         self.cmd_pub = self.create_publisher(LaunchCommand, '/launch_info', 10)
-        self.actuator_pub = self.create_publisher(LaunchCommand, 'actuator_command', 10)
-        self.bool_homed = False
-        self.bool_busy = False
+        self.onset_is_homed = 0
+        self.onset_is_busy = 0
+        self._prev_onset_is_busy = 0
+        self._home_request_pending = False
+        self._home_request_reset_timer = None
+        self._home_request_debounce_s = 0.35
+        self._home_request_reset_delay_s = 0.2
+        self._last_home_request_ts = 0.0
         self.status_sub = self.create_subscription(
             OnsetStatus,
             '/onset_status',
@@ -49,16 +56,56 @@ class OnsetbotGuiRosNode(Node):
         # )
 
     def onset_status_callback(self, msg: OnsetStatus):
-        self.bool_homed = bool(msg.bool_homed)
-        self.bool_busy = bool(msg.bool_busy)
+        self.onset_is_homed = int(msg.onset_is_homed)
+        self.onset_is_busy = int(msg.onset_is_busy)
+
+        busy_rising = (self._prev_onset_is_busy == 0) and (self.onset_is_busy == 1)
+        if self._home_request_pending and busy_rising:
+            self._home_request_pending = False
+            self._schedule_home_request_reset(self._home_request_reset_delay_s)
+
+        self._prev_onset_is_busy = self.onset_is_busy
 
     def can_launch(self) -> bool:
-        return self.bool_homed and not self.bool_busy
+        return (self.onset_is_homed == 1) and (self.onset_is_busy == 0)
 
-    def publish_home_sequence(self, home_seq: bool):
+    def publish_home_onset_request(self, request_value: int):
         msg = LaunchCommand()
-        msg.home_seq = bool(home_seq)
-        self.actuator_pub.publish(msg)
+        msg.home_onset_request = int(request_value)
+        self.cmd_pub.publish(msg)
+        self.get_logger().info(f'Published home_onset_request={msg.home_onset_request} to /launch_info')
+
+    def _schedule_home_request_reset(self, delay_s: float):
+        if self._home_request_reset_timer is not None:
+            self._home_request_reset_timer.cancel()
+            self._home_request_reset_timer = None
+
+        def _reset_request():
+            self._home_request_pending = False
+            self.publish_home_onset_request(0)
+            if self._home_request_reset_timer is not None:
+                self._home_request_reset_timer.cancel()
+                self._home_request_reset_timer = None
+
+        self._home_request_reset_timer = self.create_timer(delay_s, _reset_request)
+
+    def request_home_onset(self):
+        now = time.monotonic()
+
+        if self._home_request_pending:
+            self.get_logger().info('Ignoring home request: already pending')
+            return
+
+        if (now - self._last_home_request_ts) < self._home_request_debounce_s:
+            self.get_logger().info('Ignoring home request: debounced')
+            return
+
+        self.publish_home_onset_request(1)
+        self._last_home_request_ts = now
+        self._home_request_pending = True
+
+        # Failsafe reset in case acknowledgement status is missed
+        self._schedule_home_request_reset(1.5)
 
 class DraggableBall(QGraphicsEllipseItem):
     """Ball item that can be dragged and snaps to grid points on release."""
@@ -938,8 +985,7 @@ class MainWindow(QWidget):
         """Placeholder for robot homing command."""
         if self.ros_node is None:
             return
-        self.ros_node.publish_home_sequence(True)
-        QTimer.singleShot(100, lambda: self.ros_node.publish_home_sequence(False))
+        self.ros_node.request_home_onset()
 
 def main():
     rclpy.init(args=None)
@@ -947,6 +993,12 @@ def main():
     ros_node = OnsetbotGuiRosNode()
 
     app = QApplication(sys.argv)
+
+    def _handle_sigint(_sig, _frame):
+        app.quit()
+
+    signal.signal(signal.SIGINT, _handle_sigint)
+
     w = MainWindow(ros_node=ros_node)
     w.show()
 

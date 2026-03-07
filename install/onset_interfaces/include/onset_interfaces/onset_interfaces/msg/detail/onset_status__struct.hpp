@@ -39,8 +39,8 @@ struct OnsetStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->bool_homed = false;
-      this->bool_busy = false;
+      this->onset_is_homed = 0;
+      this->onset_is_busy = 0;
     }
   }
 
@@ -50,30 +50,30 @@ struct OnsetStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->bool_homed = false;
-      this->bool_busy = false;
+      this->onset_is_homed = 0;
+      this->onset_is_busy = 0;
     }
   }
 
   // field types and members
-  using _bool_homed_type =
-    bool;
-  _bool_homed_type bool_homed;
-  using _bool_busy_type =
-    bool;
-  _bool_busy_type bool_busy;
+  using _onset_is_homed_type =
+    uint8_t;
+  _onset_is_homed_type onset_is_homed;
+  using _onset_is_busy_type =
+    uint8_t;
+  _onset_is_busy_type onset_is_busy;
 
   // setters for named parameter idiom
-  Type & set__bool_homed(
-    const bool & _arg)
+  Type & set__onset_is_homed(
+    const uint8_t & _arg)
   {
-    this->bool_homed = _arg;
+    this->onset_is_homed = _arg;
     return *this;
   }
-  Type & set__bool_busy(
-    const bool & _arg)
+  Type & set__onset_is_busy(
+    const uint8_t & _arg)
   {
-    this->bool_busy = _arg;
+    this->onset_is_busy = _arg;
     return *this;
   }
 
@@ -119,10 +119,10 @@ struct OnsetStatus_
   // comparison operators
   bool operator==(const OnsetStatus_ & other) const
   {
-    if (this->bool_homed != other.bool_homed) {
+    if (this->onset_is_homed != other.onset_is_homed) {
       return false;
     }
-    if (this->bool_busy != other.bool_busy) {
+    if (this->onset_is_busy != other.onset_is_busy) {
       return false;
     }
     return true;

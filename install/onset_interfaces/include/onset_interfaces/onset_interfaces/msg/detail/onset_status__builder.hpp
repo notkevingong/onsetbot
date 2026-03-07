@@ -21,15 +21,15 @@ namespace msg
 namespace builder
 {
 
-class Init_OnsetStatus_bool_busy
+class Init_OnsetStatus_onset_is_busy
 {
 public:
-  explicit Init_OnsetStatus_bool_busy(::onset_interfaces::msg::OnsetStatus & msg)
+  explicit Init_OnsetStatus_onset_is_busy(::onset_interfaces::msg::OnsetStatus & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::OnsetStatus bool_busy(::onset_interfaces::msg::OnsetStatus::_bool_busy_type arg)
+  ::onset_interfaces::msg::OnsetStatus onset_is_busy(::onset_interfaces::msg::OnsetStatus::_onset_is_busy_type arg)
   {
-    msg_.bool_busy = std::move(arg);
+    msg_.onset_is_busy = std::move(arg);
     return std::move(msg_);
   }
 
@@ -37,16 +37,16 @@ private:
   ::onset_interfaces::msg::OnsetStatus msg_;
 };
 
-class Init_OnsetStatus_bool_homed
+class Init_OnsetStatus_onset_is_homed
 {
 public:
-  Init_OnsetStatus_bool_homed()
+  Init_OnsetStatus_onset_is_homed()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_OnsetStatus_bool_busy bool_homed(::onset_interfaces::msg::OnsetStatus::_bool_homed_type arg)
+  Init_OnsetStatus_onset_is_busy onset_is_homed(::onset_interfaces::msg::OnsetStatus::_onset_is_homed_type arg)
   {
-    msg_.bool_homed = std::move(arg);
-    return Init_OnsetStatus_bool_busy(msg_);
+    msg_.onset_is_homed = std::move(arg);
+    return Init_OnsetStatus_onset_is_busy(msg_);
   }
 
 private:
@@ -64,7 +64,7 @@ template<>
 inline
 auto build<::onset_interfaces::msg::OnsetStatus>()
 {
-  return onset_interfaces::msg::builder::Init_OnsetStatus_bool_homed();
+  return onset_interfaces::msg::builder::Init_OnsetStatus_onset_is_homed();
 }
 
 }  // namespace onset_interfaces

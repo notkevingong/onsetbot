@@ -32,14 +32,14 @@ cdr_serialize(
   const onset_interfaces::msg::STM32State & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: sw1
-  cdr << ros_message.sw1;
   // Member: sw2
   cdr << ros_message.sw2;
   // Member: sw3
   cdr << ros_message.sw3;
-  // Member: error_code
-  cdr << ros_message.error_code;
+  // Member: elbow_moving_status
+  cdr << ros_message.elbow_moving_status;
+  // Member: elbow_power_status
+  cdr << ros_message.elbow_power_status;
   return true;
 }
 
@@ -49,17 +49,17 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   onset_interfaces::msg::STM32State & ros_message)
 {
-  // Member: sw1
-  cdr >> ros_message.sw1;
-
   // Member: sw2
   cdr >> ros_message.sw2;
 
   // Member: sw3
   cdr >> ros_message.sw3;
 
-  // Member: error_code
-  cdr >> ros_message.error_code;
+  // Member: elbow_moving_status
+  cdr >> ros_message.elbow_moving_status;
+
+  // Member: elbow_power_status
+  cdr >> ros_message.elbow_power_status;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -77,12 +77,6 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: sw1
-  {
-    size_t item_size = sizeof(ros_message.sw1);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: sw2
   {
     size_t item_size = sizeof(ros_message.sw2);
@@ -95,9 +89,15 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: error_code
+  // Member: elbow_moving_status
   {
-    size_t item_size = sizeof(ros_message.error_code);
+    size_t item_size = sizeof(ros_message.elbow_moving_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: elbow_power_status
+  {
+    size_t item_size = sizeof(ros_message.elbow_power_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -125,14 +125,6 @@ max_serialized_size_STM32State(
   is_plain = true;
 
 
-  // Member: sw1
-  {
-    size_t array_size = 1;
-
-    last_member_size = array_size * sizeof(uint8_t);
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
   // Member: sw2
   {
     size_t array_size = 1;
@@ -149,7 +141,15 @@ max_serialized_size_STM32State(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: error_code
+  // Member: elbow_moving_status
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: elbow_power_status
   {
     size_t array_size = 1;
 
@@ -165,7 +165,7 @@ max_serialized_size_STM32State(
     using DataType = onset_interfaces::msg::STM32State;
     is_plain =
       (
-      offsetof(DataType, error_code) +
+      offsetof(DataType, elbow_power_status) +
       last_member_size
       ) == ret_val;
   }

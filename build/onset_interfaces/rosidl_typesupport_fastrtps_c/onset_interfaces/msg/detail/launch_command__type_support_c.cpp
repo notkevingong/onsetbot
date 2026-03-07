@@ -64,9 +64,9 @@ static bool _LaunchCommand__cdr_serialize(
     cdr << ros_message->angle_turret;
   }
 
-  // Field name: home_seq
+  // Field name: home_onset_request
   {
-    cdr << (ros_message->home_seq ? true : false);
+    cdr << ros_message->home_onset_request;
   }
 
   return true;
@@ -96,11 +96,9 @@ static bool _LaunchCommand__cdr_deserialize(
     cdr >> ros_message->angle_turret;
   }
 
-  // Field name: home_seq
+  // Field name: home_onset_request
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->home_seq = tmp ? true : false;
+    cdr >> ros_message->home_onset_request;
   }
 
   return true;
@@ -138,9 +136,9 @@ size_t get_serialized_size_onset_interfaces__msg__LaunchCommand(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name home_seq
+  // field.name home_onset_request
   {
-    size_t item_size = sizeof(ros_message->home_seq);
+    size_t item_size = sizeof(ros_message->home_onset_request);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -197,7 +195,7 @@ size_t max_serialized_size_onset_interfaces__msg__LaunchCommand(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: home_seq
+  // member: home_onset_request
   {
     size_t array_size = 1;
 
@@ -213,7 +211,7 @@ size_t max_serialized_size_onset_interfaces__msg__LaunchCommand(
     using DataType = onset_interfaces__msg__LaunchCommand;
     is_plain =
       (
-      offsetof(DataType, home_seq) +
+      offsetof(DataType, home_onset_request) +
       last_member_size
       ) == ret_val;
   }

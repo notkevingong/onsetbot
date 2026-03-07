@@ -50,15 +50,6 @@ bool onset_interfaces__msg__stm32_state__convert_from_py(PyObject * _pymsg, void
     assert(strncmp("onset_interfaces.msg._stm32_state.STM32State", full_classname_dest, 44) == 0);
   }
   onset_interfaces__msg__STM32State * ros_message = _ros_message;
-  {  // sw1
-    PyObject * field = PyObject_GetAttrString(_pymsg, "sw1");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->sw1 = (uint8_t)PyLong_AsUnsignedLong(field);
-    Py_DECREF(field);
-  }
   {  // sw2
     PyObject * field = PyObject_GetAttrString(_pymsg, "sw2");
     if (!field) {
@@ -77,13 +68,22 @@ bool onset_interfaces__msg__stm32_state__convert_from_py(PyObject * _pymsg, void
     ros_message->sw3 = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
-  {  // error_code
-    PyObject * field = PyObject_GetAttrString(_pymsg, "error_code");
+  {  // elbow_moving_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "elbow_moving_status");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error_code = (uint8_t)PyLong_AsUnsignedLong(field);
+    ros_message->elbow_moving_status = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // elbow_power_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "elbow_power_status");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->elbow_power_status = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
 
@@ -108,17 +108,6 @@ PyObject * onset_interfaces__msg__stm32_state__convert_to_py(void * raw_ros_mess
     }
   }
   onset_interfaces__msg__STM32State * ros_message = (onset_interfaces__msg__STM32State *)raw_ros_message;
-  {  // sw1
-    PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->sw1);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "sw1", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // sw2
     PyObject * field = NULL;
     field = PyLong_FromUnsignedLong(ros_message->sw2);
@@ -141,11 +130,22 @@ PyObject * onset_interfaces__msg__stm32_state__convert_to_py(void * raw_ros_mess
       }
     }
   }
-  {  // error_code
+  {  // elbow_moving_status
     PyObject * field = NULL;
-    field = PyLong_FromUnsignedLong(ros_message->error_code);
+    field = PyLong_FromUnsignedLong(ros_message->elbow_moving_status);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
+      int rc = PyObject_SetAttrString(_pymessage, "elbow_moving_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // elbow_power_status
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->elbow_power_status);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "elbow_power_status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -25,17 +25,17 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: bool_homed
+  // member: onset_is_homed
   {
-    out << "bool_homed: ";
-    rosidl_generator_traits::value_to_yaml(msg.bool_homed, out);
+    out << "onset_is_homed: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_is_homed, out);
     out << ", ";
   }
 
-  // member: bool_busy
+  // member: onset_is_busy
   {
-    out << "bool_busy: ";
-    rosidl_generator_traits::value_to_yaml(msg.bool_busy, out);
+    out << "onset_is_busy: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_is_busy, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -44,23 +44,23 @@ inline void to_block_style_yaml(
   const OnsetStatus & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: bool_homed
+  // member: onset_is_homed
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "bool_homed: ";
-    rosidl_generator_traits::value_to_yaml(msg.bool_homed, out);
+    out << "onset_is_homed: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_is_homed, out);
     out << "\n";
   }
 
-  // member: bool_busy
+  // member: onset_is_busy
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "bool_busy: ";
-    rosidl_generator_traits::value_to_yaml(msg.bool_busy, out);
+    out << "onset_is_busy: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_is_busy, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

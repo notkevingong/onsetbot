@@ -1,10 +1,8 @@
-/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/zero_sequence.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/stm32_bridge.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/odrive_can_bridge.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__init__.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/actuator_command.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/onset_gui.py
-/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/zero_sequence.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/stm32_bridge.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/odrive_can_bridge.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/__init__.cpython-310.pyc
@@ -23,4 +21,3 @@
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/odrive_can_bridge
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/onset_gui
 /home/gong/onset_ws/install/onsetbot/lib/onsetbot/stm32_bridge
-/home/gong/onset_ws/install/onsetbot/lib/onsetbot/zero_sequence

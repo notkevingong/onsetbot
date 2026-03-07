@@ -6,9 +6,9 @@
 module onset_interfaces {
   module msg {
     struct OnsetStatus {
-      boolean bool_homed;
+      uint8 onset_is_homed;
 
-      boolean bool_busy;
+      uint8 onset_is_busy;
     };
   };
 };

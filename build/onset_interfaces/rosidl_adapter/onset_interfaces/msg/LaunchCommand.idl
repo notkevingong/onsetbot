@@ -12,7 +12,7 @@ module onset_interfaces {
 
       double angle_turret;
 
-      boolean home_seq;
+      uint8 home_onset_request;
     };
   };
 };

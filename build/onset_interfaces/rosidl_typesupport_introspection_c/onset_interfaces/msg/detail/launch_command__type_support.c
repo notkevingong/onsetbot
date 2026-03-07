@@ -84,14 +84,14 @@ static rosidl_typesupport_introspection_c__MessageMember onset_interfaces__msg__
     NULL  // resize(index) function pointer
   },
   {
-    "home_seq",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    "home_onset_request",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(onset_interfaces__msg__LaunchCommand, home_seq),  // bytes offset in struct
+    offsetof(onset_interfaces__msg__LaunchCommand, home_onset_request),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
