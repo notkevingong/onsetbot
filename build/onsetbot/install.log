@@ -1,11 +1,13 @@
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/stm32_bridge.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/odrive_can_bridge.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__init__.py
+/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/configure_spinout_usb.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/actuator_command.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/onset_gui.py
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/stm32_bridge.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/odrive_can_bridge.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/__init__.cpython-310.pyc
+/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/configure_spinout_usb.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/actuator_command.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/__pycache__/onset_gui.cpython-310.pyc
 /home/gong/onset_ws/install/onsetbot/share/ament_index/resource_index/packages/onsetbot

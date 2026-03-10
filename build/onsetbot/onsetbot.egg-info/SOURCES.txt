@@ -11,6 +11,7 @@ setup.py
 ../../build/onsetbot/onsetbot.egg-info/zip-safe
 onsetbot/__init__.py
 onsetbot/actuator_command.py
+onsetbot/configure_spinout_usb.py
 onsetbot/odrive_can_bridge.py
 onsetbot/onset_gui.py
 onsetbot/stm32_bridge.py

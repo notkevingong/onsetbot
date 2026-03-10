@@ -818,7 +818,7 @@ class FieldView(QGraphicsView):
         V_y = (self.ball_y_m / t) if abs(t) > 1e-9 else 0.0
 
         # Launch angles
-        th = math.atan2(V_z, V_h)              # elevation / pitch
+        th = (math.pi / 2) - math.atan2(V_z, V_h)              # elevation / pitch
         yaw = abs(math.atan2(self.ball_y_m, x_m))   # azimuth / yaw
 
         # Exit speed magnitude
@@ -858,10 +858,13 @@ class FieldView(QGraphicsView):
         setter_state['yaw_angle'] = math.degrees(yaw)
         
         
-        self.status_label.setText(f"Target (m): x = {x_m:.2f}, z = {z_m:.2f}, y = {self.ball_y_m:.2f}, yaw = {math.degrees(yaw):.1f}°")
+        self.status_label.setText(
+            f"Target (m): x = {x_m:.2f}, z = {z_m:.2f}, y = {self.ball_y_m:.2f} | "
+            f"exit velocity = {V_0:.2f} m/s | angle = {math.degrees(th):.1f}° | angle (rad) = {th:.3f}"
+        )
         # Update scene text under the net if present
         if hasattr(self, 'net_text') and self.net_text is not None:
-            self.net_text.setPlainText(f"x = {x_m:.2f} m, z = {z_m:.2f} m, y = {self.ball_y_m:.2f} m, peak = {parabola_height_m:.2f} m, velocity = {V_0:.2f} m/s, angle = {math.degrees(th):.1f}°, yaw = {math.degrees(yaw):.1f}°, velocity_x = {V_x:.2f} m/s, velocity_z = {V_z:.2f} m/s")
+            self.net_text.setPlainText(f"x = {x_m:.2f} m, z = {z_m:.2f} m, y = {self.ball_y_m:.2f} m, peak = {parabola_height_m:.2f} m, velocity = {V_0:.2f} m/s, angle = {math.degrees(th):.1f}°, angle(rad) = {th:.3f}, yaw = {math.degrees(yaw):.1f}°, velocity_x = {V_x:.2f} m/s, velocity_z = {V_z:.2f} m/s")
             # Reposition in case scene or net changed
             left = self.world_to_scene(self.x_min_m, self.net_z_min)
             right = self.world_to_scene(self.x_max_m, self.net_z_max)

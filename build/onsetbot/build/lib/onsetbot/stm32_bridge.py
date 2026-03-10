@@ -12,9 +12,7 @@ from rclpy.node import Node
 from onset_interfaces.msg import STM32Message, STM32State
 
 import serial
-import threading
 import re
-import math
 import time
 
 
@@ -47,7 +45,6 @@ class STM32Bridge(Node):
         self.ser = None
         self.home_elbow_status = False
         self._homing_in_progress = False
-        self._home_wait_seconds = 3.0
         self._last_power_on_status: Optional[bool] = None
         self._last_serial_error_log_time = 0.0
         self.usb_port = '/dev/ttyACM0'
@@ -67,6 +64,33 @@ class STM32Bridge(Node):
         msg.elbow_moving_status = parsed.elbow_moving_status
         msg.elbow_power_status = parsed.elbow_power_status
         self.stm32_state_pub.publish(msg)
+
+        status = parsed.elbow_moving_status
+        if status == 0:  # STATUS_NEEDS_HOME
+            self.home_elbow_status = False
+            self._homing_in_progress = False
+        elif status == 1:  # STATUS_HOMING
+            self.home_elbow_status = False
+            self._homing_in_progress = True
+        elif status == 2:  # STATUS_HOME_ERROR
+            self.home_elbow_status = False
+            self._homing_in_progress = False
+            self.get_logger().warn("STM32 elbow home error (status=2)")
+        elif status == 3:  # STATUS_HOME_SUCCESS
+            was_homing = self._homing_in_progress
+            self.home_elbow_status = True
+            self._homing_in_progress = False
+            if was_homing:
+                self.get_logger().info("Elbow homing complete from STM32 status: <x,x,3,x>")
+        elif status == 4:  # STATUS_MOVING
+            self.home_elbow_status = True
+            self._homing_in_progress = False
+        elif status == 5:  # STATUS_MOVE_SUCCESS
+            self.home_elbow_status = True
+            self._homing_in_progress = False
+        elif status == 6:  # STATUS_MOVE_ERROR
+            self._homing_in_progress = False
+            self.get_logger().warn("STM32 elbow move error (status=6)")
 
     def _read_serial_latest_line(self) -> Optional[str]:
         latest_line: Optional[str] = None
@@ -127,7 +151,7 @@ class STM32Bridge(Node):
 
     def _on_command(self, msg: STM32Message) -> None:
         power_on = msg.power_on_status == 1
-        home_requested = msg.home_elbow_request == 1
+        home_requested = bool(getattr(msg, "home_elbow", 0) == 1 or getattr(msg, "home_elbow_request", 0) == 1)
 
         if self._last_power_on_status is None or power_on != self._last_power_on_status:
             self._send_to_stm32(f"<P,{1 if power_on else 0}>")
@@ -140,17 +164,15 @@ class STM32Bridge(Node):
             return
 
         if home_requested and not self.home_elbow_status and not self._homing_in_progress:
-            if self._send_to_stm32("<H>"):
+            if self._send_to_stm32("<h>"):
                 self._homing_in_progress = True
-                self.get_logger().info("Homing command sent; waiting for completion...")
-                threading.Thread(target=self._complete_home_after_delay, daemon=True).start()
+                self.get_logger().info("Homing command sent (<h>); waiting for STM32 status <x,x,3,x>")
             return
 
         if self.home_elbow_status:
-            angle_deg = msg.angle_launch
-            angle_rad = math.radians(angle_deg)
+            angle_rad = msg.angle_launch
             self.message_to_stm32 = str(angle_rad)
-            self.get_logger().info(f"Sending elbow angle: {angle_deg} deg ({angle_rad} rad)")
+            self.get_logger().info(f"Sending elbow angle: {angle_rad} rad")
             self._send_to_stm32(f"<M,{angle_rad}>")
         else:
             self.get_logger().info("Home not complete; ignoring elbow angle command")
@@ -161,6 +183,7 @@ class STM32Bridge(Node):
             if self.ser is None:
                 self.ser = serial.Serial(self.usb_port, 115200, timeout=0.0, write_timeout=0.02)
             if self.ser.is_open:
+                self.get_logger().info(f"Sending STM32 command: {payload}")
                 self.ser.write(payload.encode("utf-8"))
                 return True
         except Exception as e:
@@ -168,12 +191,6 @@ class STM32Bridge(Node):
             self.close_serial()
             self.ser = None
         return False
-
-    def _complete_home_after_delay(self) -> None:
-        time.sleep(self._home_wait_seconds)
-        self.home_elbow_status = True
-        self._homing_in_progress = False
-        self.get_logger().info("Elbow homing complete")
 
 
 def main() -> None:
