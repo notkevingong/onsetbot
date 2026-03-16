@@ -1,4 +1,1 @@
-source;share/onset_interfaces/environment/ament_prefix_path.sh
-source;share/onset_interfaces/environment/library_path.sh
-source;share/onset_interfaces/environment/path.sh
-source;share/onset_interfaces/environment/pythonpath.sh
+/home/gong/onset_ws/build/onset_interfaces/ament_cmake_environment_hooks/local_setup.dsv

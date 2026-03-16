@@ -1,4 +1,1 @@
-float64 angle_launch
-uint8 power_on_status
-uint8 home_elbow_request
-uint8 stm32_state_request
+/home/gong/onset_ws/src/onset_interfaces/msg/STM32Message.msg

@@ -1,10 +1,1 @@
-msg/HomeCommand.idl
-msg/HomeCommand.msg
-msg/LaunchCommand.idl
-msg/LaunchCommand.msg
-msg/OnsetStatus.idl
-msg/OnsetStatus.msg
-msg/STM32Message.idl
-msg/STM32Message.msg
-msg/STM32State.idl
-msg/STM32State.msg
+/home/gong/onset_ws/build/onset_interfaces/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/onset_interfaces

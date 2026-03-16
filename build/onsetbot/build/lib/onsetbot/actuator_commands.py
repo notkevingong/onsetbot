@@ -143,9 +143,9 @@ class ActuatorCommand(Node):
         self._home_clear_start_time = 0.0
 
         # Launch tuning constants
-        self._launch_velocity_limit_turns_per_sec = 70.0
+        self._launch_velocity_limit_turns_per_sec = 40.0
         self._launch_seek_to_start_velocity_turns_per_sec = 3.0
-        self._launch_decel_start_fraction = 0.8
+        self._launch_decel_start_fraction = 0.6
         self._launch_brake_velocity_threshold_turns_per_sec = 0.2
         self._launch_brake_timeout_sec = 2.0
         self._launch_post_sw3_hold_sec = 5.0
@@ -162,6 +162,9 @@ class ActuatorCommand(Node):
         self.launch_direction = 1.0
         self._launch_brake_start_time = 0.0
         self._launch_post_sw3_hold_start_time = 0.0
+        self._launch_command_velocity = 0.0
+        self._launch_velocity_log_period_sec = 0.1
+        self._last_launch_velocity_log_time = 0.0
 
         # Timers
         self.homing_timer = self.create_timer(0.05, self._homing_step)
@@ -293,6 +296,7 @@ class ActuatorCommand(Node):
 
     def _abort_launch_sequence(self, reason: str):
         self._publish_odrive_velocity(0.0)
+        self._log_launch_velocity(force=True)
         self.launch_active = False
         self.launch_state = 'idle'
         self._publish_onset_status(homed=self.is_homed, busy=False)
@@ -300,11 +304,34 @@ class ActuatorCommand(Node):
 
     def _complete_launch_sequence(self):
         self._publish_odrive_velocity(0.0)
+        self._log_launch_velocity(force=True)
         self.launch_active = False
         self.launch_state = 'idle'
         self._publish_onset_status(homed=self.is_homed, busy=False)
         self.get_logger().info(
             'Launch sequence complete: recalibrated SW3/SW2, recomputed offsets, and returned to offset_min_position'
+        )
+
+    def _turns_per_sec_to_m_per_sec(self, turns_per_sec: float) -> float:
+        if abs(self._velocity_conversion_constant) <= 1e-9:
+            return 0.0
+        return float(turns_per_sec) / self._velocity_conversion_constant
+
+    def _log_launch_velocity(self, force: bool = False):
+        if not self.launch_active and not force:
+            return
+
+        now = time.monotonic()
+        if (not force) and ((now - self._last_launch_velocity_log_time) < self._launch_velocity_log_period_sec):
+            return
+
+        self._last_launch_velocity_log_time = now
+        target_velocity_mps = self._turns_per_sec_to_m_per_sec(self._launch_command_velocity)
+        real_velocity_mps = self._turns_per_sec_to_m_per_sec(self.current_velocity)
+        self.get_logger().info(
+            f'Launch velocity [{self.launch_state}]: '
+            f'target={target_velocity_mps:.3f} m/s, '
+            f'real={real_velocity_mps:.3f} m/s'
         )
 
     def _launch_step(self):
@@ -587,6 +614,11 @@ class ActuatorCommand(Node):
         )
 
     def _publish_odrive_velocity(self, velocity: float):
+        feedback_axis = self._odrive_feedback_axis_name
+        feedback_scale = self._odrive_velocity_scale_by_axis.get(feedback_axis, 1.0)
+        if feedback_axis == 'axis1':
+            feedback_scale = self._axis1_velocity_scale_up if velocity >= 0.0 else self._axis1_velocity_scale_down
+        self._launch_command_velocity = float(feedback_scale * velocity)
         for axis_name, axis_id in self._odrive_axes:
             direction = self._odrive_direction_sign_by_axis.get(axis_name, 1.0)
             scale = self._odrive_velocity_scale_by_axis.get(axis_name, 1.0)
@@ -642,6 +674,9 @@ class ActuatorCommand(Node):
             self.current_position = float(sign * msg.position[idx])
         if idx < len(msg.velocity):
             self.current_velocity = float(sign * msg.velocity[idx])
+
+        if self.launch_active:
+            self._log_launch_velocity()
 
     def update_stm32_state(self, msg: STM32State):
         self._stm32_state_seen = True

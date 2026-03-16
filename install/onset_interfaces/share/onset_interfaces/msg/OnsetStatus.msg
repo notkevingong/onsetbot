@@ -1,2 +1,1 @@
-uint8 onset_is_homed
-uint8 onset_is_busy
+/home/gong/onset_ws/src/onset_interfaces/msg/OnsetStatus.msg

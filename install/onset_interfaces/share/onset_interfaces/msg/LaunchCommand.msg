@@ -1,4 +1,1 @@
-float64 velocity
-float64 angle_launch
-float64 angle_turret
-
+/home/gong/onset_ws/src/onset_interfaces/msg/LaunchCommand.msg

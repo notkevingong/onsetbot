@@ -1,0 +1,1 @@
+/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/__init__.py

@@ -1,1 +1,1 @@
-uint8 home_onset_request
+/home/gong/onset_ws/src/onset_interfaces/msg/HomeCommand.msg

@@ -1,1 +1,1 @@
-onset_interfaces
+/home/gong/onset_ws/build/onset_interfaces/ament_cmake_python/onset_interfaces/onset_interfaces.egg-info/top_level.txt

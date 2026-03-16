@@ -1,5 +1,1 @@
-from onset_interfaces.msg._home_command import HomeCommand  # noqa: F401
-from onset_interfaces.msg._launch_command import LaunchCommand  # noqa: F401
-from onset_interfaces.msg._onset_status import OnsetStatus  # noqa: F401
-from onset_interfaces.msg._stm32_message import STM32Message  # noqa: F401
-from onset_interfaces.msg._stm32_state import STM32State  # noqa: F401
+/home/gong/onset_ws/build/onset_interfaces/rosidl_generator_py/onset_interfaces/msg/__init__.py

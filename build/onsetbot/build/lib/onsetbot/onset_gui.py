@@ -2,6 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from onset_interfaces.msg import LaunchCommand, OnsetStatus, HomeCommand
+import subprocess
 import sys
 import math
 import time
@@ -525,7 +526,7 @@ class FieldView(QGraphicsView):
         print(left, right)
         net = QGraphicsRectItem(left.x(), left.y(), right.x()-left.x(), right.y()-left.y())
         net.setPen(net_pen)        
-        net_brush = QBrush(Qt.GlobalColor.white, Qt.BrushStyle.CrossPattern)
+        net_brush = QBrush(Qt.GlobalColor.darkGray, Qt.BrushStyle.CrossPattern)
         net.setBrush(net_brush)        
         net.setZValue(0.5)
         self.scene.addItem(net)
@@ -909,6 +910,18 @@ class MainWindow(QWidget):
 
         # Right side: parabola height buttons
         right_layout = QVBoxLayout()
+
+        # Emergency stop button (top of panel, always accessible)
+        btn_estop = QPushButton("⚠ E-STOP")
+        btn_estop.setStyleSheet(
+            "QPushButton { background-color: #cc0000; color: white; font-weight: bold; "
+            "font-size: 16px; padding: 12px; border-radius: 6px; } "
+            "QPushButton:hover { background-color: #ff0000; } "
+            "QPushButton:pressed { background-color: #880000; }"
+        )
+        btn_estop.clicked.connect(self.emergency_stop)
+        right_layout.addWidget(btn_estop)
+
         right_layout.addStretch()
         
         btn_up = QPushButton("↑ Higher")
@@ -991,6 +1004,22 @@ class MainWindow(QWidget):
         if self.ros_node is None:
             return
         self.ros_node.request_home_onset()
+
+    def emergency_stop(self):
+        """Stop odrive_can_bridge first, then stop remaining ROS2 processes."""
+        if self.ros_node is not None:
+            self.ros_node.get_logger().warn(
+                'EMERGENCY STOP triggered - stopping odrive_can_bridge first'
+            )
+
+        # Stop ODrive bridge first so motor commands halt before other nodes unwind.
+        subprocess.run(['pkill', '-2', '-f', 'odrive_can_bridge'], check=False)
+
+        # Give ODrive bridge a short head start before stopping all ROS2 processes.
+        time.sleep(0.15)
+
+        subprocess.run(['pkill', '-2', '-f', 'ros2'], check=False)
+        QApplication.instance().quit()
 
 def main():
     rclpy.init(args=None)

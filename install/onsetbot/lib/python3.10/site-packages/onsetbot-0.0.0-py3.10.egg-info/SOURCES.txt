@@ -9,6 +9,7 @@ setup.py
 ../../build/onsetbot/onsetbot.egg-info/requires.txt
 ../../build/onsetbot/onsetbot.egg-info/top_level.txt
 ../../build/onsetbot/onsetbot.egg-info/zip-safe
+launch/onset_launch.launch.py
 onsetbot/__init__.py
 onsetbot/actuator_command.py
 onsetbot/actuator_commands.py
