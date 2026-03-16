@@ -20,6 +20,7 @@ onset_interfaces__msg__STM32Message__init(onset_interfaces__msg__STM32Message * 
   // angle_launch
   // power_on_status
   // home_elbow_request
+  // stm32_state_request
   return true;
 }
 
@@ -32,6 +33,7 @@ onset_interfaces__msg__STM32Message__fini(onset_interfaces__msg__STM32Message * 
   // angle_launch
   // power_on_status
   // home_elbow_request
+  // stm32_state_request
 }
 
 bool
@@ -52,6 +54,10 @@ onset_interfaces__msg__STM32Message__are_equal(const onset_interfaces__msg__STM3
   if (lhs->home_elbow_request != rhs->home_elbow_request) {
     return false;
   }
+  // stm32_state_request
+  if (lhs->stm32_state_request != rhs->stm32_state_request) {
+    return false;
+  }
   return true;
 }
 
@@ -69,6 +75,8 @@ onset_interfaces__msg__STM32Message__copy(
   output->power_on_status = input->power_on_status;
   // home_elbow_request
   output->home_elbow_request = input->home_elbow_request;
+  // stm32_state_request
+  output->stm32_state_request = input->stm32_state_request;
   return true;
 }
 

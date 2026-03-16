@@ -5,6 +5,7 @@ onset_interfaces.egg-info/SOURCES.txt
 onset_interfaces.egg-info/dependency_links.txt
 onset_interfaces.egg-info/top_level.txt
 onset_interfaces/msg/__init__.py
+onset_interfaces/msg/_home_command.py
 onset_interfaces/msg/_launch_command.py
 onset_interfaces/msg/_onset_status.py
 onset_interfaces/msg/_stm32_message.py

@@ -20,7 +20,6 @@ onset_interfaces__msg__LaunchCommand__init(onset_interfaces__msg__LaunchCommand 
   // velocity
   // angle_launch
   // angle_turret
-  // home_onset_request
   return true;
 }
 
@@ -33,7 +32,6 @@ onset_interfaces__msg__LaunchCommand__fini(onset_interfaces__msg__LaunchCommand 
   // velocity
   // angle_launch
   // angle_turret
-  // home_onset_request
 }
 
 bool
@@ -54,10 +52,6 @@ onset_interfaces__msg__LaunchCommand__are_equal(const onset_interfaces__msg__Lau
   if (lhs->angle_turret != rhs->angle_turret) {
     return false;
   }
-  // home_onset_request
-  if (lhs->home_onset_request != rhs->home_onset_request) {
-    return false;
-  }
   return true;
 }
 
@@ -75,8 +69,6 @@ onset_interfaces__msg__LaunchCommand__copy(
   output->angle_launch = input->angle_launch;
   // angle_turret
   output->angle_turret = input->angle_turret;
-  // home_onset_request
-  output->home_onset_request = input->home_onset_request;
   return true;
 }
 

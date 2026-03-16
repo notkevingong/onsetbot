@@ -43,6 +43,13 @@ inline void to_flow_style_yaml(
   {
     out << "home_elbow_request: ";
     rosidl_generator_traits::value_to_yaml(msg.home_elbow_request, out);
+    out << ", ";
+  }
+
+  // member: stm32_state_request
+  {
+    out << "stm32_state_request: ";
+    rosidl_generator_traits::value_to_yaml(msg.stm32_state_request, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -78,6 +85,16 @@ inline void to_block_style_yaml(
     }
     out << "home_elbow_request: ";
     rosidl_generator_traits::value_to_yaml(msg.home_elbow_request, out);
+    out << "\n";
+  }
+
+  // member: stm32_state_request
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "stm32_state_request: ";
+    rosidl_generator_traits::value_to_yaml(msg.stm32_state_request, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

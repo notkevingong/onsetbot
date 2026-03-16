@@ -1,5 +1,6 @@
 [console_scripts]
 actuator_command = onsetbot.actuator_command:main
+actuator_commands = onsetbot.actuator_commands:main
 odrive_can_bridge = onsetbot.odrive_can_bridge:main
 onset_gui = onsetbot.onset_gui:main
 stm32_bridge = onsetbot.stm32_bridge:main

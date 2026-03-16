@@ -64,6 +64,11 @@ static bool _STM32Message__cdr_serialize(
     cdr << ros_message->home_elbow_request;
   }
 
+  // Field name: stm32_state_request
+  {
+    cdr << ros_message->stm32_state_request;
+  }
+
   return true;
 }
 
@@ -89,6 +94,11 @@ static bool _STM32Message__cdr_deserialize(
   // Field name: home_elbow_request
   {
     cdr >> ros_message->home_elbow_request;
+  }
+
+  // Field name: stm32_state_request
+  {
+    cdr >> ros_message->stm32_state_request;
   }
 
   return true;
@@ -123,6 +133,12 @@ size_t get_serialized_size_onset_interfaces__msg__STM32Message(
   // field.name home_elbow_request
   {
     size_t item_size = sizeof(ros_message->home_elbow_request);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name stm32_state_request
+  {
+    size_t item_size = sizeof(ros_message->stm32_state_request);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -177,6 +193,13 @@ size_t max_serialized_size_onset_interfaces__msg__STM32Message(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
+  // member: stm32_state_request
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -186,7 +209,7 @@ size_t max_serialized_size_onset_interfaces__msg__STM32Message(
     using DataType = onset_interfaces__msg__STM32Message;
     is_plain =
       (
-      offsetof(DataType, home_elbow_request) +
+      offsetof(DataType, stm32_state_request) +
       last_member_size
       ) == ret_val;
   }

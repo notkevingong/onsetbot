@@ -86,6 +86,11 @@ CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/deta
 CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__struct.hpp
 CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__traits.hpp
 CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp
+CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/home_command.hpp
+CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__builder.hpp
+CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__struct.hpp
+CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__traits.hpp
+CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__type_support.hpp
 CMakeFiles/onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -107,6 +112,7 @@ rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: rosidl_adapter/ons
 rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl
 rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: rosidl_adapter/onset_interfaces/msg/STM32Message.idl
 rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: rosidl_adapter/onset_interfaces/msg/STM32State.idl
+rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp: rosidl_adapter/onset_interfaces/msg/HomeCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -167,7 +173,26 @@ rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__traits.hpp: rosidl
 rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp
 
+rosidl_generator_cpp/onset_interfaces/msg/home_command.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/home_command.hpp
+
+rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__builder.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__builder.hpp
+
+rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__struct.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__struct.hpp
+
+rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__traits.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__traits.hpp
+
+rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__type_support.hpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__type_support.hpp
+
 onset_interfaces__cpp: CMakeFiles/onset_interfaces__cpp
+onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__builder.hpp
+onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__struct.hpp
+onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__traits.hpp
+onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__type_support.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__builder.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__struct.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__traits.hpp
@@ -184,6 +209,7 @@ onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_st
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__struct.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__traits.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp
+onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/home_command.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/onset_status.hpp
 onset_interfaces__cpp: rosidl_generator_cpp/onset_interfaces/msg/stm32_message.hpp

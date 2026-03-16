@@ -60,16 +60,19 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         '_angle_launch',
         '_power_on_status',
         '_home_elbow_request',
+        '_stm32_state_request',
     ]
 
     _fields_and_field_types = {
         'angle_launch': 'double',
         'power_on_status': 'uint8',
         'home_elbow_request': 'uint8',
+        'stm32_state_request': 'uint8',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
     )
@@ -81,6 +84,7 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         self.angle_launch = kwargs.get('angle_launch', float())
         self.power_on_status = kwargs.get('power_on_status', int())
         self.home_elbow_request = kwargs.get('home_elbow_request', int())
+        self.stm32_state_request = kwargs.get('stm32_state_request', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -116,6 +120,8 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         if self.power_on_status != other.power_on_status:
             return False
         if self.home_elbow_request != other.home_elbow_request:
+            return False
+        if self.stm32_state_request != other.stm32_state_request:
             return False
         return True
 
@@ -168,3 +174,18 @@ class STM32Message(metaclass=Metaclass_STM32Message):
             assert value >= 0 and value < 256, \
                 "The 'home_elbow_request' field must be an unsigned integer in [0, 255]"
         self._home_elbow_request = value
+
+    @builtins.property
+    def stm32_state_request(self):
+        """Message field 'stm32_state_request'."""
+        return self._stm32_state_request
+
+    @stm32_state_request.setter
+    def stm32_state_request(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'stm32_state_request' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'stm32_state_request' field must be an unsigned integer in [0, 255]"
+        self._stm32_state_request = value

@@ -21,16 +21,32 @@ namespace msg
 namespace builder
 {
 
+class Init_STM32Message_stm32_state_request
+{
+public:
+  explicit Init_STM32Message_stm32_state_request(::onset_interfaces::msg::STM32Message & msg)
+  : msg_(msg)
+  {}
+  ::onset_interfaces::msg::STM32Message stm32_state_request(::onset_interfaces::msg::STM32Message::_stm32_state_request_type arg)
+  {
+    msg_.stm32_state_request = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32Message msg_;
+};
+
 class Init_STM32Message_home_elbow_request
 {
 public:
   explicit Init_STM32Message_home_elbow_request(::onset_interfaces::msg::STM32Message & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::STM32Message home_elbow_request(::onset_interfaces::msg::STM32Message::_home_elbow_request_type arg)
+  Init_STM32Message_stm32_state_request home_elbow_request(::onset_interfaces::msg::STM32Message::_home_elbow_request_type arg)
   {
     msg_.home_elbow_request = std::move(arg);
-    return std::move(msg_);
+    return Init_STM32Message_stm32_state_request(msg_);
   }
 
 private:

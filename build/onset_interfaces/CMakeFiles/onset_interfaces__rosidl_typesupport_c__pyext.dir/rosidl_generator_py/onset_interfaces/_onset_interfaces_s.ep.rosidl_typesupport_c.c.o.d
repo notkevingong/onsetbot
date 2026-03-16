@@ -213,4 +213,7 @@ CMakeFiles/onset_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py
  /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_message__functions.h \
  /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__type_support.h \
  /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__struct.h \
- /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h
+ /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/stm32_state__functions.h \
+ /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/home_command__type_support.h \
+ /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/home_command__struct.h \
+ /home/gong/onset_ws/build/onset_interfaces/rosidl_generator_c/onset_interfaces/msg/detail/home_command__functions.h

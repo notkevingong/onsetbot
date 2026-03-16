@@ -9,6 +9,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/OnsetStatus.msg"
   "msg/STM32Message.msg"
   "msg/STM32State.msg"
+  "msg/HomeCommand.msg"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

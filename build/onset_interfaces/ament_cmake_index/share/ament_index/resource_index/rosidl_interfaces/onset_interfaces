@@ -1,3 +1,5 @@
+msg/HomeCommand.idl
+msg/HomeCommand.msg
 msg/LaunchCommand.idl
 msg/LaunchCommand.msg
 msg/OnsetStatus.idl

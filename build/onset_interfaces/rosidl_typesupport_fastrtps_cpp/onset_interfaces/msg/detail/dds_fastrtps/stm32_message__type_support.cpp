@@ -38,6 +38,8 @@ cdr_serialize(
   cdr << ros_message.power_on_status;
   // Member: home_elbow_request
   cdr << ros_message.home_elbow_request;
+  // Member: stm32_state_request
+  cdr << ros_message.stm32_state_request;
   return true;
 }
 
@@ -55,6 +57,9 @@ cdr_deserialize(
 
   // Member: home_elbow_request
   cdr >> ros_message.home_elbow_request;
+
+  // Member: stm32_state_request
+  cdr >> ros_message.stm32_state_request;
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -87,6 +92,12 @@ get_serialized_size(
   // Member: home_elbow_request
   {
     size_t item_size = sizeof(ros_message.home_elbow_request);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: stm32_state_request
+  {
+    size_t item_size = sizeof(ros_message.stm32_state_request);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -139,6 +150,14 @@ max_serialized_size_STM32Message(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
+  // Member: stm32_state_request
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -147,7 +166,7 @@ max_serialized_size_STM32Message(
     using DataType = onset_interfaces::msg::STM32Message;
     is_plain =
       (
-      offsetof(DataType, home_elbow_request) +
+      offsetof(DataType, stm32_state_request) +
       last_member_size
       ) == ret_val;
   }

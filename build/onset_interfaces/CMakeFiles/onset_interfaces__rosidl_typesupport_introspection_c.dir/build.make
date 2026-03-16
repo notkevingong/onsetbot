@@ -81,6 +81,7 @@ rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__r
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h: rosidl_adapter/onset_interfaces/msg/OnsetStatus.idl
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h: rosidl_adapter/onset_interfaces/msg/STM32Message.idl
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h: rosidl_adapter/onset_interfaces/msg/STM32State.idl
+rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h: rosidl_adapter/onset_interfaces/msg/HomeCommand.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c --generator-arguments-file /home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_introspection_c__arguments.json
 
@@ -93,6 +94,9 @@ rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__ro
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c
 
@@ -104,6 +108,9 @@ rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__ty
 
 rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c
+
+rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c
 
 CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c
@@ -161,12 +168,27 @@ CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_types
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c -o CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.s
 
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o -MF CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o.d -o CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o -c /home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c
+
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c > CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.i
+
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gong/onset_ws/build/onset_interfaces/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c -o CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.s
+
 # Object files for target onset_interfaces__rosidl_typesupport_introspection_c
 onset_interfaces__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c.o" \
 "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o" \
 "CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o" \
-"CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o"
+"CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o" \
+"CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o"
 
 # External object files for target onset_interfaces__rosidl_typesupport_introspection_c
 onset_interfaces__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -175,13 +197,14 @@ libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_int
 libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__type_support.c.o
 libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_message__type_support.c.o
 libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/stm32_state__type_support.c.o
+libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c.o
 libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/build.make
 libonset_interfaces__rosidl_typesupport_introspection_c.so: libonset_interfaces__rosidl_generator_c.so
 libonset_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
 libonset_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libonset_interfaces__rosidl_typesupport_introspection_c.so: /opt/ros/humble/lib/librcutils.so
 libonset_interfaces__rosidl_typesupport_introspection_c.so: CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C shared library libonset_interfaces__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gong/onset_ws/build/onset_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C shared library libonset_interfaces__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -192,6 +215,8 @@ CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/clean
 
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__rosidl_typesupport_introspection_c.h
+CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/home_command__type_support.c
 CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
 CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/launch_command__type_support.c
 CMakeFiles/onset_interfaces__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_c.h

@@ -77,6 +77,15 @@ bool onset_interfaces__msg__stm32_message__convert_from_py(PyObject * _pymsg, vo
     ros_message->home_elbow_request = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
+  {  // stm32_state_request
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stm32_state_request");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->stm32_state_request = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -126,6 +135,17 @@ PyObject * onset_interfaces__msg__stm32_message__convert_to_py(void * raw_ros_me
     field = PyLong_FromUnsignedLong(ros_message->home_elbow_request);
     {
       int rc = PyObject_SetAttrString(_pymessage, "home_elbow_request", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stm32_state_request
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->stm32_state_request);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stm32_state_request", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

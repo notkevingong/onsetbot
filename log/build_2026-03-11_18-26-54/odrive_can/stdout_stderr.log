@@ -1,0 +1,7 @@
+[ 10%] Built target odrive_can__rosidl_generator_c
+[ 11%] Built target odrive_can__cpp
+gmake[2]: *** [CMakeFiles/odrive_can__rosidl_typesupport_cpp.dir/build.make:185: CMakeFiles/odrive_can__rosidl_typesupport_cpp.dir/depend] Interrupt
+gmake[2]: *** [CMakeFiles/ament_cmake_python_copy_odrive_can.dir/build.make:70: CMakeFiles/ament_cmake_python_copy_odrive_can] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:396: CMakeFiles/odrive_can__rosidl_typesupport_cpp.dir/all] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:423: CMakeFiles/ament_cmake_python_copy_odrive_can.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

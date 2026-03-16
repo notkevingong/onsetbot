@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/onset_interfaces__cpp"
+  "rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__builder.hpp"
+  "rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__struct.hpp"
+  "rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__traits.hpp"
+  "rosidl_generator_cpp/onset_interfaces/msg/detail/home_command__type_support.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__builder.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__struct.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/detail/launch_command__traits.hpp"
@@ -16,6 +20,7 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__struct.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__traits.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/detail/stm32_state__type_support.hpp"
+  "rosidl_generator_cpp/onset_interfaces/msg/home_command.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/launch_command.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/onset_status.hpp"
   "rosidl_generator_cpp/onset_interfaces/msg/stm32_message.hpp"

@@ -42,6 +42,7 @@ struct STM32Message_
       this->angle_launch = 0.0;
       this->power_on_status = 0;
       this->home_elbow_request = 0;
+      this->stm32_state_request = 0;
     }
   }
 
@@ -54,6 +55,7 @@ struct STM32Message_
       this->angle_launch = 0.0;
       this->power_on_status = 0;
       this->home_elbow_request = 0;
+      this->stm32_state_request = 0;
     }
   }
 
@@ -67,6 +69,9 @@ struct STM32Message_
   using _home_elbow_request_type =
     uint8_t;
   _home_elbow_request_type home_elbow_request;
+  using _stm32_state_request_type =
+    uint8_t;
+  _stm32_state_request_type stm32_state_request;
 
   // setters for named parameter idiom
   Type & set__angle_launch(
@@ -85,6 +90,12 @@ struct STM32Message_
     const uint8_t & _arg)
   {
     this->home_elbow_request = _arg;
+    return *this;
+  }
+  Type & set__stm32_state_request(
+    const uint8_t & _arg)
+  {
+    this->stm32_state_request = _arg;
     return *this;
   }
 
@@ -137,6 +148,9 @@ struct STM32Message_
       return false;
     }
     if (this->home_elbow_request != other.home_elbow_request) {
+      return false;
+    }
+    if (this->stm32_state_request != other.stm32_state_request) {
       return false;
     }
     return true;
