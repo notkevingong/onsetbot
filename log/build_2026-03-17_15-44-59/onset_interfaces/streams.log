@@ -1,0 +1,188 @@
+[0.100s] Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j4 -l4
+[1.033s] [  1%] Built target onset_interfaces__cpp
+[1.238s] [  1%] Built target ament_cmake_python_symlink_onset_interfaces
+[1.480s] [ 12%] Built target onset_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.672s] [ 23%] Built target onset_interfaces__rosidl_typesupport_introspection_cpp
+[2.739s] running egg_info
+[2.812s] writing onset_interfaces.egg-info/PKG-INFO
+[2.814s] writing dependency_links to onset_interfaces.egg-info/dependency_links.txt
+[2.815s] writing top-level names to onset_interfaces.egg-info/top_level.txt
+[3.029s] reading manifest file 'onset_interfaces.egg-info/SOURCES.txt'
+[3.034s] writing manifest file 'onset_interfaces.egg-info/SOURCES.txt'
+[3.213s] [ 23%] Built target ament_cmake_python_build_onset_interfaces_egg
+[3.400s] [ 34%] Built target onset_interfaces__rosidl_typesupport_cpp
+[3.579s] [ 46%] Built target onset_interfaces__rosidl_generator_c
+[3.848s] [ 57%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c
+[4.032s] [ 68%] Built target onset_interfaces__rosidl_typesupport_c
+[4.209s] [ 79%] Built target onset_interfaces__rosidl_typesupport_introspection_c
+[4.364s] [ 79%] Built target onset_interfaces
+[4.528s] [ 80%] Built target onset_interfaces__py
+[4.730s] [ 90%] Built target onset_interfaces__rosidl_generator_py
+[4.899s] [ 93%] Built target onset_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[5.073s] [ 96%] Built target onset_interfaces__rosidl_typesupport_c__pyext
+[5.272s] [100%] Built target onset_interfaces__rosidl_typesupport_introspection_c__pyext
+[5.395s] Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j4 -l4
+[5.510s] Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[5.622s] -- Install configuration: ""
+[5.630s] -- Execute custom install script
+[5.634s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/rosidl_interfaces/onset_interfaces
+[5.654s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__functions.h
+[5.658s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__struct.h
+[5.665s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__type_support.h
+[5.668s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__functions.h
+[5.686s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.h
+[5.687s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.h
+[5.690s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__functions.h
+[5.691s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.h
+[5.694s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.h
+[5.700s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__functions.h
+[5.703s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.h
+[5.708s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.h
+[5.713s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__functions.h
+[5.717s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.h
+[5.719s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.h
+[5.722s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/home_command.h
+[5.725s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.h
+[5.731s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.h
+[5.733s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_c__visibility_control.h
+[5.736s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.h
+[5.742s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.h
+[5.749s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.sh
+[5.753s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/library_path.dsv
+[5.764s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__rosidl_typesupport_fastrtps_c.h
+[5.766s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_c.h
+[5.768s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_c.h
+[5.781s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_c.h
+[5.782s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_c.h
+[5.783s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.784s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__rosidl_typesupport_introspection_c.h
+[5.788s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_c.h
+[5.796s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_c.h
+[5.798s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_c.h
+[5.802s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_c.h
+[5.805s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.815s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__builder.hpp
+[5.822s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__struct.hpp
+[5.824s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__traits.hpp
+[5.826s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__type_support.hpp
+[5.834s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__builder.hpp
+[5.838s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__struct.hpp
+[5.842s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__traits.hpp
+[5.846s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__type_support.hpp
+[5.854s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__builder.hpp
+[5.864s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__struct.hpp
+[5.868s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__traits.hpp
+[5.870s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__type_support.hpp
+[5.876s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__builder.hpp
+[5.878s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__struct.hpp
+[5.881s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__traits.hpp
+[5.884s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__type_support.hpp
+[5.886s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__builder.hpp
+[5.888s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__struct.hpp
+[5.896s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__traits.hpp
+[5.897s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__type_support.hpp
+[5.900s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/home_command.hpp
+[5.914s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/launch_command.hpp
+[5.915s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/onset_status.hpp
+[5.915s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.918s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_message.hpp
+[5.920s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/stm32_state.hpp
+[5.948s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__rosidl_typesupport_fastrtps_cpp.hpp
+[5.952s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_fastrtps_cpp.hpp
+[5.959s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_fastrtps_cpp.hpp
+[5.968s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_fastrtps_cpp.hpp
+[5.970s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_fastrtps_cpp.hpp
+[5.970s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.980s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/home_command__rosidl_typesupport_introspection_cpp.hpp
+[5.986s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/launch_command__rosidl_typesupport_introspection_cpp.hpp
+[5.987s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/onset_status__rosidl_typesupport_introspection_cpp.hpp
+[5.989s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_message__rosidl_typesupport_introspection_cpp.hpp
+[5.997s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/include/onset_interfaces/onset_interfaces/msg/detail/stm32_state__rosidl_typesupport_introspection_cpp.hpp
+[5.998s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.sh
+[6.006s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/pythonpath.dsv
+[6.011s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[6.019s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.026s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.032s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[6.046s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/__init__.py
+[6.049s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_c.c
+[6.051s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.052s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/_onset_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[6.055s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/libonset_interfaces__rosidl_generator_py.so
+[6.056s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/__init__.py
+[6.059s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_home_command.py
+[6.064s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_home_command_s.c
+[6.066s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command.py
+[6.068s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_launch_command_s.c
+[6.070s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status.py
+[6.072s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_onset_status_s.c
+[6.074s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message.py
+[6.076s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_message_s.c
+[6.079s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state.py
+[6.083s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg/_stm32_state_s.c
+[6.085s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.087s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.089s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.092s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[6.096s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[6.099s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/onset_interfaces_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[6.102s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.idl
+[6.104s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.idl
+[6.106s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.idl
+[6.108s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.idl
+[6.110s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/HomeCommand.idl
+[6.111s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/LaunchCommand.msg
+[6.113s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/OnsetStatus.msg
+[6.114s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32Message.msg
+[6.115s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/STM32State.msg
+[6.117s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/msg/HomeCommand.msg
+[6.118s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/package_run_dependencies/onset_interfaces
+[6.121s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/parent_prefix_path/onset_interfaces
+[6.122s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.sh
+[6.124s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/ament_prefix_path.dsv
+[6.126s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.sh
+[6.127s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/environment/path.dsv
+[6.129s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.bash
+[6.131s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.sh
+[6.132s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.zsh
+[6.134s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/local_setup.dsv
+[6.134s] -- Symlinking: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv
+[6.196s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/ament_index/resource_index/packages/onset_interfaces
+[6.198s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake-extras.cmake
+[6.200s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.202s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[6.204s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[6.205s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.207s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.209s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.210s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig.cmake
+[6.212s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfacesConfig-version.cmake
+[6.213s] -- Up-to-date symlink: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.xml
+[6.215s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_c.so
+[6.217s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_c.so
+[6.220s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_c.so
+[6.222s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_c.so
+[6.229s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[6.233s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_introspection_cpp.so
+[6.238s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_typesupport_cpp.so
+[6.430s] Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces'...
+[6.431s] Listing '/home/gong/onset_ws/install/onset_interfaces/local/lib/python3.10/dist-packages/onset_interfaces/msg'...
+[6.457s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/lib/libonset_interfaces__rosidl_generator_py.so
+[6.462s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport.cmake
+[6.463s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cExport-noconfig.cmake
+[6.465s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[6.466s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.470s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[6.471s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.473s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport.cmake
+[6.474s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[6.476s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_cppExport.cmake
+[6.478s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.479s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.482s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[6.483s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.487s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport.cmake
+[6.488s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/onset_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[6.492s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport.cmake
+[6.493s] -- Up-to-date: /home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/cmake/export_onset_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[6.502s] Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces

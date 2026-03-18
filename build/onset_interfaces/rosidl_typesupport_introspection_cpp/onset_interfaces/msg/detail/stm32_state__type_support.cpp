@@ -37,7 +37,7 @@ void STM32State_fini_function(void * message_memory)
   typed_message->~STM32State();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember STM32State_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember STM32State_message_member_array[6] = {
   {
     "sw2",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
@@ -105,13 +105,47 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember STM32State_me
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "led_status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(onset_interfaces::msg::STM32State, led_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "loader_status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(onset_interfaces::msg::STM32State, loader_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers STM32State_message_members = {
   "onset_interfaces::msg",  // message namespace
   "STM32State",  // message name
-  4,  // number of fields
+  6,  // number of fields
   sizeof(onset_interfaces::msg::STM32State),
   STM32State_message_member_array,  // message members
   STM32State_init_function,  // function to initialize message memory (memory has to be allocated)

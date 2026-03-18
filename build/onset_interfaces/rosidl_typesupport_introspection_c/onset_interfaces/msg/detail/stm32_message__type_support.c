@@ -31,7 +31,7 @@ void onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__ST
   onset_interfaces__msg__STM32Message__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__STM32Message_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__STM32Message_message_member_array[6] = {
   {
     "angle_launch",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -99,13 +99,47 @@ static rosidl_typesupport_introspection_c__MessageMember onset_interfaces__msg__
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "onset_state",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(onset_interfaces__msg__STM32Message, onset_state),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "loader_request",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(onset_interfaces__msg__STM32Message, loader_request),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__STM32Message_message_members = {
   "onset_interfaces__msg",  // message namespace
   "STM32Message",  // message name
-  4,  // number of fields
+  6,  // number of fields
   sizeof(onset_interfaces__msg__STM32Message),
   onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__STM32Message_message_member_array,  // message members
   onset_interfaces__msg__STM32Message__rosidl_typesupport_introspection_c__STM32Message_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -1,0 +1,242 @@
+[1.291s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.292s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffff8dad2ce0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff8dc943a0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff8dc943a0>>, mixin_verb=('build',))
+[1.751s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.753s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.753s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.754s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.754s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.755s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.756s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gong/onset_ws'
+[1.756s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.757s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.758s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.758s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.759s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.759s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.759s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.760s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[1.930s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[1.930s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[1.931s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[1.931s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[1.934s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[1.936s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[1.937s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[1.940s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[1.942s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[1.943s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[1.946s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[1.946s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[1.947s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[1.948s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[1.949s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[1.949s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[1.950s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[1.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[1.951s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[1.952s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[1.952s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[1.953s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[1.954s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[1.954s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[1.955s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[1.955s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[1.956s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[1.957s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[1.958s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ignore'
+[1.958s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ignore_ament_install'
+[1.959s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['colcon_pkg']
+[1.960s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'colcon_pkg'
+[1.960s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['colcon_meta']
+[1.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'colcon_meta'
+[1.961s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extensions ['ros']
+[1.962s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces) by extension 'ros'
+[1.985s] DEBUG:colcon.colcon_core.package_identification:Package 'src/onset_interfaces' with type 'ros.ament_cmake' and name 'onset_interfaces'
+[1.988s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['ignore', 'ignore_ament_install']
+[1.990s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ignore'
+[1.990s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ignore_ament_install'
+[1.991s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['colcon_pkg']
+[1.991s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'colcon_pkg'
+[1.992s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['colcon_meta']
+[1.992s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'colcon_meta'
+[1.992s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['ros']
+[1.993s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'ros'
+[1.993s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['cmake', 'python']
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'cmake'
+[1.994s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'python'
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extensions ['python_setup_py']
+[1.995s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931) by extension 'python_setup_py'
+[1.997s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['ignore', 'ignore_ament_install']
+[1.998s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ignore'
+[2.000s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ignore_ament_install'
+[2.002s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['colcon_pkg']
+[2.003s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'colcon_pkg'
+[2.005s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['colcon_meta']
+[2.006s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'colcon_meta'
+[2.007s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['ros']
+[2.009s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'ros'
+[2.013s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['cmake', 'python']
+[2.014s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'cmake'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'python'
+[2.015s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extensions ['python_setup_py']
+[2.016s] Level 1:colcon.colcon_core.package_identification:_identify(src/onset_interfaces_old_20260226_141931/msg) by extension 'python_setup_py'
+[2.017s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['ignore', 'ignore_ament_install']
+[2.018s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ignore'
+[2.019s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ignore_ament_install'
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['colcon_pkg']
+[2.020s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'colcon_pkg'
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['colcon_meta']
+[2.021s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'colcon_meta'
+[2.022s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extensions ['ros']
+[2.022s] Level 1:colcon.colcon_core.package_identification:_identify(src/onsetbot) by extension 'ros'
+[2.028s] DEBUG:colcon.colcon_core.package_identification:Package 'src/onsetbot' with type 'ros.ament_python' and name 'onsetbot'
+[2.029s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['ignore', 'ignore_ament_install']
+[2.029s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ignore'
+[2.030s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ignore_ament_install'
+[2.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['colcon_pkg']
+[2.031s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'colcon_pkg'
+[2.032s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['colcon_meta']
+[2.033s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'colcon_meta'
+[2.034s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['ros']
+[2.036s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'ros'
+[2.037s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['cmake', 'python']
+[2.039s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'cmake'
+[2.041s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'python'
+[2.042s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extensions ['python_setup_py']
+[2.047s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros_odrive) by extension 'python_setup_py'
+[2.047s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.048s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.048s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.049s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.049s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.278s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/gong/onset_ws/install
+[2.290s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 23 installed packages in /home/gong/ros2_ws/install
+[2.305s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 230 installed packages in /opt/ros/humble
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.826s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_args' from command line to 'None'
+[2.826s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_target' from command line to 'None'
+[2.827s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.827s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[2.827s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[2.828s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[2.828s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[2.828s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[2.828s] Level 5:colcon.colcon_core.verb:set package 'onset_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.829s] DEBUG:colcon.colcon_core.verb:Building package 'onset_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/onset_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/onset_interfaces', 'merge_install': False, 'path': '/home/gong/onset_ws/src/onset_interfaces', 'symlink_install': False, 'test_result_base': None}
+[2.831s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_args' from command line to 'None'
+[2.831s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_target' from command line to 'None'
+[2.832s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.832s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_clean_cache' from command line to 'False'
+[2.833s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_clean_first' from command line to 'False'
+[2.833s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'cmake_force_configure' from command line to 'False'
+[2.833s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'ament_cmake_args' from command line to 'None'
+[2.833s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'catkin_cmake_args' from command line to 'None'
+[2.834s] Level 5:colcon.colcon_core.verb:set package 'onsetbot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.834s] DEBUG:colcon.colcon_core.verb:Building package 'onsetbot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gong/onset_ws/build/onsetbot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gong/onset_ws/install/onsetbot', 'merge_install': False, 'path': '/home/gong/onset_ws/src/onsetbot', 'symlink_install': False, 'test_result_base': None}
+[2.839s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.844s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.845s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gong/onset_ws/src/onset_interfaces' with build type 'ament_cmake'
+[2.846s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gong/onset_ws/src/onset_interfaces'
+[2.874s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.880s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.881s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.007s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j4 -l4
+[8.685s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --build /home/gong/onset_ws/build/onset_interfaces -- -j4 -l4
+[8.758s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/build/onset_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[9.341s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onset_interfaces)
+[9.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/build/onset_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/gong/onset_ws/install/onsetbot:/home/gong/ros2_ws/install/odrive_tools:/opt/ros/humble /usr/bin/cmake --install /home/gong/onset_ws/build/onset_interfaces
+[9.358s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake module files
+[9.363s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake config files
+[9.375s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'cmake_prefix_path')
+[9.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.ps1'
+[9.381s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.dsv'
+[9.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.sh'
+[9.391s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib'
+[9.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'ld_library_path_lib')
+[9.394s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.ps1'
+[9.397s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.dsv'
+[9.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.sh'
+[9.403s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[9.403s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/pkgconfig/onset_interfaces.pc'
+[9.404s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/python3.10/site-packages'
+[9.406s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[9.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.ps1'
+[9.413s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv'
+[9.416s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.sh'
+[9.420s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.bash'
+[9.424s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.zsh'
+[9.427s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onset_interfaces/share/colcon-core/packages/onset_interfaces)
+[9.431s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onset_interfaces)
+[9.432s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake module files
+[9.437s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces' for CMake config files
+[9.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'cmake_prefix_path')
+[9.452s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.ps1'
+[9.454s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.dsv'
+[9.457s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/cmake_prefix_path.sh'
+[9.460s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib'
+[9.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('onset_interfaces', 'ld_library_path_lib')
+[9.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.ps1'
+[9.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.dsv'
+[9.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/hook/ld_library_path_lib.sh'
+[9.470s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[9.471s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/pkgconfig/onset_interfaces.pc'
+[9.472s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/lib/python3.10/site-packages'
+[9.473s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onset_interfaces/bin'
+[9.475s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.ps1'
+[9.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.dsv'
+[9.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.sh'
+[9.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.bash'
+[9.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onset_interfaces/share/onset_interfaces/package.zsh'
+[9.489s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onset_interfaces/share/colcon-core/packages/onset_interfaces)
+[9.491s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gong/onset_ws/src/onsetbot' with build type 'ament_python'
+[9.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('onsetbot', 'ament_prefix_path')
+[9.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.ps1'
+[9.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.dsv'
+[9.500s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/ament_prefix_path.sh'
+[9.503s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[9.503s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.770s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gong/onset_ws/src/onsetbot'
+[10.772s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.772s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.186s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gong/onset_ws/src/onsetbot': PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[15.566s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot' for CMake module files
+[15.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gong/onset_ws/src/onsetbot' returned '0': PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[15.572s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot' for CMake config files
+[15.577s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib'
+[15.578s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/bin'
+[15.579s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib/pkgconfig/onsetbot.pc'
+[15.581s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages'
+[15.581s] Level 1:colcon.colcon_core.shell:create_environment_hook('onsetbot', 'pythonpath')
+[15.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.ps1'
+[15.588s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.dsv'
+[15.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gong/onset_ws/install/onsetbot/share/onsetbot/hook/pythonpath.sh'
+[15.600s] Level 1:colcon.colcon_core.environment:checking '/home/gong/onset_ws/install/onsetbot/bin'
+[15.601s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(onsetbot)
+[15.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.ps1'
+[15.606s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.dsv'
+[15.611s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.sh'
+[15.614s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.bash'
+[15.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/gong/onset_ws/install/onsetbot/share/onsetbot/package.zsh'
+[15.621s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gong/onset_ws/install/onsetbot/share/colcon-core/packages/onsetbot)
+[15.622s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[15.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[15.624s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[15.624s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[15.669s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[15.669s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[15.670s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[15.744s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[15.746s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.ps1'
+[15.753s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gong/onset_ws/install/_local_setup_util_ps1.py'
+[15.766s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.ps1'
+[15.796s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.sh'
+[15.801s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gong/onset_ws/install/_local_setup_util_sh.py'
+[15.806s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.sh'
+[15.825s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.bash'
+[15.829s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.bash'
+[15.850s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gong/onset_ws/install/local_setup.zsh'
+[15.854s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gong/onset_ws/install/setup.zsh'

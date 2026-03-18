@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_STM32State_loader_status
+{
+public:
+  explicit Init_STM32State_loader_status(::onset_interfaces::msg::STM32State & msg)
+  : msg_(msg)
+  {}
+  ::onset_interfaces::msg::STM32State loader_status(::onset_interfaces::msg::STM32State::_loader_status_type arg)
+  {
+    msg_.loader_status = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32State msg_;
+};
+
+class Init_STM32State_led_status
+{
+public:
+  explicit Init_STM32State_led_status(::onset_interfaces::msg::STM32State & msg)
+  : msg_(msg)
+  {}
+  Init_STM32State_loader_status led_status(::onset_interfaces::msg::STM32State::_led_status_type arg)
+  {
+    msg_.led_status = std::move(arg);
+    return Init_STM32State_loader_status(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32State msg_;
+};
+
 class Init_STM32State_elbow_power_status
 {
 public:
   explicit Init_STM32State_elbow_power_status(::onset_interfaces::msg::STM32State & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::STM32State elbow_power_status(::onset_interfaces::msg::STM32State::_elbow_power_status_type arg)
+  Init_STM32State_led_status elbow_power_status(::onset_interfaces::msg::STM32State::_elbow_power_status_type arg)
   {
     msg_.elbow_power_status = std::move(arg);
-    return std::move(msg_);
+    return Init_STM32State_led_status(msg_);
   }
 
 private:

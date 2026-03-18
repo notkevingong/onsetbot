@@ -43,6 +43,8 @@ struct STM32Message_
       this->power_on_status = 0;
       this->home_elbow_request = 0;
       this->stm32_state_request = 0;
+      this->onset_state = 0;
+      this->loader_request = 0;
     }
   }
 
@@ -56,6 +58,8 @@ struct STM32Message_
       this->power_on_status = 0;
       this->home_elbow_request = 0;
       this->stm32_state_request = 0;
+      this->onset_state = 0;
+      this->loader_request = 0;
     }
   }
 
@@ -72,6 +76,12 @@ struct STM32Message_
   using _stm32_state_request_type =
     uint8_t;
   _stm32_state_request_type stm32_state_request;
+  using _onset_state_type =
+    uint8_t;
+  _onset_state_type onset_state;
+  using _loader_request_type =
+    uint8_t;
+  _loader_request_type loader_request;
 
   // setters for named parameter idiom
   Type & set__angle_launch(
@@ -96,6 +106,18 @@ struct STM32Message_
     const uint8_t & _arg)
   {
     this->stm32_state_request = _arg;
+    return *this;
+  }
+  Type & set__onset_state(
+    const uint8_t & _arg)
+  {
+    this->onset_state = _arg;
+    return *this;
+  }
+  Type & set__loader_request(
+    const uint8_t & _arg)
+  {
+    this->loader_request = _arg;
     return *this;
   }
 
@@ -151,6 +173,12 @@ struct STM32Message_
       return false;
     }
     if (this->stm32_state_request != other.stm32_state_request) {
+      return false;
+    }
+    if (this->onset_state != other.onset_state) {
+      return false;
+    }
+    if (this->loader_request != other.loader_request) {
       return false;
     }
     return true;

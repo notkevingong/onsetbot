@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_STM32Message_loader_request
+{
+public:
+  explicit Init_STM32Message_loader_request(::onset_interfaces::msg::STM32Message & msg)
+  : msg_(msg)
+  {}
+  ::onset_interfaces::msg::STM32Message loader_request(::onset_interfaces::msg::STM32Message::_loader_request_type arg)
+  {
+    msg_.loader_request = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32Message msg_;
+};
+
+class Init_STM32Message_onset_state
+{
+public:
+  explicit Init_STM32Message_onset_state(::onset_interfaces::msg::STM32Message & msg)
+  : msg_(msg)
+  {}
+  Init_STM32Message_loader_request onset_state(::onset_interfaces::msg::STM32Message::_onset_state_type arg)
+  {
+    msg_.onset_state = std::move(arg);
+    return Init_STM32Message_loader_request(msg_);
+  }
+
+private:
+  ::onset_interfaces::msg::STM32Message msg_;
+};
+
 class Init_STM32Message_stm32_state_request
 {
 public:
   explicit Init_STM32Message_stm32_state_request(::onset_interfaces::msg::STM32Message & msg)
   : msg_(msg)
   {}
-  ::onset_interfaces::msg::STM32Message stm32_state_request(::onset_interfaces::msg::STM32Message::_stm32_state_request_type arg)
+  Init_STM32Message_onset_state stm32_state_request(::onset_interfaces::msg::STM32Message::_stm32_state_request_type arg)
   {
     msg_.stm32_state_request = std::move(arg);
-    return std::move(msg_);
+    return Init_STM32Message_onset_state(msg_);
   }
 
 private:

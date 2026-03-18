@@ -59,6 +59,8 @@ class STM32State(metaclass=Metaclass_STM32State):
         '_sw3',
         '_elbow_moving_status',
         '_elbow_power_status',
+        '_led_status',
+        '_loader_status',
     ]
 
     _fields_and_field_types = {
@@ -66,9 +68,13 @@ class STM32State(metaclass=Metaclass_STM32State):
         'sw3': 'uint8',
         'elbow_moving_status': 'uint8',
         'elbow_power_status': 'uint8',
+        'led_status': 'uint8',
+        'loader_status': 'uint8',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -83,6 +89,8 @@ class STM32State(metaclass=Metaclass_STM32State):
         self.sw3 = kwargs.get('sw3', int())
         self.elbow_moving_status = kwargs.get('elbow_moving_status', int())
         self.elbow_power_status = kwargs.get('elbow_power_status', int())
+        self.led_status = kwargs.get('led_status', int())
+        self.loader_status = kwargs.get('loader_status', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -120,6 +128,10 @@ class STM32State(metaclass=Metaclass_STM32State):
         if self.elbow_moving_status != other.elbow_moving_status:
             return False
         if self.elbow_power_status != other.elbow_power_status:
+            return False
+        if self.led_status != other.led_status:
+            return False
+        if self.loader_status != other.loader_status:
             return False
         return True
 
@@ -187,3 +199,33 @@ class STM32State(metaclass=Metaclass_STM32State):
             assert value >= 0 and value < 256, \
                 "The 'elbow_power_status' field must be an unsigned integer in [0, 255]"
         self._elbow_power_status = value
+
+    @builtins.property
+    def led_status(self):
+        """Message field 'led_status'."""
+        return self._led_status
+
+    @led_status.setter
+    def led_status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'led_status' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'led_status' field must be an unsigned integer in [0, 255]"
+        self._led_status = value
+
+    @builtins.property
+    def loader_status(self):
+        """Message field 'loader_status'."""
+        return self._loader_status
+
+    @loader_status.setter
+    def loader_status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'loader_status' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'loader_status' field must be an unsigned integer in [0, 255]"
+        self._loader_status = value

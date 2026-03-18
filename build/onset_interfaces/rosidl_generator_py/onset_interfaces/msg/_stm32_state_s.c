@@ -86,6 +86,24 @@ bool onset_interfaces__msg__stm32_state__convert_from_py(PyObject * _pymsg, void
     ros_message->elbow_power_status = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
+  {  // led_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "led_status");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->led_status = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // loader_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "loader_status");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->loader_status = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -146,6 +164,28 @@ PyObject * onset_interfaces__msg__stm32_state__convert_to_py(void * raw_ros_mess
     field = PyLong_FromUnsignedLong(ros_message->elbow_power_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "elbow_power_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // led_status
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->led_status);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "led_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // loader_status
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->loader_status);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "loader_status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

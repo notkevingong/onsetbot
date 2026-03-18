@@ -50,6 +50,20 @@ inline void to_flow_style_yaml(
   {
     out << "stm32_state_request: ";
     rosidl_generator_traits::value_to_yaml(msg.stm32_state_request, out);
+    out << ", ";
+  }
+
+  // member: onset_state
+  {
+    out << "onset_state: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_state, out);
+    out << ", ";
+  }
+
+  // member: loader_request
+  {
+    out << "loader_request: ";
+    rosidl_generator_traits::value_to_yaml(msg.loader_request, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -95,6 +109,26 @@ inline void to_block_style_yaml(
     }
     out << "stm32_state_request: ";
     rosidl_generator_traits::value_to_yaml(msg.stm32_state_request, out);
+    out << "\n";
+  }
+
+  // member: onset_state
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "onset_state: ";
+    rosidl_generator_traits::value_to_yaml(msg.onset_state, out);
+    out << "\n";
+  }
+
+  // member: loader_request
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "loader_request: ";
+    rosidl_generator_traits::value_to_yaml(msg.loader_request, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

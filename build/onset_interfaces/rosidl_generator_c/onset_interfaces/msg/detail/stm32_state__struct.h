@@ -24,6 +24,8 @@ typedef struct onset_interfaces__msg__STM32State
   uint8_t sw3;
   uint8_t elbow_moving_status;
   uint8_t elbow_power_status;
+  uint8_t led_status;
+  uint8_t loader_status;
 } onset_interfaces__msg__STM32State;
 
 // Struct for a sequence of onset_interfaces__msg__STM32State.

@@ -43,6 +43,8 @@ struct STM32State_
       this->sw3 = 0;
       this->elbow_moving_status = 0;
       this->elbow_power_status = 0;
+      this->led_status = 0;
+      this->loader_status = 0;
     }
   }
 
@@ -56,6 +58,8 @@ struct STM32State_
       this->sw3 = 0;
       this->elbow_moving_status = 0;
       this->elbow_power_status = 0;
+      this->led_status = 0;
+      this->loader_status = 0;
     }
   }
 
@@ -72,6 +76,12 @@ struct STM32State_
   using _elbow_power_status_type =
     uint8_t;
   _elbow_power_status_type elbow_power_status;
+  using _led_status_type =
+    uint8_t;
+  _led_status_type led_status;
+  using _loader_status_type =
+    uint8_t;
+  _loader_status_type loader_status;
 
   // setters for named parameter idiom
   Type & set__sw2(
@@ -96,6 +106,18 @@ struct STM32State_
     const uint8_t & _arg)
   {
     this->elbow_power_status = _arg;
+    return *this;
+  }
+  Type & set__led_status(
+    const uint8_t & _arg)
+  {
+    this->led_status = _arg;
+    return *this;
+  }
+  Type & set__loader_status(
+    const uint8_t & _arg)
+  {
+    this->loader_status = _arg;
     return *this;
   }
 
@@ -151,6 +173,12 @@ struct STM32State_
       return false;
     }
     if (this->elbow_power_status != other.elbow_power_status) {
+      return false;
+    }
+    if (this->led_status != other.led_status) {
+      return false;
+    }
+    if (this->loader_status != other.loader_status) {
       return false;
     }
     return true;

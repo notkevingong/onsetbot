@@ -21,6 +21,8 @@ onset_interfaces__msg__STM32State__init(onset_interfaces__msg__STM32State * msg)
   // sw3
   // elbow_moving_status
   // elbow_power_status
+  // led_status
+  // loader_status
   return true;
 }
 
@@ -34,6 +36,8 @@ onset_interfaces__msg__STM32State__fini(onset_interfaces__msg__STM32State * msg)
   // sw3
   // elbow_moving_status
   // elbow_power_status
+  // led_status
+  // loader_status
 }
 
 bool
@@ -58,6 +62,14 @@ onset_interfaces__msg__STM32State__are_equal(const onset_interfaces__msg__STM32S
   if (lhs->elbow_power_status != rhs->elbow_power_status) {
     return false;
   }
+  // led_status
+  if (lhs->led_status != rhs->led_status) {
+    return false;
+  }
+  // loader_status
+  if (lhs->loader_status != rhs->loader_status) {
+    return false;
+  }
   return true;
 }
 
@@ -77,6 +89,10 @@ onset_interfaces__msg__STM32State__copy(
   output->elbow_moving_status = input->elbow_moving_status;
   // elbow_power_status
   output->elbow_power_status = input->elbow_power_status;
+  // led_status
+  output->led_status = input->led_status;
+  // loader_status
+  output->loader_status = input->loader_status;
   return true;
 }
 

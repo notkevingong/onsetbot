@@ -22,6 +22,8 @@ class ParsedStatus:
     sw3: int
     elbow_moving_status: int
     elbow_power_status: int
+    led_status: int
+    loader_status: int
 
 
 class STM32Bridge(Node):
@@ -46,12 +48,20 @@ class STM32Bridge(Node):
         self.home_elbow_status = False
         self._homing_in_progress = False
         self._last_power_on_status: Optional[bool] = None
+        self._last_led_payload: Optional[str] = None
+        self._startup_idle_led_applied = False
+        self._last_loader_request_value = 0
+        self._last_angle_command_rad: Optional[float] = None
+        self._angle_command_epsilon_rad = 1e-4
+        self._idle_led_rgb = (255, 100, 0)
         self._last_serial_error_log_time = 0.0
         self.usb_port = '/dev/ttyACM0'
 
         self._poll_timer = self.create_timer(0.1, self._poll_stm32)
 
     def _poll_stm32(self) -> None:
+        self._ensure_startup_idle_led()
+
         raw_status = self._read_serial_latest_line()
         parsed = self._parse_status_string(raw_status) if raw_status else None
 
@@ -63,6 +73,8 @@ class STM32Bridge(Node):
         msg.sw3 = parsed.sw3
         msg.elbow_moving_status = parsed.elbow_moving_status
         msg.elbow_power_status = parsed.elbow_power_status
+        msg.led_status = parsed.led_status
+        msg.loader_status = parsed.loader_status
         self.stm32_state_pub.publish(msg)
 
         status = parsed.elbow_moving_status
@@ -119,9 +131,23 @@ class STM32Bridge(Node):
             self.get_logger().error(msg)
             self._last_serial_error_log_time = now
 
+    def _ensure_startup_idle_led(self) -> None:
+        if self._startup_idle_led_applied:
+            return
+
+        if self._send_led_command(2):
+            self._startup_idle_led_applied = True
+            self.get_logger().info("Startup LED set to idle single-color mode")
+
     def close_serial(self) -> None:
         if self.ser and self.ser.is_open:
             self.ser.close()
+
+    def shutdown_leds(self) -> None:
+        # Best-effort LED shutdown when this bridge node exits.
+        if self._send_to_stm32("<L,0>"):
+            self._last_led_payload = "<L,0>"
+            self.get_logger().info("Sent LED shutdown command: <L,0>")
 
     def _parse_status_string(self, raw: str) -> Optional[ParsedStatus]:
         raw = raw.strip()
@@ -129,25 +155,84 @@ class STM32Bridge(Node):
         if match:
             try:
                 parts = [part.strip() for part in match.group(1).split(',')]
-                if len(parts) != 4:
+                if len(parts) != 6:
                     return None
 
                 switch2 = int(parts[0])
                 switch3 = int(parts[1])
                 moving_status = int(parts[2])
                 power_status = int(parts[3])
+                led_status = int(parts[4])
+                loader_status = int(parts[5])
 
                 return ParsedStatus(
                     sw2=switch2,
                     sw3=switch3,
                     elbow_moving_status=moving_status,
                     elbow_power_status=power_status,
+                    led_status=led_status,
+                    loader_status=loader_status
                 )
             except (IndexError, ValueError) as e:
                 self.get_logger().error(f"Error parsing status string: {e}")
                 return None
 
         return None
+
+    @staticmethod
+    def _clamp_u8(value: int) -> int:
+        return max(0, min(255, int(value)))
+
+    def _send_led_command(self, led_value: int, r: Optional[int] = None, g: Optional[int] = None, b: Optional[int] = None) -> bool:
+        led_value = int(led_value)
+        if led_value == 2:
+            rr = self._clamp_u8(self._idle_led_rgb[0] if r is None else r)
+            gg = self._clamp_u8(self._idle_led_rgb[1] if g is None else g)
+            bb = self._clamp_u8(self._idle_led_rgb[2] if b is None else b)
+            payload = f"<L,2,{rr},{gg},{bb}>"
+        else:
+            payload = f"<L,{led_value}>"
+
+        if payload == self._last_led_payload:
+            return True
+
+        if self._send_to_stm32(payload):
+            self._last_led_payload = payload
+            return True
+        return False
+
+    def _apply_led_request(self, msg: STM32Message) -> None:
+        onset_state = int(getattr(msg, "onset_state", 0))
+        if onset_state == 1:
+            self._send_led_command(1)
+            return
+
+        if onset_state == 2:
+            # RGB fields are optional in STM32Message; default to yellow when absent.
+            red = int(getattr(msg, "led_r", self._idle_led_rgb[0]))
+            green = int(getattr(msg, "led_g", self._idle_led_rgb[1]))
+            blue = int(getattr(msg, "led_b", self._idle_led_rgb[2]))
+            self._send_led_command(2, red, green, blue)
+            return
+
+        if onset_state == 0:
+            self._send_led_command(0)
+
+    def _apply_loader_request(self, msg: STM32Message) -> None:
+        loader_request = int(getattr(msg, "loader_reqest", getattr(msg, "loader_request", 0)))
+        if loader_request == 0:
+            loader_request = int(getattr(msg, "stm32_state_request", 0))
+
+        if loader_request == 0:
+            self._last_loader_request_value = 0
+            return
+
+        if loader_request == self._last_loader_request_value:
+            return
+
+        if self._send_to_stm32("<B>"):
+            self._last_loader_request_value = loader_request
+            self.get_logger().info(f"Loader request pulse sent via <B> (request={loader_request})")
 
     def _on_command(self, msg: STM32Message) -> None:
         power_on = msg.power_on_status == 1
@@ -156,6 +241,12 @@ class STM32Bridge(Node):
         if self._last_power_on_status is None or power_on != self._last_power_on_status:
             self._send_to_stm32(f"<P,{1 if power_on else 0}>")
             self._last_power_on_status = power_on
+            if power_on:
+                self._send_led_command(2)
+            else:
+                self._send_led_command(0)
+                self._last_angle_command_rad = None
+                self._last_loader_request_value = 0
 
         if not power_on:
             self.home_elbow_status = False
@@ -163,17 +254,26 @@ class STM32Bridge(Node):
             self.get_logger().info("Power is OFF; ignoring motor command")
             return
 
-        if home_requested and not self.home_elbow_status and not self._homing_in_progress:
+        self._apply_led_request(msg)
+        self._apply_loader_request(msg)
+
+        if home_requested and not self._homing_in_progress:
             if self._send_to_stm32("<h>"):
                 self._homing_in_progress = True
                 self.get_logger().info("Homing command sent (<h>); waiting for STM32 status <x,x,3,x>")
             return
 
         if self.home_elbow_status:
-            angle_rad = msg.angle_launch
-            self.message_to_stm32 = str(angle_rad)
-            self.get_logger().info(f"Sending elbow angle: {angle_rad} rad")
-            self._send_to_stm32(f"<M,{angle_rad}>")
+            angle_rad = float(msg.angle_launch)
+            should_send_angle = (
+                self._last_angle_command_rad is None or
+                abs(angle_rad - self._last_angle_command_rad) >= self._angle_command_epsilon_rad
+            )
+            if should_send_angle:
+                self.message_to_stm32 = str(angle_rad)
+                self.get_logger().info(f"Sending elbow angle: {angle_rad} rad")
+                if self._send_to_stm32(f"<M,{angle_rad}>"):
+                    self._last_angle_command_rad = angle_rad
         else:
             self.get_logger().info("Home not complete; ignoring elbow angle command")
 
@@ -194,17 +294,18 @@ class STM32Bridge(Node):
 
 
 def main() -> None:
-	rclpy.init()
-	node = STM32Bridge()
-	try:  
-		rclpy.spin(node)
-	except KeyboardInterrupt:
-		pass
-	finally:
-		node.close_serial()
-		node.destroy_node()
-		rclpy.shutdown()
+    rclpy.init()
+    node = STM32Bridge()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.shutdown_leds()
+        node.close_serial()
+        node.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":
-	main()
+    main()

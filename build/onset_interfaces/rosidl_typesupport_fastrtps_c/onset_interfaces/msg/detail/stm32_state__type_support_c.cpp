@@ -69,6 +69,16 @@ static bool _STM32State__cdr_serialize(
     cdr << ros_message->elbow_power_status;
   }
 
+  // Field name: led_status
+  {
+    cdr << ros_message->led_status;
+  }
+
+  // Field name: loader_status
+  {
+    cdr << ros_message->loader_status;
+  }
+
   return true;
 }
 
@@ -99,6 +109,16 @@ static bool _STM32State__cdr_deserialize(
   // Field name: elbow_power_status
   {
     cdr >> ros_message->elbow_power_status;
+  }
+
+  // Field name: led_status
+  {
+    cdr >> ros_message->led_status;
+  }
+
+  // Field name: loader_status
+  {
+    cdr >> ros_message->loader_status;
   }
 
   return true;
@@ -139,6 +159,18 @@ size_t get_serialized_size_onset_interfaces__msg__STM32State(
   // field.name elbow_power_status
   {
     size_t item_size = sizeof(ros_message->elbow_power_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name led_status
+  {
+    size_t item_size = sizeof(ros_message->led_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name loader_status
+  {
+    size_t item_size = sizeof(ros_message->loader_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -199,6 +231,20 @@ size_t max_serialized_size_onset_interfaces__msg__STM32State(
     last_member_size = array_size * sizeof(uint8_t);
     current_alignment += array_size * sizeof(uint8_t);
   }
+  // member: led_status
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: loader_status
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -208,7 +254,7 @@ size_t max_serialized_size_onset_interfaces__msg__STM32State(
     using DataType = onset_interfaces__msg__STM32State;
     is_plain =
       (
-      offsetof(DataType, elbow_power_status) +
+      offsetof(DataType, loader_status) +
       last_member_size
       ) == ret_val;
   }

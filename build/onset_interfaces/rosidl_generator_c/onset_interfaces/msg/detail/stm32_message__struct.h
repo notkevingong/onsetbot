@@ -24,6 +24,8 @@ typedef struct onset_interfaces__msg__STM32Message
   uint8_t power_on_status;
   uint8_t home_elbow_request;
   uint8_t stm32_state_request;
+  uint8_t onset_state;
+  uint8_t loader_request;
 } onset_interfaces__msg__STM32Message;
 
 // Struct for a sequence of onset_interfaces__msg__STM32Message.

@@ -50,6 +50,20 @@ inline void to_flow_style_yaml(
   {
     out << "elbow_power_status: ";
     rosidl_generator_traits::value_to_yaml(msg.elbow_power_status, out);
+    out << ", ";
+  }
+
+  // member: led_status
+  {
+    out << "led_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.led_status, out);
+    out << ", ";
+  }
+
+  // member: loader_status
+  {
+    out << "loader_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.loader_status, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -95,6 +109,26 @@ inline void to_block_style_yaml(
     }
     out << "elbow_power_status: ";
     rosidl_generator_traits::value_to_yaml(msg.elbow_power_status, out);
+    out << "\n";
+  }
+
+  // member: led_status
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "led_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.led_status, out);
+    out << "\n";
+  }
+
+  // member: loader_status
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "loader_status: ";
+    rosidl_generator_traits::value_to_yaml(msg.loader_status, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)

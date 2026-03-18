@@ -86,6 +86,24 @@ bool onset_interfaces__msg__stm32_message__convert_from_py(PyObject * _pymsg, vo
     ros_message->stm32_state_request = (uint8_t)PyLong_AsUnsignedLong(field);
     Py_DECREF(field);
   }
+  {  // onset_state
+    PyObject * field = PyObject_GetAttrString(_pymsg, "onset_state");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->onset_state = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
+  {  // loader_request
+    PyObject * field = PyObject_GetAttrString(_pymsg, "loader_request");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->loader_request = (uint8_t)PyLong_AsUnsignedLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -146,6 +164,28 @@ PyObject * onset_interfaces__msg__stm32_message__convert_to_py(void * raw_ros_me
     field = PyLong_FromUnsignedLong(ros_message->stm32_state_request);
     {
       int rc = PyObject_SetAttrString(_pymessage, "stm32_state_request", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // onset_state
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->onset_state);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "onset_state", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // loader_request
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLong(ros_message->loader_request);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "loader_request", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

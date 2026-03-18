@@ -61,6 +61,8 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         '_power_on_status',
         '_home_elbow_request',
         '_stm32_state_request',
+        '_onset_state',
+        '_loader_request',
     ]
 
     _fields_and_field_types = {
@@ -68,10 +70,14 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         'power_on_status': 'uint8',
         'home_elbow_request': 'uint8',
         'stm32_state_request': 'uint8',
+        'onset_state': 'uint8',
+        'loader_request': 'uint8',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -85,6 +91,8 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         self.power_on_status = kwargs.get('power_on_status', int())
         self.home_elbow_request = kwargs.get('home_elbow_request', int())
         self.stm32_state_request = kwargs.get('stm32_state_request', int())
+        self.onset_state = kwargs.get('onset_state', int())
+        self.loader_request = kwargs.get('loader_request', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -122,6 +130,10 @@ class STM32Message(metaclass=Metaclass_STM32Message):
         if self.home_elbow_request != other.home_elbow_request:
             return False
         if self.stm32_state_request != other.stm32_state_request:
+            return False
+        if self.onset_state != other.onset_state:
+            return False
+        if self.loader_request != other.loader_request:
             return False
         return True
 
@@ -189,3 +201,33 @@ class STM32Message(metaclass=Metaclass_STM32Message):
             assert value >= 0 and value < 256, \
                 "The 'stm32_state_request' field must be an unsigned integer in [0, 255]"
         self._stm32_state_request = value
+
+    @builtins.property
+    def onset_state(self):
+        """Message field 'onset_state'."""
+        return self._onset_state
+
+    @onset_state.setter
+    def onset_state(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'onset_state' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'onset_state' field must be an unsigned integer in [0, 255]"
+        self._onset_state = value
+
+    @builtins.property
+    def loader_request(self):
+        """Message field 'loader_request'."""
+        return self._loader_request
+
+    @loader_request.setter
+    def loader_request(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'loader_request' field must be of type 'int'"
+            assert value >= 0 and value < 256, \
+                "The 'loader_request' field must be an unsigned integer in [0, 255]"
+        self._loader_request = value
