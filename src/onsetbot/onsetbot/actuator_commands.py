@@ -137,21 +137,23 @@ class ActuatorCommand(Node):
         self._bldc_home_complete = False
 
         # Home constants
-        self._home_velocity = 1.0
-        self._home_clear_velocity = 1.0
+        self._home_velocity = 2.0
+        self._home_clear_velocity = 2.0
         self._home_clear_duration_sec = 0.4
         self._home_position_tolerance = 0.05 # in turns
         self._home_clear_start_time = 0.0
 
         # Launch tuning constants
-        self._launch_velocity_limit_turns_per_sec = 40.0
+        self._launch_velocity_limit_turns_per_sec = 35.0
         self._launch_seek_to_start_velocity_turns_per_sec = 3.0
         self._launch_decel_start_fraction = 0.6
         self._launch_brake_velocity_threshold_turns_per_sec = 0.2
         self._launch_brake_timeout_sec = 2.0
         self._launch_post_sw3_hold_sec = 5.0
+        self._enable_post_launch_rehome = True
         self._require_stm32_launch_confirmation = True
         self._launch_led_restore_delay_sec = 0.5
+        self._idle_led_reassert_period_sec = 1.0
 
         # STM32 LED command values (mapped in stm32_bridge)
         self._stm32_led_state_off = 0
@@ -175,6 +177,8 @@ class ActuatorCommand(Node):
         self._launch_led_seen_idle_status = False
         self._launch_led_restore_pending = False
         self._launch_led_restore_start_time = 0.0
+        self._idle_led_last_sent_time = 0.0
+        self._idle_led_sent_for_current_idle = False
         self._last_stm32_angle_command = 0.0
         self._launch_command_velocity = 0.0
         self._launch_velocity_log_period_sec = 0.1
@@ -301,7 +305,7 @@ class ActuatorCommand(Node):
             f'Launch requested: theta_rad={self.launch_requested_theta_rad:.4f}, '
             f'cmd_vel={self.launch_target_velocity:.3f} turns/s (limited), '
             f'offset_range=({self.launch_start_position:.4f} -> {self.launch_end_position:.4f}), '
-            f'decel_at={self.launch_decel_position:.4f}. Waiting for elbow_moving_status sequence 4 -> 5, then led_status sequence 2 -> 3'
+            f'decel_at={self.launch_decel_position:.4f}. Waiting for elbow_moving_status sequence 4 -> 5, then led_status sequence 3 -> 2 -> 3 before starting ODrive launch motion'
         )
 
     def _abort_launch_sequence(self, reason: str):
@@ -325,7 +329,7 @@ class ActuatorCommand(Node):
         self._schedule_launch_led_restore()
         self._publish_onset_status(homed=self.is_homed, busy=False)
         self.get_logger().info(
-            'Launch sequence complete: recalibrated SW3/SW2, recomputed offsets, and returned to offset_min_position'
+            'Launch sequence complete: recalibrated SW3/SW2, recomputed offsets, and returned to offset_min_position. Elbow held at launch angle.'
         )
 
     def _schedule_launch_led_restore(self):
@@ -346,11 +350,47 @@ class ActuatorCommand(Node):
             angle_launch=self._last_stm32_angle_command,
             onset_state=self._stm32_led_state_idle_color,
         )
+        self._idle_led_last_sent_time = time.monotonic()
+        self._idle_led_sent_for_current_idle = True
         self._launch_led_launch_mode_sent = False
         self._launch_led_restore_pending = False
         self.get_logger().info(
             f'Launch LED hold complete. Restored idle yellow LED after {self._launch_led_restore_delay_sec:.1f}s delay'
         )
+
+    def _is_controller_idle(self) -> bool:
+        return (
+            (not self.home_active)
+            and (not self.launch_active)
+            and (self.homing_state == 'idle')
+            and (self.launch_state == 'idle')
+        )
+
+    def _ensure_idle_led_command(self):
+        if not self._is_controller_idle():
+            self._idle_led_sent_for_current_idle = False
+            return
+
+        if self._launch_led_restore_pending:
+            return
+
+        now = time.monotonic()
+        should_send = not self._idle_led_sent_for_current_idle
+        if (not should_send) and (self.led_status != self._stm32_led_state_idle_color):
+            should_send = (now - self._idle_led_last_sent_time) >= self._idle_led_reassert_period_sec
+
+        if not should_send:
+            return
+
+        self._publish_stm32_command(
+            power_on_status=1,
+            home_elbow_request=0,
+            angle_launch=self._last_stm32_angle_command,
+            onset_state=self._stm32_led_state_idle_color,
+        )
+        self._idle_led_last_sent_time = now
+        self._idle_led_sent_for_current_idle = True
+        self.get_logger().info('Controller is idle. Sent idle LED command to STM32')
 
     def _turns_per_sec_to_m_per_sec(self, turns_per_sec: float) -> float:
         if abs(self._velocity_conversion_constant) <= 1e-9:
@@ -376,6 +416,7 @@ class ActuatorCommand(Node):
 
     def _launch_step(self):
         self._restore_idle_led_if_due()
+        self._ensure_idle_led_command()
 
         if not self.launch_active:
             return
@@ -406,45 +447,28 @@ class ActuatorCommand(Node):
                         onset_state=self._stm32_led_state_launch,
                     )
                     self._launch_led_launch_mode_sent = True
-                    self.get_logger().info('Elbow reached launch angle after movement. Sent launch LED command and waiting for led_status==3')
-
-                self._launch_led_seen_idle_status = False
-                self.launch_state = 'wait_launch_led_ready'
-                self.get_logger().info(
-                    'Elbow move confirmed (4 -> 5). Waiting for STM32 led_status sequence 2 -> 3 before starting ODrive launch motion'
-                )
-            return
-
-        if self.launch_state == 'wait_launch_led_ready':
-            self._publish_odrive_velocity(0.0)
-            if self.elbow_moving_status != 5:
-                self.launch_state = 'wait_elbow_position'
-                self._launch_elbow_seen_moving_status = False
-                self._launch_led_seen_idle_status = False
-                if self._launch_led_launch_mode_sent:
-                    self._publish_stm32_command(
-                        power_on_status=1,
-                        home_elbow_request=0,
-                        angle_launch=self._last_stm32_angle_command,
-                        onset_state=self._stm32_led_state_idle_color,
+                    self._launch_led_seen_idle_status = False
+                    self.get_logger().info(
+                        'Elbow reached launch angle. Sent launch LED command and waiting for led_status sequence 3 -> 2 -> 3'
                     )
-                    self._launch_led_launch_mode_sent = False
-                self.get_logger().warn(
-                    f'Elbow status changed to {self.elbow_moving_status} while waiting for LED ready; waiting again for elbow_moving_status==5'
-                )
-                return
+                    return
 
-            if (not self._launch_led_seen_idle_status) and self.led_status == 2:
-                self._launch_led_seen_idle_status = True
-                self.get_logger().info('Observed STM32 led_status==2. Now waiting for led_status==3 to launch')
-                return
+                if not self._launch_led_seen_idle_status:
+                    if self.led_status == 2:
+                        self._launch_led_seen_idle_status = True
+                        self.get_logger().info(
+                            'Launch LED acknowledged (led_status==2). Holding launch until led_status goes to 1'
+                        )
+                    return
 
-            if not self._launch_led_seen_idle_status:
-                return
+                if self.led_status == 2:
+                    return
 
-            if self.led_status == 3:
-                self.launch_state = 'launch_to_decel'
-                self.get_logger().info('Observed STM32 led_status sequence 2 -> 3. Starting ODrive launch motion')
+                if self.led_status == 1:
+                    self.launch_state = 'launch_to_decel'
+                    self.get_logger().info(
+                        'LED handshake complete (3 -> 2 -> 3). Starting ODrive launch motion immediately'
+                    )
             return
 
         if self.launch_state == 'launch_to_decel':
@@ -468,6 +492,12 @@ class ActuatorCommand(Node):
             stopped = abs(self.current_velocity) <= self._launch_brake_velocity_threshold_turns_per_sec
             if stopped or elapsed >= self._launch_brake_timeout_sec:
                 self.launch_state = 'post_seek_sw3'
+                self._publish_stm32_command(
+                    power_on_status=1,
+                    home_elbow_request=0,
+                    angle_launch=self.launch_requested_theta_rad,
+                    onset_state=2,
+                )
                 self.get_logger().info(
                     f'Brake phase complete (stopped={int(stopped)}, elapsed={elapsed:.2f}s). Seeking SW3 for post-launch re-reference'
                 )
@@ -479,27 +509,11 @@ class ActuatorCommand(Node):
                 self._publish_odrive_velocity(0.0)
                 for axis_name in self._odrive_axis_names:
                     self.home_max_position[axis_name] = self.current_position_by_axis.get(axis_name, 0.0)
-                self._publish_stm32_command(
-                    power_on_status=1,
-                    home_elbow_request=0,
-                    angle_launch=0.0,
-                    onset_state=self._stm32_led_state_launch,
-                )
-                # Send a momentary loader pulse when SW3 is reached.
-                self._publish_stm32_command(
-                    power_on_status=1,
-                    home_elbow_request=0,
-                    angle_launch=0.0,
-                    onset_state=self._stm32_led_state_launch,
-                    loader_request=self._stm32_loader_request_pulse_value,
-                )
-                self._publish_stm32_command(
-                    power_on_status=1,
-                    home_elbow_request=0,
-                    angle_launch=0.0,
-                    onset_state=self._stm32_led_state_launch,
-                    loader_request=0,
-                )
+
+                #Send a momentary home elbow pulse
+                self._publish_stm32_command(power_on_status=1, home_elbow_request=1, angle_launch=0.0)
+                self._publish_stm32_command(power_on_status=1, home_elbow_request=0, angle_launch=0.0)
+                
                 self._launch_post_sw3_hold_start_time = time.monotonic()
                 self.launch_state = 'post_hold_sw3'
                 self.get_logger().info(

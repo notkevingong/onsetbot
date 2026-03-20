@@ -1,0 +1,37 @@
+[6.086s] Invoking command in '/home/gong/onset_ws/src/onsetbot': PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
+[7.772s] running egg_info
+[7.919s] writing ../../build/onsetbot/onsetbot.egg-info/PKG-INFO
+[7.927s] writing dependency_links to ../../build/onsetbot/onsetbot.egg-info/dependency_links.txt
+[7.933s] writing entry points to ../../build/onsetbot/onsetbot.egg-info/entry_points.txt
+[7.935s] writing requirements to ../../build/onsetbot/onsetbot.egg-info/requires.txt
+[7.940s] writing top-level names to ../../build/onsetbot/onsetbot.egg-info/top_level.txt
+[8.267s] reading manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+[8.275s] writing manifest file '../../build/onsetbot/onsetbot.egg-info/SOURCES.txt'
+[8.276s] running build
+[8.276s] running build_py
+[8.279s] copying onsetbot/actuator_command.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.281s] copying onsetbot/stm32_bridge.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.282s] copying onsetbot/__init__.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.283s] copying onsetbot/onset_gui.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.285s] copying onsetbot/configure_spinout_usb.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.288s] copying onsetbot/actuator_commands.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.289s] copying onsetbot/odrive_can_bridge.py -> /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot
+[8.293s] running install
+[8.309s] running install_lib
+[8.419s] copying /home/gong/onset_ws/build/onsetbot/build/lib/onsetbot/actuator_commands.py -> /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot
+[8.426s] byte-compiling /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot/actuator_commands.py to actuator_commands.cpython-310.pyc
+[8.451s] running install_data
+[8.452s] copying resource/onsetbot -> /home/gong/onset_ws/install/onsetbot/share/ament_index/resource_index/packages
+[8.453s] copying package.xml -> /home/gong/onset_ws/install/onsetbot/share/onsetbot
+[8.455s] copying launch/onset_launch.launch.py -> /home/gong/onset_ws/install/onsetbot/share/onsetbot/launch
+[8.456s] running install_egg_info
+[8.550s] removing '/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info' (and everything under it)
+[8.552s] Copying ../../build/onsetbot/onsetbot.egg-info to /home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages/onsetbot-0.0.0-py3.10.egg-info
+[8.561s] running install_scripts
+[8.713s] Installing actuator_command script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[8.715s] Installing actuator_commands script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[8.716s] Installing odrive_can_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[8.717s] Installing onset_gui script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[8.719s] Installing stm32_bridge script to /home/gong/onset_ws/install/onsetbot/lib/onsetbot
+[8.723s] writing list of installed files to '/home/gong/onset_ws/build/onsetbot/install.log'
+[8.865s] Invoked command in '/home/gong/onset_ws/src/onsetbot' returned '0': PYTHONPATH=/home/gong/onset_ws/build/onsetbot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/gong/onset_ws/install/onsetbot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/onsetbot build --build-base /home/gong/onset_ws/build/onsetbot/build install --record /home/gong/onset_ws/build/onsetbot/install.log --single-version-externally-managed install_data
